@@ -32,31 +32,31 @@
 <section id="services">
 	<div id="servicescontent">
 		<h3>Services</h3>
-		<p>{{services.services|safe}}</p>
+		<p>{{services.services.text|safe}}</p>
 	</div>
 	<div id="smsp">
 		<h3>Social Media Strategy Planning</h3>
-		<p>{{services.smsp|safe}}</p>
+		<p>{{services.smsp.text|safe}}</p>
 	</div>
 	<div id="branding">
 		<h3>Branding</h3>
-		<p>{{services.branding|safe}}</p>
+		<p>{{services.branding.text|safe}}</p>
 	</div>
 	<div id="research">
 		<h3>research</h3>
-		<p>{{services.research|safe}}</p>
+		<p>{{services.research.text|safe}}</p>
 	</div>
 	<div id="creativedev">
 		<h3>Creative Development</h3>
-		<p>{{services.creativedev|safe}}</p>
+		<p>{{services.creativedev.text|safe}}</p>
 	</div>
 	<div id="contentproduction">
 		<h3>Content Production</h3>
-		<p>{{services.contentproduction|safe}}</p>
+		<p>{{services.contentproduction.text|safe}}</p>
 	</div>
 	<div id="resultsanalytics">
 		<h3>Results Analytics</h3>
-		<p>{{services.resultsanalytics|safe}}</p>
+		<p>{{services.resultsanalytics.text|safe}}</p>
 	</div>
 
 	<div>
@@ -98,8 +98,11 @@
 <script src="/../static/js/waypoints-sticky.js"></script>
 
 <script type="text/javascript">
-$('.backgroundImage').waypoint('sticky');
+$('.backgroundImage').waypoint('sticky',{
+	
+});
 
+softScroll()
 </script>
 
 {% endblock %}
