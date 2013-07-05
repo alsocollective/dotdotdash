@@ -13,7 +13,7 @@ class MediaNode(models.Model):
 		fname, dot, extension = filename.rpartition('.')
 		slug = slugify(fname)
 		instance.title = '%s.%s' % (slug, extension)
-		return 'static/img/uploaded/%s.%s' % (slug, extension)
+		return 'static/uploaded/%s.%s' % (slug, extension)
 	location = models.FileField(upload_to=slugify_filename)
 
 	def save(self, *args, **kwargs):
