@@ -5,6 +5,9 @@
 *.pyc
 *.psd
 *.json
+*.mov
+*.mp3
+*.webm
 yeaa
 settings.py
 jquery.royalslider.min.js
