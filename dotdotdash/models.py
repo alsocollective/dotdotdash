@@ -67,6 +67,12 @@ class Services(models.Model):
 	resultsanalytics = models.TextField(max_length=2000)
 
 	backgroundimage = models.ForeignKey(MediaNode,blank=True,null=True,related_name="bkimg+")
+	socimage = models.ForeignKey(MediaNode,blank=True,null=True,related_name="1img+")
+	brandingimage = models.ForeignKey(MediaNode,blank=True,null=True,related_name="2img+")
+	researchimage = models.ForeignKey(MediaNode,blank=True,null=True,related_name="3img+")
+	creativedevimage = models.ForeignKey(MediaNode,blank=True,null=True,related_name="4img+")
+	contentproductionimage = models.ForeignKey(MediaNode,blank=True,null=True,related_name="5img+")
+	resultsimage = models.ForeignKey(MediaNode,blank=True,null=True,related_name="6img+")
 
 class Clients(models.Model):
 	class Meta:
