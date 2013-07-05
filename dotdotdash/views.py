@@ -10,13 +10,13 @@ def home(request):
 	services = Services.objects.all()[0]
 	print services.services
 	servicesout = {
-		"services":services.services,
-		"smsp":services.socialmediastrategyplanning,
-		"branding":services.branding,
-		"research":services.research,
-		"creativedev":services.creativedevelopment,
-		"contentproduction":services.contentproduction,
-		"resultsanalytics":services.resultsanalytics,
+		"services":{"text":services.services,"image":services.backgroundimage},
+		"smsp":{"text":services.socialmediastrategyplanning,"image":services.socimage},
+		"branding":{"text":services.branding,"image":services.brandingimage},
+		"research":{"text":services.research,"image":services.researchimage},
+		"creativedev":{"text":services.creativedevelopment,"image":services.creativedevimage},
+		"contentproduction":{"text":services.contentproduction,"image":services.contentproductionimage},
+		"resultsanalytics":{"text":services.resultsanalytics,"image":services.resultsimage},
 		}
 	clients = Clients.objects.all()[0]
 	clientsout = {"text":clients.text,"images":getClients(clients.clientimages.all())}
