@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="/../static/css/style.css">
+{% endblock %}
+
+{% block content %}
+<nav>
+	<img src="/../static/assests/logo.png">
+	<ul>
+		<li id="aboutLink"><a href="#about">About</a></li>
+		<li id="serviceLink"><a href="#services">Services</a></li>
+		<li id="clientsLink"><a href="#clients">Clients</a></li>
+		<li id="ourWorkLink"><a href="#work">Our Work</a></li>
+		<li id="contactLink"><a href="#contact">Contact</a></li>
+	</ul>
+</nav>
+
+<section class="quote">{{home.q1|safe}}</section>
+<section class="quote">{{home.q2|safe}}</section>
+<!-- {{home}} -->
+
+<section id="about">
+	<div class="backgroundImage"  style="background-image: url('/../static/uploaded/{{about.bkImg}}')"></div>
+	<h1>About</h1>
+	<p>{{about.about|safe}}</p>
+	<h1>Process</h1>
+	<p>{{about.process|safe}}</p>
+</section>
+<!-- {{about}} -->
+
+<section id="services">
+	<div id="servicescontent">
+		<h3>Services</h3>
+		<p>{{services.services|safe}}</p>
+	</div>
+	<div id="smsp">
+		<h3>Social Media Strategy Planning</h3>
+		<p>{{services.smsp|safe}}</p>
+	</div>
+	<div id="branding">
+		<h3>Branding</h3>
+		<p>{{services.branding|safe}}</p>
+	</div>
+	<div id="research">
+		<h3>research</h3>
+		<p>{{services.research|safe}}</p>
+	</div>
+	<div id="creativedev">
+		<h3>Creative Development</h3>
+		<p>{{services.creativedev|safe}}</p>
+	</div>
+	<div id="contentproduction">
+		<h3>Content Production</h3>
+		<p>{{services.contentproduction|safe}}</p>
+	</div>
+	<div id="resultsanalytics">
+		<h3>Results Analytics</h3>
+		<p>{{services.resultsanalytics|safe}}</p>
+	</div>
+
+	<div>
+		<img src="/../static/assests/analytics.png">
+		<img src="/../static/assests/branding.png">
+		<img src="/../static/assests/content.png">
+		<img src="/../static/assests/creative.png">
+		<img src="/../static/assests/research.png">
+		<img src="/../static/assests/social.png">
+	</div>
+</section>
+<!-- {{services}} -->
+
+<section id="clients">
+	<h1>Clients</h1>
+	<p>{{clients.text|safe}}</p>
+	<div>
+		{% for img in clients.images%}
+			<a href="{{img.link}}"><img src="/../static/uploaded/{{img.title}}"></a>
+		{% endfor %}
+	</div>
+</section>
+<!-- {{clients}} -->
+
+<section id="work"></section>
+
+<section id="contact">
+	<h1>Contact</h1>
+	{{contact.text}}
+</section>
+
+{% endblock %}
+
+
+{% block js %}
+
+<script src="/../static/js/jquery.min.js"></script>
+<script src="/../static/js/waypoints.min.js"></script>
+<script src="/../static/js/waypoints-sticky.js"></script>
+
+<script type="text/javascript">
+$('.backgroundImage').waypoint('sticky');
+
+</script>
+
+{% endblock %}
