@@ -44,6 +44,7 @@ class Home(models.Model):
 	mp4 = models.ForeignKey(MediaNode,blank=True,null=True,related_name="mp4+")
 	ogv = models.ForeignKey(MediaNode,blank=True,null=True,related_name="ogv+")
 	webm = models.ForeignKey(MediaNode,blank=True,null=True,related_name="webm+")
+	workbackgroundimage = models.ForeignKey(MediaNode,blank=True,null=True,related_name="bkimg+")
 
 class About(models.Model):
 	class Meta:
@@ -72,6 +73,7 @@ class Clients(models.Model):
 		verbose_name_plural = "Clients"
 	text = models.TextField(max_length=2000)
 	clientimages = models.ManyToManyField(MediaNode,blank=True,related_name="imageFields+")
+	backgroundimage = models.ForeignKey(MediaNode,blank=True,null=True,related_name="bkimg+")
 
 class Page(models.Model):
 	pageTypes = (
@@ -113,3 +115,4 @@ class Contact(models.Model):
 	class Meta:
 		verbose_name_plural = "Contact"
 	contant = models.TextField(max_length=4000)
+	backgroundimage = models.ForeignKey(MediaNode,blank=True,null=True,related_name="bkimg+")

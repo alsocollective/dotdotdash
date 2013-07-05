@@ -6,23 +6,30 @@ def home(request):
 	homeout = {"q1":home.quote1,"q2":home.quote2,"mp4":home.mp4,"ogv":home.ogv,"webm":home.webm}
 	about = About.objects.all()[0]
 	aboutout = {"about":about.about,"process":about.process,"bkImg":about.backgroundimage}
+	print "breakkkkkkk"
 	services = Services.objects.all()[0]
+	print services.services
 	servicesout = {
 		"services":services.services,
-		"smsp":servies.socialmediastrategyplanning,
+		"smsp":services.socialmediastrategyplanning,
 		"branding":services.branding,
 		"research":services.research,
 		"creativedev":services.creativedevelopment,
 		"contentproduction":services.contentproduction,
-		"resultsanalytics":services.resultsanalytics
+		"resultsanalytics":services.resultsanalytics,
 		}
 	clients = Clients.objects.all()[0]
-	clientsout = {"text":clients.text,"images":getClients(clients.clientimages)}
+	clientsout = {"text":clients.text,"images":getClients(clients.clientimages.all())}
+
+	contact = Contact.objects.all()[0]
+	contactout = {"text":contact.contant}
 
 	return render_to_response('index.html',{
 		"home":homeout,
 		"about":aboutout,
-		"services":servicesout
+		"services":servicesout,
+		"clients":clientsout,
+		"contact":contactout,
 		})
 
 def getClients(clist):
