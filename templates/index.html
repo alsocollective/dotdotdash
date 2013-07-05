@@ -7,7 +7,7 @@
 {% block content %}
 <nav>
 	<img src="/../static/assests/logo.png">
-	<ul>
+	<ul id="stickNav">
 		<li id="aboutLink"><a href="#about">About</a></li>
 		<li id="serviceLink"><a href="#services">Services</a></li>
 		<li id="clientsLink"><a href="#clients">Clients</a></li>
@@ -15,6 +15,10 @@
 		<li id="contactLink"><a href="#contact">Contact</a></li>
 	</ul>
 </nav>
+
+{{home.mp4}}
+{{home.ogv}}
+{{home.webm}}
 
 <section class="quote">{{home.q1|safe}}</section>
 <section class="quote">{{home.q2|safe}}</section>
@@ -96,9 +100,22 @@
 <script src="/../static/js/jquery.min.js"></script>
 <script src="/../static/js/waypoints.min.js"></script>
 <script src="/../static/js/waypoints-sticky.js"></script>
+<script src="/../static/js/script.js"></script>
 
 <script type="text/javascript">
-$('.backgroundImage').waypoint('sticky');
+
+
+$("#stickNav").waypoint('sticky');
+$('.backgroundImage').waypoint('sticky',{
+	wrapper: '<div class="background-wrapper" />',
+});
+
+softScroll("aboutLink","about")
+softScroll("serviceLink","services")
+softScroll("clientsLink","clients")
+softScroll("ourWorkLink","work")
+softScroll("contactLink","contact")
+
 
 </script>
 
