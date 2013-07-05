@@ -104,7 +104,7 @@ class Work(models.Model):
 
 	def save(self,*args, **kwargs):
 		self.slug = slugify(self.title)
-		super(Article, self).save(*args, **kwargs)
+		super(Work, self).save(*args, **kwargs)
 
 	def __unicode__(self):
 		return self.title
