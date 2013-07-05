@@ -7,6 +7,8 @@
 *.json
 *.mov
 *.mp3
+*.ovg
+*.mp4
 *.webm
 yeaa
 settings.py
@@ -14,5 +16,6 @@ jquery.royalslider.min.js
 royalslider.css
 .DS_Store
 new-old/
+/uploaded/
 /data/
 /static_work/
