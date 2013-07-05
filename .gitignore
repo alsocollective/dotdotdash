@@ -1,0 +1,15 @@
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.pyc
+*.psd
+*.json
+yeaa
+settings.py
+jquery.royalslider.min.js
+royalslider.css
+.DS_Store
+new-old/
+/data/
+/static_work/
