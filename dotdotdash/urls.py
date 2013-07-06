@@ -8,6 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
 	url(r'^$', 'dotdotdash.views.home', name='home'),
 	url(r'^sticky/', 'dotdotdash.views.sticky'),
+    url(r'^projects/(?P<project>[\w|\W]+)/(?P<page>[\w|\W]+)/$', 'dotdotdash.views.projects'),
 	# Examples:
 
     # url(r'^$', 'dotdotdash.views.home', name='home'),

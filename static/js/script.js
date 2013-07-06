@@ -44,7 +44,7 @@ function FadeingObject(element){
 		location = (quoteTop+(quoteSize/2))-scrollLocation;
 		midPoint = screenHeight/2;
 		if(location > midPoint - range && location < midPoint + range){
-			var transparency = ((quoteTop-scrollLocation)/(screenHeight/2))-1;
+			var transparency = (((quoteTop-scrollLocation)/(screenHeight/2))-1)*2;
 			if(transparency < 0){
 				transparency = transparency*(-1);
 			}
