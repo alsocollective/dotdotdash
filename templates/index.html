@@ -2,9 +2,18 @@
 
 {% block css %}
 <link rel="stylesheet" type="text/css" href="/../static/css/style.css">
+<link href="http://vjs.zencdn.net/4.0/video-js.css" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
+<div id="backgroundVideo">
+	<video id="bkvid" class="video-js vjs-default-skin" controls preload="auto" width="100%" height="100%" poster="http://video-js.zencoder.com/oceans-clip.png" data-setup=''>
+	<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+	<source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+	<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+	</video>
+</div>
+
 <nav>
 	<img src="/../static/assests/logo.png">
 	<ul id="stickNav">
@@ -37,40 +46,16 @@
 <section id="services">
 	<div id="servicebackgrounds">
 		<div class="backgroundImage"  style="background-image: url('/../static/uploaded/{{services.services.image}}')"></div>
-		<div class="backgroundImage noshow"  style="background-image: url('/../static/uploaded/{{services.smsp.image}}')"></div>
-		<div class="backgroundImage noshow"  style="background-image: url('/../static/uploaded/{{services.branding.image}}')"></div>
-		<div class="backgroundImage noshow"  style="background-image: url('/../static/uploaded/{{services.research.image}}')"></div>
-		<div class="backgroundImage noshow"  style="background-image: url('/../static/uploaded/{{services.creativedev.image}}')"></div>
-		<div class="backgroundImage noshow"  style="background-image: url('/../static/uploaded/{{services.contentproduction.image}}')"></div>
-		<div class="backgroundImage noshow"  style="background-image: url('/../static/uploaded/{{services.resultsanalytics.image}}')"></div>
+		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.smsp.image}}')"></div>
+		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.branding.image}}')"></div>
+		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.research.image}}')"></div>
+		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.creativedev.image}}')"></div>
+		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.contentproduction.image}}')"></div>
+		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.resultsanalytics.image}}')"></div>
 	</div>
-	<div id="servicescontent" class="servicesection">
+	<div id="servicescontent">
 		<h3>Services</h3>
 		<p>{{services.services.text|safe}}</p>
-	</div>
-	<div id="smsp" class="servicesection noshow">
-		<h3>Social Media Strategy Planning</h3>
-		<p>{{services.smsp.text|safe}}</p>
-	</div>
-	<div id="branding" class="servicesection noshow">
-		<h3>Branding</h3>
-		<p>{{services.branding.text|safe}}</p>
-	</div>
-	<div id="research" class="servicesection noshow">
-		<h3>research</h3>
-		<p>{{services.research.text|safe}}</p>
-	</div>
-	<div id="creativedev" class="servicesection noshow">
-		<h3>Creative Development</h3>
-		<p>{{services.creativedev.text|safe}}</p>
-	</div>
-	<div id="contentproduction" class="servicesection noshow">
-		<h3>Content Production</h3>
-		<p>{{services.contentproduction.text|safe}}</p>
-	</div>
-	<div id="resultsanalytics" class="servicesection noshow">
-		<h3>Results Analytics</h3>
-		<p>{{services.resultsanalytics.text|safe}}</p>
 	</div>
 	<div id="buttoncontainer">
 		<a href="#smsp" id="smsp"><img src="/../static/assests/social.png"></a>
@@ -79,6 +64,30 @@
 		<a href="#creativedev" id="creativedev"><img src="/../static/assests/creative.png"></a>
 		<a href="#contentproduction" id="contentproduction"><img src="/../static/assests/content.png"></a>
 		<a href="#resultsanalytics" id="resultsanalytics"><img src="/../static/assests/analytics.png"></a>
+	</div>
+	<div id="smsp" class="servicesection textnoshow">
+		<h3>Social Media Strategy Planning</h3>
+		<p>{{services.smsp.text|safe}}</p>
+	</div>
+	<div id="branding" class="servicesection textnoshow">
+		<h3>Branding</h3>
+		<p>{{services.branding.text|safe}}</p>
+	</div>
+	<div id="research" class="servicesection textnoshow">
+		<h3>research</h3>
+		<p>{{services.research.text|safe}}</p>
+	</div>
+	<div id="creativedev" class="servicesection textnoshow">
+		<h3>Creative Development</h3>
+		<p>{{services.creativedev.text|safe}}</p>
+	</div>
+	<div id="contentproduction" class="servicesection textnoshow">
+		<h3>Content Production</h3>
+		<p>{{services.contentproduction.text|safe}}</p>
+	</div>
+	<div id="resultsanalytics" class="servicesection textnoshow">
+		<h3>Results Analytics</h3>
+		<p>{{services.resultsanalytics.text|safe}}</p>
 	</div>
 </section>
 <!-- {{services}} -->
@@ -119,85 +128,15 @@
 <script src="/../static/js/waypoints-sticky.js"></script>
 <script src="/../static/js/script.js"></script>
 
+<script src="http://vjs.zencdn.net/4.0/video.js"></script>
+
+
+
 <script type="text/javascript">
-//sticky elements
-$("#stickNav").waypoint('sticky');
-$('.backgroundImage').waypoint('sticky',{
-	wrapper: '<div class="background-wrapper" />',
-});
-
-//scrolling effect for nav
-softScroll("aboutLink","about")
-softScroll("serviceLink","services")
-softScroll("clientsLink","clients")
-softScroll("ourWorkLink","work")
-softScroll("contactLink","contact")
-
-//fading quotes
-var fadingElement = [
-	new FadeingObject("quote1"),
-	new FadeingObject("quote2")
-]
-
-var scrollLocation = $(document).scrollTop();
-
-function fadingResized(){
-	for(var a = 0; a < fadingElement.length; ++a){
-		fadingElement[a].resized();
-		fadingElement[a].makeFade(scrollLocation,200);
-	}
-}
-fadingResized();
-
-
-
-
-$(window).scroll(function(eForEvent){
-	scrollLocation = $(document).scrollTop();
-	for(var a = 0; a < fadingElement.length; ++a){
-		fadingElement[a].makeFade(scrollLocation,200);
-	}
-});
-
-$(window).bind("resize",function(){
-	fadingResized();
-	windowHeight = $(window).height();
-	for(var a =0; a < serviceBackgrounds.length; ++a){
-		serviceBackgrounds[a].style.height = windowHeight;
-	}
-});
-
-var serviceSection= $(".servicesection");
-var serviceBackgrounds = $("#servicebackgrounds").children();
-var windowHeight = $(window).height();
-for(var a =0; a < serviceBackgrounds.length; ++a){
-	serviceBackgrounds[a] = $(serviceBackgrounds[a]).children()[0];
-	serviceBackgrounds[a].style.height = windowHeight;
-}
-
-var buttons = $("#buttoncontainer").children();
-
-buttons.each(function(index){
-	$(buttons[index]).click(function(){
-		event.preventDefault();
-		hideServicesBut(this);
+	videojs("bkvid",{"example_option":true,"autoplay": true,"controls":false,"loop": "true"}).ready(function(){
+		var myPlayer = this;
+		myPlayer.volume(0);
 	});
-
-})
-
-
-function hideServicesBut(thisEl){
-	serviceSection.each(function(index){
-		if(serviceSection[index].id == thisEl.id){
-			$(serviceSection[index]).removeClass("noshow");
-			$(serviceBackgrounds[index]).removeClass("noshow");
-		} else if(!$(serviceSection[index]).hasClass("noshow")){
-			$(serviceSection[index]).addClass("noshow");
-			$(serviceBackgrounds[index]).addClass("noshow");
-		}
-	});
-}
-
 </script>
 
 {% endblock %}

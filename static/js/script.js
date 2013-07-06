@@ -1,6 +1,102 @@
 
 var useOpacity = (typeof document.createElement("div").style.opacity != 'undefined');
 
+
+//sticky elements
+$("#stickNav").waypoint('sticky');
+$('.backgroundImage').waypoint('sticky',{
+	wrapper: '<div class="background-wrapper" />',
+});
+
+//scrolling effect for nav
+softScroll("aboutLink","about")
+softScroll("serviceLink","services")
+softScroll("clientsLink","clients")
+softScroll("ourWorkLink","work")
+softScroll("contactLink","contact")
+
+//fading quotes
+var fadingElement = [
+	new FadeingObject("quote1"),
+	new FadeingObject("quote2")
+]
+
+var scrollLocation = $(document).scrollTop();
+
+function fadingResized(){
+	for(var a = 0; a < fadingElement.length; ++a){
+		fadingElement[a].resized();
+		fadingElement[a].makeFade(scrollLocation,200);
+	}
+}
+fadingResized();
+
+$(window).scroll(function(eForEvent){
+	scrollLocation = $(document).scrollTop();
+	for(var a = 0; a < fadingElement.length; ++a){
+		fadingElement[a].makeFade(scrollLocation,200);
+	}
+});
+
+$(window).bind("resize",function(){
+	fadingResized();
+	windowHeight = $(window).height();
+	document.getElementById('servicebackgrounds').style.height = windowHeight;
+});
+var serviceSection= $(".servicesection");
+var serviceBackgrounds = $("#servicebackgrounds").children();
+var windowHeight = $(window).height();
+document.getElementById('servicebackgrounds').style.height = windowHeight;
+
+for(var a =0; a < serviceBackgrounds.length; ++a){
+	serviceBackgrounds[a] = $(serviceBackgrounds[a]).children()[0];
+}
+
+var buttons = $("#buttoncontainer").children();
+var buttonsClicked = false;
+
+buttons.each(function(index){
+	$(buttons[index]).click(function(){
+		event.preventDefault();
+		hideServicesBut(this);
+	});
+
+})
+
+function hideServicesBut(thisEl){
+	var first = true;
+	serviceSection.each(function(index){
+		if(serviceSection[index].id == thisEl.id){
+			if($(serviceSection[index]).hasClass("textnoshow")){
+				if(first && buttonsClicked){
+					$(serviceBackgrounds[index]).fadeIn(0);
+					first = false;
+				} else {
+					$(serviceBackgrounds[index]).fadeIn(1000);
+					if(!buttonsClicked){
+						buttonsClicked = true;
+					}
+				}
+			}
+
+			$(serviceSection[index]).removeClass("textnoshow");
+		} else if(!$(serviceSection[index]).hasClass("textnoshow")){
+			$(serviceSection[index]).addClass("textnoshow");
+			if(first){
+				setTimeout(function(){
+					$(serviceBackgrounds[index]).fadeOut(0)
+				},1000)
+				first = false;
+			} else {
+				$(serviceBackgrounds[index]).fadeOut(1000)
+			}
+		}
+	});
+}
+
+
+
+
 // Element, Element -> EventListener
 //element one is the object that is click to scroll to element two
 function softScroll(click, endup){
@@ -57,4 +153,3 @@ function FadeingObject(element){
 		}
 	}
 }
-
