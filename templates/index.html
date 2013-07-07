@@ -3,6 +3,8 @@
 {% block css %}
 <link rel="stylesheet" type="text/css" href="/../static/css/style.css">
 <link href="http://vjs.zencdn.net/4.0/video-js.css" rel="stylesheet">
+<link rel="stylesheet" href="/../static/css/royalslider.css">
+<link rel="stylesheet" href="/../static/css/rs-default.css">
 {% endblock %}
 
 {% block content %}
@@ -32,7 +34,6 @@
 <!-- do not add spaces between these elements -->
 <section class="quote"><div id="quote1">{{home.q1|safe}}</div></section>
 <section class="quote"><div id="quote2">{{home.q2|safe}}</div></section>
-<!-- {{home}} -->
 
 <section id="about">
 	<div class="backgroundImage"  style="background-image: url('/../static/uploaded/{{about.bkImg}}')"></div>
@@ -41,7 +42,6 @@
 	<h1>Process</h1>
 	<p>{{about.process|safe}}</p>
 </section>
-<!-- {{about}} -->
 
 <section id="services">
 	<div id="servicebackgrounds">
@@ -90,7 +90,6 @@
 		<p>{{services.resultsanalytics.text|safe}}</p>
 	</div>
 </section>
-<!-- {{services}} -->
 
 <section id="clients">
 	<h1>Clients</h1>
@@ -101,11 +100,28 @@
 		{% endfor %}
 	</div>
 </section>
-<!-- {{clients}} -->
 
 <section id="work">
+	<script type="text/javascript">
+	var works = {
+		{%for project in work%}
+
+		"{{project.slug}}":{
+			"slug":"{{project.slug}}",
+			"Links":[
+			{%for page in project.pages%}
+				"projects/{{project.slug}}/{{page.slug}}/",
+			{%endfor%}
+			]
+		},
+		{%endfor%}
+	}
+	</script>
+
+
 {% for project in work %}
-	<div>
+	<!-- which ever element has the class .project and id of the slug will be what is clickable to get royalslider of the project, THE id and project class are to be kept together -->
+	<div class="project" id="{{project.slug}}">
 		<h2>{{project.title}}</h2>
 		<h3>{{project.subtitle}}</h3>
 		<p>{{project.description}}</p>
@@ -127,6 +143,8 @@
 <script src="/../static/js/waypoints.min.js"></script>
 <script src="/../static/js/waypoints-sticky.js"></script>
 <script src="/../static/js/script.js"></script>
+<script src="/../static/js/jquery.royalslider.min.js"></script>
+
 
 <script src="http://vjs.zencdn.net/4.0/video.js"></script>
 

@@ -153,3 +153,62 @@ function FadeingObject(element){
 		}
 	}
 }
+
+
+$(".project").click(function(event){
+	console.log("clicked",this);
+	event.preventDefault()
+	var workToShow = works[this.id];
+	console.log(works);
+
+	var rsSlider = document.createElement("div");
+	rsSlider.style.left = "100%";
+	rsSlider.setAttribute("class","royalSlider");
+	document.body.appendChild(rsSlider);
+
+	var backButton = document.createElement("a");
+	backButton.innerHTML = "Back";
+	backButton.style.left = "105%";
+	backButton.id = "rsbackButton";
+	$(backButton).click(function(){
+		rsSlider.style.left = "100%";
+		backButton.style.left = "105%";
+		setTimeout(function(){
+			rsSlider.parentNode.removeChild(rsSlider);
+			backButton.parentNode.removeChild(backButton);
+		},1000);
+	});
+	document.body.appendChild(backButton);
+
+	rsSlider.innerHTML = "";
+	var newElement = document.createElement("div");
+	newElement.setAttribute("class","rsContent");
+
+	var numberofslides = workToShow["Links"].length;
+	for(var a = 0; a < numberofslides; ++a){
+		var temp = newElement.cloneNode(true)
+		temp.innerHTML += "  " + a;
+		rsSlider.appendChild(temp);
+	}
+
+	var rsSliderChildren = rsSlider.childNodes;
+
+	$(rsSliderChildren[0]).load(workToShow["Links"][0],function(){
+		with(rsSlider.style){
+			left = "0%";
+		}
+		backButton.style.left = "5%";
+
+		for(var a = 1; a < rsSliderChildren.length; ++a){
+			$(rsSliderChildren[a]).load(workToShow["Links"][a]);
+		}
+
+		$(".royalSlider").royalSlider({
+			// options go here
+			// as an example, enable keyboard arrows nav
+			keyboardNavEnabled: true
+		});
+	});
+
+
+});

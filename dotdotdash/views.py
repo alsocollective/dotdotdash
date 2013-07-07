@@ -22,7 +22,14 @@ def home(request):
 	work = Work.objects.all()
 	workout = []
 	for project in work:
-		workout.append({"title":project.title ,"subtitle":project.subTitle,"description":project.description})
+		print project.pages.all()
+		workout.append({
+			"title":project.title,
+			"slug":project.slug,
+			"subtitle":project.subTitle,
+			"description":project.description,
+			"pages":getPages(project.pages.all())
+			})
 
 	contact = Contact.objects.all()[0]
 	contactout = {"text":contact.contant}
@@ -35,6 +42,12 @@ def home(request):
 		"work":workout,
 		"contact":contactout,
 		})
+
+def getPages(wlist):
+	pages = []
+	for page in wlist:
+		pages.append({"slug":page.slug})
+	return pages
 
 def getClients(clist):
 	out = []
@@ -51,35 +64,33 @@ def getBkImg(imageIn):
 def sticky(request):
 	return render_to_response('sticky.html',{"none":"none"})
 
-
+def getImages(listIn):
+	mediaList = []
+	for media in listIn:
+		mediaObj = {
+			"location":media.title,
+			"description":media.description,
+			"link":media.link,
+			"vimeo":media.vimeo}
+		mediaList.append(mediaObj)
+	return ({"media":mediaList})
 
 
 def projects(request,project=None,page=None):
 	if(project == None or page == None):
 		return render_to_response("basic.html",{"none":"data"})
 
+	article = []
+	pageObj = []
+	pageType = "text"
+	project = Work.objects.filter(slug = project)[0]
+	page = project.pages.filter(slug = page)[0]
+	pageout = {
+		"title":page.title,
+		"text":page.textFields,
+		"video":page.videoURL,
+		"slug":page.slug
+		}
+	pageout.update(getImages(page.mediaField.all()))
 
-	# work = Category.objects.filter(slug = "work")[0]
-
-	# article = work.articleFields.filter(slug = project)
-	# if(len(article) <= 0):
-	# 	return render_to_response("basic.html",{"none":"data"})
-
-	# pages = article[0].pages.filter(slug = page)
-	# if(len(pages) <= 0):
-	# 	return render_to_response("basic.html",{"none":"data"})
-	# pages = pages[0]
-
-	# pageObj = {"title":pages.title}
-	# pageType = pages.pageType;
-
-	# if(pageType == "imageWText"):
-	# 	pageObj.update(getText(pages.textFields.all()))
-	# 	if pages.videoURL:
-	# 		pageObj.update({"vidLink":pages.videoURL})
-	# 	pageObj.update(getImages(pages.mediaField.all()))
-	# if(pageType == "fourImage" or pageType == "singleImage"):
-	# 	pageObj.update(getImages(pages.mediaField.all()))
-
-
-	return render_to_response("%s.html"%pageType,{"project":article,"content":pageObj})
+	return render_to_response("%s.html"%pageType,{"project":article,"content":pageout})

@@ -12,6 +12,7 @@ section{
 	position: relative;
 }
 
+/*this is just for me to see the text*/
 p{
 	position: relative;
 	background-color: rgba(255,255,255,0.8);
@@ -19,6 +20,7 @@ p{
 }
 
 
+/*for layering of the content all ements must be relative to work*/
 nav{
 	position: relative;
 }
@@ -31,21 +33,19 @@ div{
 
 
 /*// background stuff //*/
+/* still need to make the video full screen */
 #backgroundVideo{
 	width: 100%;
 	height: 100%;
-	/*position: fixed;*/
 	position: absolute;
-	/*z-index: -2;*/
 }
 #bkvid{
 	position: fixed;
-/*	z-index: 0;*/
-/*	z-index: -1;*/
 }
+
 #stickNav{
 	/*do not add margin to this element*/
-	z-index: 1 !important;
+	z-index: 2 !important;
 	margin: 0px;
 }
 
@@ -58,32 +58,34 @@ div{
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-/*	z-index: -1;*/
 }
 .background-wrapper{
 	position: absolute;
 	width: 100% ;
 	height: 100% !important;
-	/*z-index: -1;*/
 }
 .stuck{
 	position: fixed;
 	top: 0;
-	/*z-index: -1;*/
 }
 
 
-#services div{
+
+
+/*// servicesection stuff //*/
+
+.servicesection{
+	/*for css to work this must be a height*/
+	height: 200px;
+	overflow: hidden;
 	-webkit-transition: height 1s;
 	-moz-transition: height 1s;
 	-ms-transition: height 1s;
 	-o-transition: height 1s;
 	transition: height 1s;
-
 }
-.servicesection{
-	height: 200px;
-	overflow: hidden;
+.textnoshow{
+	height: 0px;
 }
 
 #servicebackgrounds{
@@ -92,29 +94,7 @@ div{
 	left: 0;
 	width: 100%;
 }
-
-#services a{
-	display: inline-block;
-	width: 200px;
-	height: 200px;
-	overflow: hidden;
-}
-
-#services img{
-	width: 100%;
-}
-
-.textnoshow{
-	height: 0px;
-}
-
-.noopacity{
-	opacity: 0;
-	filter:alpha(opacity=0);
-}
 .bknoshow{
-	/*opacity: 0;
-	filter:alpha(opacity=0);*/
 	display: none;
 }
 
