@@ -1,11 +1,12 @@
 
 var useOpacity = (typeof document.createElement("div").style.opacity != 'undefined');
 
-
+bttonsHeight();
 //sticky elements
 $("#stickNav").waypoint('sticky');
 $('.backgroundImage').waypoint('sticky',{
 	wrapper: '<div class="background-wrapper" />',
+	video: $("#bkvid")[0]
 });
 
 //scrolling effect for nav
@@ -30,7 +31,6 @@ function fadingResized(){
 	}
 }
 fadingResized();
-
 $(window).scroll(function(eForEvent){
 	scrollLocation = $(document).scrollTop();
 	for(var a = 0; a < fadingElement.length; ++a){
@@ -39,9 +39,10 @@ $(window).scroll(function(eForEvent){
 });
 
 $(window).bind("resize",function(){
+	bttonsHeight();
 	fadingResized();
-	windowHeight = $(window).height();
 	document.getElementById('servicebackgrounds').style.height = windowHeight;
+
 });
 var serviceSection= $(".servicesection");
 var serviceBackgrounds = $("#servicebackgrounds").children();
@@ -56,12 +57,20 @@ var buttons = $("#buttoncontainer").children();
 var buttonsClicked = false;
 
 buttons.each(function(index){
-	$(buttons[index]).click(function(){
+	$(buttons[index]).click(function(event){
 		event.preventDefault();
 		hideServicesBut(this);
 	});
 
 })
+
+function bttonsHeight(){
+	var bkImages = $(".backgroundImage");
+	windowHeight = $(window).height();
+	bkImages.each(function(index){
+		bkImages[index].style.height = windowHeight+"px";
+	})
+}
 
 function hideServicesBut(thisEl){
 	var first = true;
@@ -72,7 +81,7 @@ function hideServicesBut(thisEl){
 					$(serviceBackgrounds[index]).fadeIn(0);
 					first = false;
 				} else {
-					$(serviceBackgrounds[index]).fadeIn(1000);
+					$(serviceBackgrounds[index]).fadeIn(500);
 					if(!buttonsClicked){
 						buttonsClicked = true;
 					}
@@ -88,7 +97,7 @@ function hideServicesBut(thisEl){
 				},1000)
 				first = false;
 			} else {
-				$(serviceBackgrounds[index]).fadeOut(1000)
+				$(serviceBackgrounds[index]).fadeOut(500)
 			}
 		}
 	});
