@@ -2,7 +2,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from dotdotdash.models import *
 
 def home(request):
-	if(not request.mobile):
+	if(request.mobile):
 		return render_to_response("mobile/index.html",getHome())
 	homeout = getHome()
 	aboutout = getAbout()
@@ -139,6 +139,7 @@ def clients(request):
 	return render_to_response('mobile/clients.html',getClients())
 
 def services(request):
+	print getServices()
 	return render_to_response('mobile/services.html',getServices())
 
 def work(request):

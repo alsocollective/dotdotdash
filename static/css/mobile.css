@@ -1,4 +1,75 @@
 /* CUSTOM OVERRIDES FOR JQUERY MOBILE */
+
+.ui-content {
+	padding: 0;
+}
+
+.ui-mobile .ui-header, .ui-mobile .ui-footer {
+	background-color: #f00;
+	height: 2.5em;
+}
+
+.ui-grid-d > :nth-child(n) {
+	width: auto;
+}
+
+.ui-grid-d a{
+	text-decoration: none;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+.ui-btn-inner {
+	padding: 0 0.4em 0 0.4em !important;
+}
+
+#containerAbout div{
+	background-color:#fff;
+	margin: 14em 0 14em 0;
+	box-shadow: 0px 3px 10px #000;
+	padding: 0.5em 1em 0.5em 1em;
+}
+
+h1, h2 {
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+h3 {
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+#services img{
+	width: 150px;
+	position: relative;
+	top: 4em;
+	left: 25%;
+	right: 5%;
+}
+
+#services div {
+	text-align: center;
+	margin: 0 0 3em 0;
+	background-color: #fff;
+	padding: 3em 1em 0.5em 1em;
+}
+
+#services h3 {
+	display: none;
+}
+
+p {
+	font-family: courier;
+	line-height: 1.6em;
+	text-align: left;
+}
+
+
 /*
 .ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
 	font-family: "ff-unit-web-pro", sans-serif !important;
