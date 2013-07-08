@@ -15,12 +15,13 @@
 		<!--For Mobile Devices-->
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-	    <link rel="stylesheet" href="/../static/css/jquery.mobile-1.3.1.min.css">
+	    <link rel="stylesheet" href="/../static/css/jquery.mobile.structure-1.3.1.css">
+	    <!-- <link rel="stylesheet" href="/../static/css/jquery.mobile-1.3.1.min.css"> -->
+
 	    <script src="/../static/js/jquery.min.js"></script>
 	    <script src="/../static/js/jquery.mobile-1.3.1.min.js"></script>
 
 		<link rel="stylesheet" href="/static/css/mobile.css">
-		<!--<link rel="stylesheet" href="/static/m/css/jquery.mobile-1.3.1.css">-->
 
 	</head>
 
@@ -28,34 +29,24 @@
 
 <div data-role="page" id="page1" class="{% block pagename %}{% endblock %}">
 
-  <div data-role="header">
-<!--     <a href="#defaultpanel" data-icon="bars" data-shadow="false" data-theme="c" data-corners="false">Menu</a> -->
-	<a href="#defaultpanel" id="top-left">&#8801; Menu</a>
+  <div data-role="footer" data-position="fixed" data-id="myNav">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="/" data-transition="fade">Home</a></li><li>
+			<a href="/about/" data-transition="fade">About</a></li><li>
+			<a href="/services/" data-transition="fade">Services</a></li><li>
+			<a href="/clients/" data-transition="fade">Clients</a></li><li>
+			<a href="/work/" data-transition="fade">Work</a></li>
+		</ul>
+	</div>
   </div>
 
-<div data-role="panel" id="defaultpanel" data-enhance="false">
-	<div class="panel-content">
-
-		<ul id="nav">
-			<li><a href="/" id="nav-about" data-transition="slide" class="nav-inactive">Home</a></li><li>
-			<a href="/about/" id="nav-about" data-transition="slide" class="nav-inactive">About</a></li><li>
-			<a href="/services/" id="nav-schedule" data-transition="slide" class="nav-inactive">Services</a></li><li>
-			<a href="/clients/" id="nav-sponsors" data-transition="slide" class="nav-inactive">Clients</a></li><li>
-			<a href="/work/" id="nav-videos" data-transition="slide" class="nav-inactive">Work</a></li>
-		</ul>
-
-      </div>
-    </div>
-
-
 <div data-role="content" data-enhance="false">
-
 	{% block content %}
 
 
 
 	{% endblock %}
-
 </div>
 
 
