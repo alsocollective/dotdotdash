@@ -19,23 +19,41 @@ home
 		-o-background-size: cover;
 		background-size: cover;
 		padding: 0;
-		z-index: -1;
+		/*z-index: -1;*/
 	}
 </style>
 
 
-<div class="table">
+
+<img class="logo" src="/../static/assets/logo.png">
+<div class="table fixed">
 	<div class="center">
-		<img class="logo" src="/../static/assets/logo.png">
-		<div id="quotes">
 		<h1 class="quote">
 			{{q1}}
 		</h1>
-		</div>
+		<h1 class="quote">
+			{{q2}}
+		</h1>
 	</div>
 </div>
 
 
 <div class="background"></div>
-
+<script type="text/javascript">
+	window.onload = function() {
+		var quotes = $(".quote");
+		var displayed = false;
+		quotes.each(function(index){
+			if(Math.random()>1/quotes.length && !displayed){
+				console.log("displayed",quotes[index]);
+				quotes[index].style.display = "inline-block";
+				displayed = true;
+			}
+			if(index == quotes.length-1 && !displayed){
+				console.log("displayed",quotes[index]);
+				quotes[index].style.display = "inline-block";
+			}
+		});
+	}
+</script>
 {% endblock %}

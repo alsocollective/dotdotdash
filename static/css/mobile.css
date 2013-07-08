@@ -93,7 +93,7 @@ body{
 }
 
 h1{
-	text-align: center;
+	text-align: left;
 }
 
 p{
@@ -137,12 +137,17 @@ img{
 	width: 100%;
 }
 
+.fixed{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
 .logo{
-	width: 80%;
+	width: 90%;
 	height: auto;
-	background-color: #fff;
-	margin: 0 5% 0 5%;
-	padding: 5%;
+	margin-top: 20%;
 }
 
 .center{
@@ -153,7 +158,7 @@ img{
 
 .quote{
 	padding-top: 1em;
-	color: #fff;
+	color: #333;
 	display: none;
 }
 
@@ -161,5 +166,4 @@ img{
 	text-align: center;
 	display: inline-block;
 	vertical-align: middle;
-}
-*/
+}*/
