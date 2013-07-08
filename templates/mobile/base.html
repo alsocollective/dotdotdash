@@ -29,12 +29,16 @@
 	
 <div data-role="page" id="page1" class="{% block pagename %}{% endblock %}">
 	
-	<div data-role="header">
-		<a href="#defaultpanel" id="top-left">&#8801; Menu</a>
-	</div> 
+    <div data-role="header">
+      <!--<a href="#defaultpanel" data-icon="bars" data-shadow="false" data-theme="c" data-corners="false">Menu</a>-->
+  	<a href="#defaultpanel" id="top-left">&#8801; Menu</a>
+    </div>
 
-  <div data-role="panel" id="defaultpanel" data-position="left" data-display="overlay" data-dismissible="true" data-theme="a" class="ui-panel ui-panel-position-left ui-panel-display-overlay ui-body-a ui-panel-animate ui-panel-open">
-	<div class="panel-content">
+    <!-- defaultpanel  -->
+      <div data-role="panel" id="defaultpanel" data-theme="a" data-display="overlay">
+ 
+        <div class="panel-content">
+
 		<ul>
 			<li><a href="/" data-transition="slide">Home</a></li><li>
 			<a href="/about/" data-transition="slide">About</a></li><li>
@@ -44,13 +48,6 @@
 		</ul>
 	</div>
   </div>
-	
-      <div class="ui-panel-inner"><h3>Left Panel: Overlay</h3><p>This panel is positioned on the left with the overlay display mode. The panel markup is <em>after</em> the header, content and footer in the source order.</p><p>To close, click off the panel, swipe left or right, hit the Esc key, or use the button below:</p><a href="#demo-links" data-rel="close" data-role="button" data-theme="a" data-icon="delete" data-inline="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-inline ui-btn-icon-left ui-btn-up-a"><span class="ui-btn-inner"><span class="ui-btn-text">Close panel</span><span class="ui-icon ui-icon-delete ui-icon-shadow">&nbsp;</span></span></a></div>
-    
-    
-    
-	
-</div>
 
 
 <div data-role="content" data-enhance="false">

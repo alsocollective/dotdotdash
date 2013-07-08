@@ -5,7 +5,7 @@
 }
 
 .ui-mobile .ui-header, .ui-mobile .ui-footer {
-	background-color: #f00;
+	background-color: #fff;
 	height: 2.5em;
 }
 
@@ -22,6 +22,21 @@
 .ui-btn-inner {
 	padding: 0 0.4em 0 0.4em !important;
 }
+
+.ui-panel {
+	background-color: #fff;
+}
+
+.ui-panel {
+width: 17em;
+min-height: 7%;
+max-height: none;
+border-width: 0;
+position: absolute;
+top: 0;
+display: block;
+}
+
 
 #containerAbout div{
 	background-color:#fff;
@@ -46,15 +61,23 @@ h3 {
 
 #services img{
 	width: 150px;
-	position: relative;
-	top: 4em;
-	left: 25%;
-	right: 5%;
 }
 
-#services div {
+.service-image {
+	text-align: center;
+	position: relative;
+	top: 3em;
+	background-color: none;
+}
+
+.servicesContainer {
 	text-align: center;
 	margin: 0 0 3em 0;
+	background-color: #fff;
+	padding: 3em 1em 0.5em 1em;
+}
+
+.services-intro {
 	background-color: #fff;
 	padding: 3em 1em 0.5em 1em;
 }
