@@ -37,10 +37,21 @@
 
 <section id="about">
 	<div class="backgroundImage"  style="background-image: url('/../static/uploaded/{{about.bkImg}}')"></div>
-	<h1>About</h1>
-	<p>{{about.about|safe}}</p>
-	<h1>Process</h1>
-	<p>{{about.process|safe}}</p>
+	
+	<div class="sub-section">
+		<h1>About</h1>
+		<div>
+			{{about.about|safe}}
+		</div>
+	</div>
+	
+	<div class="sub-section">
+		<h2>Process</h2>
+		<div>
+			{{about.process|safe}}
+		</div>
+	</div>
+
 </section>
 
 <section id="services">
@@ -54,7 +65,7 @@
 		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.resultsanalytics.image}}')"></div>
 	</div>
 	<div id="servicescontent">
-		<h3>Services</h3>
+		<h1>Services</h1>
 		<p>{{services.services.text|safe}}</p>
 	</div>
 	<div id="buttoncontainer">
@@ -66,27 +77,27 @@
 		<a href="#resultsanalytics" id="resultsanalytics"><img src="/../static/assets/analytics.png"></a>
 	</div>
 	<div id="smsp" class="servicesection textnoshow">
-		<h3>Social Media Strategy Planning</h3>
+		<h2>Social Media Strategy Planning</h2>
 		<p>{{services.smsp.text|safe}}</p>
 	</div>
 	<div id="branding" class="servicesection textnoshow">
-		<h3>Branding</h3>
+		<h2>Branding</h2>
 		<p>{{services.branding.text|safe}}</p>
 	</div>
 	<div id="research" class="servicesection textnoshow">
-		<h3>research</h3>
+		<h2>research</h2>
 		<p>{{services.research.text|safe}}</p>
 	</div>
 	<div id="creativedev" class="servicesection textnoshow">
-		<h3>Creative Development</h3>
+		<h2>Creative Development</h2>
 		<p>{{services.creativedev.text|safe}}</p>
 	</div>
 	<div id="contentproduction" class="servicesection textnoshow">
-		<h3>Content Production</h3>
+		<h2>Content Production</h2>
 		<p>{{services.contentproduction.text|safe}}</p>
 	</div>
 	<div id="resultsanalytics" class="servicesection textnoshow">
-		<h3>Results Analytics</h3>
+		<h2>Results Analytics</h2>
 		<p>{{services.resultsanalytics.text|safe}}</p>
 	</div>
 </section>
