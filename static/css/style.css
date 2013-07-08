@@ -55,6 +55,7 @@ nav {
 	background-color: #fff;
 	top: 3em;
 	padding: 1em 0 1em 0;
+	z-index: 5;
 }
 
 nav img {
@@ -83,10 +84,10 @@ div{
 }
 
 .sub-section {
-	/*background-color: rgba(255,255,255,0.9);*/
+	background-color: rgba(255,255,255,0.9);
 	background-color: #fff;
-	margin-bottom: 10em;
-	padding: 0.6em 0 1.6em 0;
+/*	margin-bottom: 10em;
+*/	padding: 0.6em 0 1.6em 0;
 	box-shadow: 0px 2px 10px #000;
 }
 
@@ -95,12 +96,6 @@ div{
 }
 
 .sub-section div {
-	columns:100px 2;
-	column-gap: 2.5em;
-	-webkit-columns:100px 2; /* Safari and Chrome */
-	-webkit-column-gap: 2.5em;
-	-moz-columns:100px 2; /* Firefox */
-	-moz-column-gap: 2.5em;
 	width: 80%;
 	margin: 0 auto 0 auto;
 }
@@ -110,6 +105,12 @@ div{
 	margin: 0;
 	margin-bottom: 0.8em;
 	line-height: 1.5em;
+	columns:100px 2;
+	column-gap: 2.5em;
+	-webkit-columns:100px 2; /* Safari and Chrome */
+	-webkit-column-gap: 2.5em;
+	-moz-columns:100px 2; /* Firefox */
+	-moz-column-gap: 2.5em;
 }
 
 h1, h2 {
@@ -128,7 +129,6 @@ h1, h2 {
 }
 
 #bkvid {
-	position: fixed;
 }
 
 #stickNav{
@@ -146,21 +146,32 @@ h1, h2 {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	overflow: hidden;
 }
 
 .background-wrapper{
 	position: absolute;
 	width: 100% ;
-	height: 100% !important;
+	/*height: 100% !important;*/
 }
 
 .stuck{
-	position: fixed;
+	position: fixed !important;
 	top: 0;
 }
 
+.for-space {
+	margin-top: 20em;
+	width: 100%;
+}
 
+#services img{
+	width: 150px;
+}
 
+#clients img{
+	width: 200px;
+}
 
 /*// servicesection stuff //*/
 
@@ -188,3 +199,10 @@ h1, h2 {
 	display: none;
 }
 
+#buttoncontainer {
+	text-align: center;	
+}
+
+#buttoncontainer a{
+	margin: 0 1em 0 1em;
+}

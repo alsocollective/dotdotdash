@@ -45,6 +45,13 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
         if (originalHandler != null) {
           return originalHandler.call(this, direction);
         }
+        if(options.video){
+          //console.log($(window).scrollTop(),options.video.parentNode)
+          if($(this).children()[0].id=="first-background-image"){
+            $(options.video).toggleClass("stuck");
+          }
+          // $("#backgroundVideo")[0].parentNode.removeChild($("#backgroundVideo")[0]);
+        }
       };
       $wrap.waypoint(options);
       return this;
