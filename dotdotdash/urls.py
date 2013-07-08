@@ -19,4 +19,10 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
 	url(r'^admin/', include(admin.site.urls)),
+
+    url(r'^about/$', 'dotdotdash.views.about'),
+    url(r'^services/$', 'dotdotdash.views.services'),
+    url(r'^clients/$', 'dotdotdash.views.clients'),
+    url(r'^work/$', 'dotdotdash.views.work'),
+    url(r'^works/(?P<project>[\w|\W]+)/$', 'dotdotdash.views.works'),
 )

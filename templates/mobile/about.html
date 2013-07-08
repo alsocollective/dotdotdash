@@ -1,0 +1,15 @@
+{% extends "mobile/base.html" %}
+{% block pagename %}
+about
+{% endblock %}
+
+{% block content %}
+	<div id="containerAbout">
+		<h1>About</h1>
+		<p>{{about|safe}}</p>
+		<h2>Process</h2>
+		<p>{{process|safe}}</p>
+		<img src="/../static/uploaded/{{bkImg}}">
+	</div>
+
+{% endblock %}

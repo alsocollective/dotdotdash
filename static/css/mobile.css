@@ -1,0 +1,165 @@
+/* CUSTOM OVERRIDES FOR JQUERY MOBILE */
+/*
+.ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
+	font-family: "ff-unit-web-pro", sans-serif !important;
+}
+
+.ui-body-a, .ui-body-a input, .ui-body-a select, .ui-body-a textarea, .ui-body-a button {
+	font-family: "ff-unit-web-pro", sans-serif !important;
+}
+
+.ui-btn-corner-all {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+.ui-body-c {
+	text-shadow: none !important;
+}
+
+.ui-bar-a {
+	border: none;
+	color: #fff;
+	font-weight: normal;
+	text-shadow: none;
+	background-image: none;
+}
+
+.ui-header, .ui-footer {
+	position: relative;
+	zoom: 1;
+}
+
+.ui-btn-up-a {
+border: 3px solid #fff;
+background: none;
+font-weight: normal;
+color: #fff;
+text-shadow: none;
+background-image: none;
+
+-moz-transition: 0.2s ease-in;
+-webkit-transition: 0.2s ease-in;
+-o-transition: 0.2s ease-in;
+transition: 0.2s ease-in;
+}
+
+.ui-btn-hover-a {
+border: 3px solid #fff;
+background: #333;
+font-weight: normal;
+color: #fff;
+text-shadow: none;
+background-image: none;
+
+-moz-transition: 0.2s ease-in;
+-webkit-transition: 0.2s ease-in;
+-o-transition: 0.2s ease-in;
+transition: 0.2s ease-in;
+}
+
+.ui-btn-text {
+position: relative;
+z-index: 1;
+width: 100%;
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+font-size: 3em;
+}
+
+.ui-header .ui-btn-inner, .ui-footer .ui-btn-inner, .ui-mini .ui-btn-inner, .ui-panel-inner {
+	padding:0;
+}
+
+.ui-panel-display-reveal{
+	background-color: #fcf;
+}
+
+.ui-content{
+	min-height: inherit;
+	padding: 0;
+}*/
+/* JQUERY END */
+/*
+html,body{
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+body{
+}
+
+h1{
+	text-align: center;
+}
+
+p{
+	margin: 0 1em 3em 1em;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+img{
+	width: 100%;
+	height: auto;
+}
+
+#nav {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+#nav li{
+	margin: 0px;
+	padding:  1em 1em 1em 1em;
+	text-align: left;
+}
+
+#nav li:hover{
+	background-color: #fcf;
+}
+
+#nav a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.table{
+	display: table;
+	min-height: inherit;
+	width: 100%;
+}
+
+.logo{
+	width: 80%;
+	height: auto;
+	background-color: #fff;
+	margin: 0 5% 0 5%;
+	padding: 5%;
+}
+
+.center{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.quote{
+	padding-top: 1em;
+	color: #fff;
+	display: none;
+}
+
+.client{
+	text-align: center;
+	display: inline-block;
+	vertical-align: middle;
+}
+*/

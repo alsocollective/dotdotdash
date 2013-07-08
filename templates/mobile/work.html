@@ -1,0 +1,16 @@
+{% extends "mobile/base.html" %}
+{% block pagename %}
+{% endblock %}
+
+{% block content %}
+
+{% for project in work%}
+	<h1><a href="/works/{{project.slug}}/">{{project.title}}</a></h1>
+	<h3>{{project.subtitle}}</h3>
+	<p>
+		{{project.description}}
+	</p>
+	<br>
+{% endfor %}
+
+{% endblock %}

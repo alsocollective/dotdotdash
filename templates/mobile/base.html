@@ -1,0 +1,64 @@
+<!DOCTYPE html lang="en">
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xmlns:x2="http://www.w3.org/2002/06/xhtml2">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Dot-Dot-Dash</title>
+
+		<!--Description, Keywords-->
+		<meta name="description" content="OCAD University’s Faculty of Design is announcing a call for proposals for Urban Ecologies 2013, a conference that will examine the impact of five intersecting themes that are shaping the future of design in our cities.">
+
+		<meta name="keywords" content="Urban Ecologies, 2013, OCAD University, design, Ontario College of Art and Design, conference, TDBank, Toronto Dominion, research, architecture, healthcare, visualization, urban planning, community">
+
+		<!--For Mobile Devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	    <link rel="stylesheet" href="/../static/css/jquery.mobile-1.3.1.min.css">
+	    <script src="/../static/js/jquery.min.js"></script>
+	    <script src="/../static/js/jquery.mobile-1.3.1.min.js"></script>
+
+		<link rel="stylesheet" href="/static/css/mobile.css">
+		<!--<link rel="stylesheet" href="/static/m/css/jquery.mobile-1.3.1.css">-->
+
+	</head>
+
+<body>
+
+<div data-role="page" id="page1" class="{% block pagename %}{% endblock %}">
+
+  <div data-role="header">
+<!--     <a href="#defaultpanel" data-icon="bars" data-shadow="false" data-theme="c" data-corners="false">Menu</a> -->
+	<a href="#defaultpanel" id="top-left">&#8801; Menu</a>
+  </div>
+
+<div data-role="panel" id="defaultpanel" data-enhance="false">
+	<div class="panel-content">
+
+		<ul id="nav">
+			<li><a href="/" id="nav-about" data-transition="slide" class="nav-inactive">Home</a></li><li>
+			<a href="/about/" id="nav-about" data-transition="slide" class="nav-inactive">About</a></li><li>
+			<a href="/services/" id="nav-schedule" data-transition="slide" class="nav-inactive">Services</a></li><li>
+			<a href="/clients/" id="nav-sponsors" data-transition="slide" class="nav-inactive">Clients</a></li><li>
+			<a href="/work/" id="nav-videos" data-transition="slide" class="nav-inactive">Work</a></li>
+		</ul>
+
+      </div>
+    </div>
+
+
+<div data-role="content" data-enhance="false">
+
+	{% block content %}
+
+
+
+	{% endblock %}
+
+</div>
+
+
+</div>
+</body>
+</html>

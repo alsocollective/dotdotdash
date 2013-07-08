@@ -1,0 +1,41 @@
+{% extends "mobile/base.html" %}
+{% block pagename %}
+home
+{% endblock %}
+
+{% block content %}
+<style type="text/css">
+	.background{
+		z-index: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		/*background-image: url("/../static/uploaded/{{text.0.placeHold}}");*/
+		background-position:center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		padding: 0;
+		z-index: -1;
+	}
+</style>
+
+
+<div class="table">
+	<div class="center">
+		<img class="logo" src="/../static/assests/logo.png">
+		<div id="quotes">
+		<h1 class="quote">
+			{{q1}}
+		</h1>
+		</div>
+	</div>
+</div>
+
+
+<div class="background"></div>
+
+{% endblock %}
