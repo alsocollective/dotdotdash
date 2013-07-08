@@ -45,18 +45,24 @@
 		</div>
 	</div>
 	
+	<div class="for-space"></div>
+	
 	<div class="sub-section">
 		<h2>Process</h2>
 		<div>
 			{{about.process|safe}}
 		</div>
 	</div>
+	
+	<div class="for-space"></div>
 
 </section>
 
 <section id="services">
-	<br>
-	<div id="servicebackgrounds">
+	
+	<div class="for-space"></div>
+	
+	<div id="servicebackgrounds"> 
 		<div class="backgroundImage"  style="background-image: url('/../static/uploaded/{{services.services.image}}')"></div>
 		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.smsp.image}}')"></div>
 		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.branding.image}}')"></div>
@@ -65,11 +71,15 @@
 		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.contentproduction.image}}')"></div>
 		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.resultsanalytics.image}}')"></div>
 	</div>
-	<div id="servicescontent">
+	
+	<div id="servicescontent" class="sub-section">
 		<h1>Services</h1>
-		<p>{{services.services.text|safe}}</p>
+		<div>
+			{{services.services.text|safe}}
+		</div>
 	</div>
-	<div id="buttoncontainer">
+	
+	<div id="buttoncontainer"> <!-- This should probably -->
 		<a href="#smsp" id="smsp"><img src="/../static/assets/social.png"></a>
 		<a href="#branding" id="branding"><img src="/../static/assets/branding.png"></a>
 		<a href="#research" id="research"><img src="/../static/assets/research.png"></a>
@@ -142,8 +152,12 @@
 </section>
 
 <section id="contact">
+	
+	<div class="backgroundImage" id="first-background-image" style="background-image: url('/../static/uploaded/{{contact.bkImg}}')"></div>
+	
 	<h1>Contact</h1>
-	{{contact.text}}
+	<p>{{contact.text}}</p>
+	
 </section>
 
 {% endblock %}

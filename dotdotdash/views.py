@@ -11,7 +11,7 @@ def home(request):
 	workout = getWork()
 
 	contact = Contact.objects.all()[0]
-	contactout = {"text":contact.contant}
+	contactout = {"text":contact.contant, "bkImg":contact.backgroundimage}
 
 	return render_to_response('index.html',{
 		"home":homeout,
