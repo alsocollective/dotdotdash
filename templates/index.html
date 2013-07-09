@@ -175,8 +175,9 @@
 <ul>
 {% for project in work %}{% if forloop.last %}<li class="project" id="{{project.slug}}">
 <!-- SOS specifics go in here -->
-	<div><img src="/../static/assets/sos-logo.png"></div>
 	<div>
+		<img src="/../static/assets/sos-logo.png">
+	
 		<h2>{{project.title}}</h2>
 		<h3>{{project.subtitle}}</h3>
 		<!-- AND why is this fixed height?! -->

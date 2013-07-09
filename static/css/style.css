@@ -433,13 +433,18 @@ h1, h2 {
 #sos-projects {
 	margin: 3em auto 0 auto;
 	display: block;
+	text-align: center;
 	width: 40%;
 	/*background-color: #3d3d3d;*/
 	background-color: transparent;
 }
 
-#sos-projects div {
+#sos-projects h2 {
+	text-align: center;
+}
 
+#sos-projects div {
+	text-align: center;
 }
 
 #sos-projects img {
