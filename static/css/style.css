@@ -424,9 +424,26 @@ h1, h2 {
 
 ::selection {
 	background: #248183; /* Safari */
-	}
+}
+
 ::-moz-selection {
 	background: #248183; /* Firefox */
+}
+
+#sos-projects {
+	margin: 3em auto 0 auto;
+	display: block;
+	width: 40%;
+	/*background-color: #3d3d3d;*/
+	background-color: transparent;
+}
+
+#sos-projects div {
+
+}
+
+#sos-projects img {
+	height: 100px;
 }
 
 /* COLOUR PALETTE */
