@@ -4,15 +4,22 @@ function videoEnd(){
 }
 
 var myPlayer;
+var videoLenth = 1000;
 videojs("bkvid",{"example_option":true,"controls":false,"autoplay":true,"preload": "none","loop": "true" }).ready(function(){
 	myPlayer = this;
-	//this.play()
-	myPlayer.volume(0);
-	setTimeout(function(){
-		console.log(myPlayer.currentTime());
-		console.log("this was called");
-	},4000)
-	//myPlayer.addEvent("ended",videoEnd);
+	this.volume(0);
+	videoLenth = myPlayer.duration();
+	setInterval(function(){
+		var currenttime = Math.floor((myPlayer.currentTime()*100))/100
+		if(!videoLenth){
+			videoLenth = Math.floor((myPlayer.duration()*100))/100-0.2;
+		}
+		if(currenttime >= videoLenth){
+			console.log("greater with reset");
+//			myPlayer.play();
+			myPlayer.currentTime(0);
+		}
+	},100)
 });
 
 
