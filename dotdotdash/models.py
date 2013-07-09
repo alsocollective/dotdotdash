@@ -86,7 +86,8 @@ class Page(models.Model):
 		("text","text"),
 		("singleImage","singleImage"),
 		("fourImage","fourImage"),
-		("imageWText","imageWText")
+		("imageWText","imageWText"),
+		("pdf","pdf"),
 	)
 	title = models.CharField(max_length=600)
 	textFields = models.TextField(max_length=1000)
@@ -95,6 +96,7 @@ class Page(models.Model):
 	pageType = models.CharField(max_length=30, choices=pageTypes)
 	slug = models.SlugField(blank=True)
 	order = models.IntegerField(blank=True,default=0)
+	pdf = models.ManyToManyField(MediaNode,blank=True,related_name="pdf+")
 
 	def save(self,*args, **kwargs):
 		self.slug = slugify(self.title)

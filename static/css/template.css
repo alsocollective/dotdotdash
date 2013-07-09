@@ -39,3 +39,27 @@
 	height: 50%;
 	display: inline-block;
 }
+
+.pdf{
+	display: table;
+	height: 400px;
+	width: 75%;
+	text-align: center;
+	background-position:center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0 auto 0 auto;
+}
+.pdf a{
+	display: table-cell;
+	vertical-align: middle;
+	opacity: 0;
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	transition:all 1s ease;
+}
+.pdf:hover a{
+	opacity: 1;
+}

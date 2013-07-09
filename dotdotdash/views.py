@@ -127,6 +127,7 @@ def projects(request,project=None,page=None):
 		"slug":page.slug
 		}
 	pageout.update(getImages(page.mediaField.all()))
+	pageout.update({"pdf":getImages(page.pdf.all())})
 
 	return render_to_response("%s.html"%pageType,{"project":article,"content":pageout})
 
