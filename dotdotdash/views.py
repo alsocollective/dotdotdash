@@ -59,7 +59,8 @@ def getWork():
 			"slug":project.slug,
 			"subtitle":project.subTitle,
 			"description":project.description,
-			"pages":getPages(project.pages.order_by('order').all())
+			"pages":getPages(project.pages.order_by('order').all()),
+			"sos":project.is_a_sos_project,
 			})
 	return workout
 

@@ -113,7 +113,8 @@ class Work(models.Model):
 	datefororder = models.DateField(auto_now=True)
 	slug = models.SlugField(blank=True)
 	order = models.IntegerField(blank=True,default=0)
-
+	is_a_sos_project = models.BooleanField(blank=True)
+	
 	def save(self,*args, **kwargs):
 		self.slug = slugify(self.title)
 		super(Work, self).save(*args, **kwargs)

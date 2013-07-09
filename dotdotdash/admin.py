@@ -16,9 +16,9 @@ class mediaAdmin(admin.ModelAdmin):
 	]
 
 class workAdmin(admin.ModelAdmin):
-	list_display = ('title','order')
+	list_display = ('title','order',"is_a_sos_project")
 	filter_horizontal = ("pages",)
-	fieldsets = [(None,{'fields':["title","subTitle","description","pages"]})]
+	fieldsets = [(None,{'fields':["title","subTitle","description","pages","is_a_sos_project"]})]
 
 admin.site.register(Home)
 admin.site.register(About)
