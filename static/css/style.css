@@ -112,18 +112,29 @@ div{
 	width: 80%;
 	margin: 0 auto 0 auto;
 }
-
-.sub-section p {
-	vertical-align: top;
-	margin: 0;
-	margin-bottom: 0.8em;
-	line-height: 1.5em;
+.about div{
 	columns:100px 2;
 	column-gap: 2.5em;
 	-webkit-columns:100px 2; /* Safari and Chrome */
 	-webkit-column-gap: 2.5em;
 	-moz-columns:100px 2; /* Firefox */
 	-moz-column-gap: 2.5em;
+}
+
+.process p {
+	columns:100px 2;
+	column-gap: 2.5em;
+	-webkit-columns:100px 2; /* Safari and Chrome */
+	-webkit-column-gap: 2.5em;
+	-moz-columns:100px 2; /* Firefox */
+	-moz-column-gap: 2.5em;
+}
+
+.sub-section p {
+	vertical-align: top;
+	margin: 0;
+	margin-bottom: 0.8em;
+	line-height: 1.5em;
 }
 
 h1, h2 {
