@@ -323,17 +323,41 @@ h1, h2 {
 #buttoncontainer {
 	text-align: center;
 	margin: -1.5em;
+	width: 100%;
 }
 
-#buttoncontainer a{
+#buttoncontainer a {
 	margin: 0 1em 0 1em;
 }
 
 
 /* Projects Section */
 
-.project {
-	display: inline-block;
-	width: 3em;
+
+.project h2 {
+	font-size: 1.5em;
 }
 
+#work ul {
+	margin: 0 auto 0 auto;
+	padding: 0;
+	width: 100%;
+}
+
+#work {
+	text-align: center;
+}
+
+.project {
+	display: inline-block;
+	width: 40%;
+	background-color: #fff;
+	height: 9em;
+	margin: 0;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.project:hover {
+	background-color: #248183;
+}

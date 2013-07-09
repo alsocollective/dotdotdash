@@ -163,16 +163,12 @@
 		{%endfor%}
 	}
 	</script>
+<!-- which ever element has the class .project and id of the slug will be what is clickable to get royalslider of the project, THE id and project class are to be kept together -->
 
+<ul>
+{% for project in work %}<li class="project" id="{{project.slug}}"><h2>{{project.title}}</h2><h3>{{project.subtitle}}</h3><p>{{project.description}}</p></li>{% endfor %}
+</ul>
 
-{% for project in work %}
-	<!-- which ever element has the class .project and id of the slug will be what is clickable to get royalslider of the project, THE id and project class are to be kept together -->
-	<div class="project" id="{{project.slug}}">
-		<h2>{{project.title}}</h2>
-		<h3>{{project.subtitle}}</h3>
-		<p>{{project.description}}</p>
-	</div>
-{% endfor %}
 </section>
 
 <section id="contact">
