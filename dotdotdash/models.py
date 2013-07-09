@@ -90,7 +90,7 @@ class Page(models.Model):
 		("pdf","pdf"),
 	)
 	title = models.CharField(max_length=600)
-	textFields = models.TextField(max_length=1000)
+	textFields = models.TextField(max_length=1000,blank=True)
 	mediaField = models.ManyToManyField(MediaNode,blank=True,related_name="images+")
 	videoURL = models.URLField(max_length=800, blank=True)
 	pageType = models.CharField(max_length=30, choices=pageTypes)

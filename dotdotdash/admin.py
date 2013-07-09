@@ -1,6 +1,9 @@
 from django.contrib import admin
 from dotdotdash.models import *
 
+class pageAdmin(admin.ModelAdmin):
+	list_display = ('title','order','pageType')
+
 class mediaAdmin(admin.ModelAdmin):
 	list_display = ('title','description','admin_image')
 
@@ -12,11 +15,16 @@ class mediaAdmin(admin.ModelAdmin):
 			}),
 	]
 
+class workAdmin(admin.ModelAdmin):
+	list_display = ('title','order')
+	filter_horizontal = ("pages",)
+	fieldsets = [(None,{'fields':["title","subTitle","description","pages"]})]
+
 admin.site.register(Home)
 admin.site.register(About)
 admin.site.register(Services)
 admin.site.register(Clients)
 admin.site.register(MediaNode,mediaAdmin)
-admin.site.register(Work)
-admin.site.register(Page)
+admin.site.register(Work,workAdmin)
+admin.site.register(Page,pageAdmin)
 admin.site.register(Contact)
