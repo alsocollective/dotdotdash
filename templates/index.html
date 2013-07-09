@@ -9,19 +9,11 @@
 
 {% block content %}
 <div id="backgroundVideo">
-<<<<<<< HEAD
 	<!-- controls preload="none" -->
 	<video id="bkvid" class="video-js vjs-default-skin stuck" width="100%" height="100%" poster="http://alsocollective.com:8000/vidback2.jpg" data-setup=''>
 	<source src="http://alsocollective.com:8000/vid2.mp4" type='video/mp4' />
 	<source src="http://alsocollective.com:8000/vid2.webm" type='video/webm' />
 	<source src="http://alsocollective.com:8000/vid2.ogv" type='video/ogg' />
-=======
-	<div class="dots"></div>
-	<video id="bkvid" class="video-js vjs-default-skin stuck" controls preload="auto" width="100%" height="100%" poster="http://video-js.zencoder.com/oceans-clip.png" data-setup=''>
-	<source src="http://localhost:8000/static/uploaded/vid2.mp4" type='video/mp4' />
-	<source src="http://localhost:8000/static/uploaded/vid2.webm" type='video/webm' />
-	<source src="http://localhost:8000/static/uploaded/vid2.ogv" type='video/ogg' />
->>>>>>> d317949643d5b59f2b2da6eb10e9b54252563b93
 	</video>
 </div>
 
@@ -181,7 +173,6 @@
 <!-- which ever element has the class .project and id of the slug will be what is clickable to get royalslider of the project, THE id and project class are to be kept together -->
 
 <ul>
-<<<<<<< HEAD
 {% for project in work %}{% if forloop.last %}<li class="project" id="{{project.slug}}">
 <!-- SOS specifics go in here -->
 	<h2>{{project.title}}</h2>
@@ -197,9 +188,6 @@
 	<p>{{project.description}}</p>
 
 </li>{%endif%}{% endfor %}
-=======
-{% for project in work %}<li class="project" id="{{project.slug}}"><div><h2>{{project.title}}</h2><h3>{{project.subtitle}}</h3><p>{{project.description}}</p></div></li>{% endfor %}
->>>>>>> d317949643d5b59f2b2da6eb10e9b54252563b93
 </ul>
 
 <div class="for-space"></div>
