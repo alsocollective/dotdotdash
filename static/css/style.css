@@ -84,10 +84,10 @@ div{
 }
 
 .sub-section {
-	/*background-color: rgba(255,255,255,0.9);*/
-	/*background-color: #fff;*/
-	/*margin-bottom: 10em;*/
-	/*padding: 0.6em 0 1.6em 0;*/
+	background-color: rgba(255,255,255,0.9);
+	background-color: #fff;
+/*	margin-bottom: 10em;
+*/	padding: 0.6em 0 1.6em 0;
 	box-shadow: 0px 2px 10px #000;
 }
 
@@ -160,8 +160,18 @@ h1, h2 {
 	top: 0;
 }
 
+.for-space {
+	margin-top: 20em;
+	width: 100%;
+}
 
+#services img{
+	width: 150px;
+}
 
+#clients img{
+	width: 200px;
+}
 
 /*// servicesection stuff //*/
 
@@ -189,3 +199,10 @@ h1, h2 {
 	display: none;
 }
 
+#buttoncontainer {
+	text-align: center;	
+}
+
+#buttoncontainer a{
+	margin: 0 1em 0 1em;
+}

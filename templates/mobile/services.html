@@ -6,12 +6,12 @@
 {% block content %}
 <style type="text/css">
 	.background{
-		position: absolute;
+		position: fixed;
 		left: 0;
 		top: 0;
 		width: 100%;
 		height: 100%;
-		/*background-image: url("/../static/uploaded/{{placeHold}}");*/
+		background-image: url("/../static/uploaded/{{services.image}}");
 		background-position:center;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
@@ -22,24 +22,57 @@
 	}
 </style>
 
+<section id="services">
+<div class="services-intro">
+	<h1>Services</h1>
+	{{services.text|safe}}
+</div>
 
-<h1>Services</h1>
-<p>{{services.text|safe}}</p>
-<h1>Social Media and Strategy Planning</h1>
-<p>{{smsp.text|safe}}</p>
-<h1>Branding</h1>
-<p>{{branding.text|safe}}</p>
-<h1>Research</h1>
-<p>{{research.text|safe}}</p>
-<h1>Creative Development</h1>
-<p>{{creativedev.text|safe}}</p>
-<h1>Content Production</h1>
-<p>{{contentproduction.text|safe}}</p>
-<h1>Results Analytics</h1>
-<p>{{resultsanalytics.text|safe}}</p>
+<div class="service-image">
+<img src="/../static/assets/social.png">
+</div>
+<div class="servicesContainer">
+	<h3>Social Media and Strategy Planning</h3>
+	{{smsp.text|safe}}
+</div>
+<div class="service-image">
+<img src="/../static/assets/branding.png">
+</div>
+<div class="servicesContainer">
+	<h3>Branding</h3>
+	{{branding.text|safe}}
+</div>
+<div class="service-image">
+<img src="/../static/assets/research.png">
+</div>
+<div class="servicesContainer">
+	<h3>Research</h3>
+	{{research.text|safe}}
+</div>
+<div class="service-image">
+<img src="/../static/assets/creative.png">
+</div>
+<div class="servicesContainer">
+	<h3>Creative Development</h3>
+	{{creativedev.text|safe}}
+</div>
+<div class="service-image">
+<img src="/../static/assets/content.png">
+</div>
+<div class="servicesContainer">
+	<h3>Content Production</h3>
+	{{contentproduction.text|safe}}
+</div>
+<div class="service-image">
+<img src="/../static/assets/analytics.png">
+</div>
+<div class="servicesContainer">
+	<h3>Results Analytics</h3>
+	{{resultsanalytics.text|safe}}
+</div>
 
 
-<div class="background"></div>
+</section>
 
 <script type="text/javascript">
 //$(".background").css({"height":$(window).height()})
