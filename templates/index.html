@@ -2,7 +2,7 @@
 
 {% block css %}
 <link rel="stylesheet" type="text/css" href="/../static/css/style.css">
-<link rel="stylesheet" href="/../static/css/video-js.css">
+<link href="http://vjs.zencdn.net/4.0/video-js.css" rel="stylesheet">
 <link rel="stylesheet" href="/../static/css/royalslider.css">
 <link rel="stylesheet" href="/../static/css/rs-default.css">
 {% endblock %}
@@ -40,7 +40,7 @@
 <section id="about">
 	<div class="backgroundImage" id="first-background-image" style="background-image: url('/../static/uploaded/{{about.bkImg}}')"><div class="dots"></div></div>
 	
-	<div class="sub-section">
+	<div class="sub-section about">
 		<h1>About</h1>
 		<div>
 			{{about.about|safe}}
@@ -49,7 +49,7 @@
 	
 	<div class="for-space"></div>
 	
-	<div class="sub-section">
+	<div class="sub-section process">
 		<h2>Process</h2>
 		<div>
 			{{about.process|safe}}

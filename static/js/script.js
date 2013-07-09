@@ -9,31 +9,6 @@ var videoLenth = 1000;
 videojs("bkvid",{"autoplay":true,"controls":false,"loop": true }).ready(function(){
 	myPlayer = this;
 	this.volume(0);
-	// setTimeout(function(){
-	// 	myPlayer.play();
-	// },200)
-	// this.play();
-	// videoLenth = myPlayer.duration();
-
-	// myPlayer.on("ended",videoEnd);
-	// myPlayer.on("error",videoEnd);
-	// myPlayer.on("pause",videoEnd);
-
-	// setInterval(function(){
-	// 	var currenttime = Math.floor((myPlayer.currentTime()*100))/100
-	// 	if(!videoLenth){
-	// 		videoLenth = Math.floor((myPlayer.duration()*100))/100-0.3;
-	// 	}
-	// 	if(currenttime >= videoLenth){
-	// 		console.log(currenttime,videoLenth);
-	// 		console.log("greater with reset");
-	// 		myPlayer.currentTime(0);
-
-	// 	}
-	// 	// if(currenttime < 10){
-	// 	// 	myPlayer.currentTime(10);
-	// 	// }
-	// },100)
 });
 
 
