@@ -421,3 +421,22 @@ h1, h2 {
 	-moz-transition:all 1s ease;
 	transition:all 1s ease;
 }
+
+::selection {
+	background: #248183; /* Safari */
+	}
+::-moz-selection {
+	background: #248183; /* Firefox */
+}
+
+/* COLOUR PALETTE */
+
+/*
+
+#000000 - Black
+#3d3d3d - Dark Grey Secondary
+#c6c8bb - Grey Secondary
+#248183 - Green Accent
+#d4bf44 - Yellow Accent
+
+*/
