@@ -118,9 +118,9 @@ def projects(request,project=None,page=None):
 
 	article = []
 	pageObj = []
-	pageType = "text"
 	project = Work.objects.filter(slug = project)[0]
 	page = project.pages.filter(slug = page)[0]
+	pageType = page.pageType
 	pageout = {
 		"title":page.title,
 		"text":page.textFields,
