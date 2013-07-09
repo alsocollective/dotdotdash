@@ -17,22 +17,6 @@
 * 
 ******************************/
 
-.royalSlider {
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	z-index: 10;
-	top: 0px;
-	left: -100%;
-	direction: ltr;
-	background-color: rgba(255,255,255,0.8);
-
-	transition: left 1s;
-	-moz-transition: left 1s;
-	-webkit-transition: left 1s;
-	-o-transition: left 1s;
-}
-
 #rsbackButton{
 	position: fixed;
 	left: -105%;
@@ -63,7 +47,7 @@
 *
 ****************/
 
-.rsDefault .rsArrow {
+ .rsArrow {
 	height: 100%;
 	width: 44px;
 	position: absolute;
@@ -71,47 +55,45 @@
 	cursor: pointer;
 	z-index: 21;
 }
-.rsDefault.rsVer .rsArrow {
+.rsVer .rsArrow {
 	width: 100%;
 	height: 44px;
-	
 }
-.rsDefault.rsVer .rsArrowLeft { top: 0; left: 0; }
-.rsDefault.rsVer .rsArrowRight { bottom: 0;  left: 0; }
+.rsVer .rsArrowLeft { top: 0; left: 0; }
+.rsVer .rsArrowRight { bottom: 0;  left: 0; }
 
-.rsDefault.rsHor .rsArrowLeft { left: 0; top: 0; }
-.rsDefault.rsHor .rsArrowRight { right: 0; top:0; }
+.rsHor .rsArrowLeft { left: 0; top: 0; }
+.rsHor .rsArrowRight { right: 0; top:0; }
 
-.rsDefault .rsArrowIcn {		
+.rsArrowIcn {
 	width: 32px;
 	height: 32px;
 	top: 50%;
 	left: 50%;
-	margin-top:-16px;	
+	margin-top:-16px;
 	margin-left: -16px;
 
 	position: absolute;	
-	cursor: pointer;	
+	cursor: pointer;
 	background: url('rs-default.png');
 
 	background-color: #000;
 	background-color: rgba(0,0,0,0.75);
-	*background-color: #000;
+	background-color: #000;
 	
 	border-radius: 2px;
 }
-.rsDefault .rsArrowIcn:hover {
+.rsArrowIcn:hover {
 	background-color: rgba(0,0,0,0.9);
 }
 
-.rsDefault.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
-.rsDefault.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
+.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
+.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
 
-.rsDefault.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
-.rsDefault.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }
+.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
+.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }
 
-.rsDefault .rsArrowDisabled .rsArrowIcn { opacity: .2; filter: alpha(opacity=20);  *display: none; }
-
+.rsArrowDisabled .rsArrowIcn { opacity: .2; filter: alpha(opacity=20);  *display: none; }
 
 /***************
 *
@@ -119,7 +101,7 @@
 *
 ****************/
 
-.rsDefault .rsBullets {
+.rsBullets {
 	position: absolute;
 	z-index: 35;
 	left: 0;
@@ -128,22 +110,22 @@
 	height: auto;
 	margin: 0 auto; 
 
-	background: #000;
-	background: rgba(0,0,0,0.75);
+	/*background: #000;*/
+	/*background: rgba(0,0,0,0.75);*/
 
 	text-align: center;
 	line-height: 8px;
 	overflow: hidden;
 }
-.rsDefault .rsBullet {
+.rsBullet {
 	width: 8px;
 	height: 8px;
 	display: inline-block;
-	*display:inline; 
+	*display:inline;
 	*zoom:1;
 	padding: 6px 5px 6px;
 }
-.rsDefault .rsBullet span {
+.rsBullet span {
 	display: block;
 	width: 8px;
 	height: 8px;
@@ -151,8 +133,25 @@
 	background: #777;
 	background: rgba(255,255,255,0.5);
 }
-.rsDefault .rsBullet.rsNavSelected span {
+.rsBullet.rsNavSelected span {
 	background-color: #FFF;
+}
+
+
+.royalSlider {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	z-index: 10;
+	top: 0px;
+	left: -100%;
+	direction: ltr;
+	background-color: rgba(255,255,255,0.8);
+
+	transition: left 1s;
+	-moz-transition: left 1s;
+	-webkit-transition: left 1s;
+	-o-transition: left 1s;
 }
 
 
