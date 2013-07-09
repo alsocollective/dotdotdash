@@ -5,9 +5,13 @@ function videoEnd(event){
 
 var myPlayer;
 var videoLenth = 1000;
+
 videojs("bkvid",{"autoplay":true,"controls":true,"loop": true }).ready(function(){
 	myPlayer = this;
 	this.volume(0);
+	setTimeout(function(){
+		myPlayer.play();
+	},200)
 	// this.play();
 	// videoLenth = myPlayer.duration();
 
