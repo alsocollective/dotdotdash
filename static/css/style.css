@@ -38,9 +38,20 @@ section h1, section h2 {
 }
 
 #quote1 {
-	font-size: 2em;
+	font-size: 2.5em;
 	font-family: sans-serif;
-	width: 40%;
+	width: 65%;
+	margin: 2em auto 0 auto;
+	color: #fff;
+}
+
+#quote2 {
+	font-size: 2.5em;
+	font-family: sans-serif;
+	width: 80%;
+	margin: 2em auto 0 auto;
+	color: #fff;
+	text-align: center;
 }
 
 
@@ -53,13 +64,13 @@ nav {
 	text-transform: uppercase;
 	font-family: sans-serif;
 	background-color: #fff;
-	top: 3em;
-	padding: 1em 0 1em 0;
+	top: 2em;
+	/*padding: 1em 0 1em 0;*/
 	z-index: 5;
 }
 
 nav img {
-	width: 80%;
+	width: 70%;
 }
 
 nav li {
@@ -84,7 +95,7 @@ div{
 }
 
 .sub-section {
-	background-color: rgba(255,255,255,0.9);
+	/*background-color: rgba(255,255,255,0.9);*/
 	background-color: #fff;
 /*	margin-bottom: 10em;
 */	padding: 0.6em 0 1.6em 0;
@@ -165,6 +176,11 @@ h1, h2 {
 	width: 100%;
 }
 
+#services .for-space {
+	margin-top: 10em;
+	width: 100%;
+}
+
 #services img{
 	width: 150px;
 }
@@ -173,20 +189,125 @@ h1, h2 {
 	width: 200px;
 }
 
+.contact-columns {
+	width: 80%;
+	margin: 4em auto 0 auto;
+	border-top: solid 2px #fff;
+	border-bottom: solid 2px #fff;
+	padding: 3em 0 3em 0;
+}
+
+#contact {
+	color: #fff;
+}
+
+#contact h1{
+	color: #000;
+}
+
+#contact h3{
+	width: 45%;
+	display: inline-block;
+	font-size: 2.6em;
+	font-family: sans-serif;
+	vertical-align: top;
+	margin: 0 1em 0 0;
+	line-height: 1.4em;
+	text-align: right;
+}
+
+#contact ul {
+	width: 35%;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0;
+	list-style: none;
+	margin: 0.5em 0 0 0;
+	padding: 0;
+}
+
+#contact li {
+	margin-bottom: 3em;
+}
+
+#contact a {
+	text-decoration: none;
+	color: #c6c8bb;
+}
+
+#contact a:hover {
+	text-decoration: none;
+	color: #248183;
+}
+
+.phone {
+	font-size: 2.6em;
+	font-family: sans-serif;
+	white-space: nowrap;
+}
+
+.email {
+	font-size: 2.6em;
+	font-family: sans-serif;
+	white-space: nowrap;
+}
+
+.logo-container {
+	border-top: solid 2px #000;
+	border-bottom: solid 2px #000;
+}
+
 /*// servicesection stuff //*/
 
-.servicesection{
+#servicescontent {
+	/*background-color: rgba(255,255,255,0.9);*/
+	background-color: #fff;
+/*	margin-bottom: 10em;
+*/	padding: 0.6em 0 3em 0;
+	box-shadow: 0px 2px 10px #000;
+}
+
+.servicesection {
 	/*for css to work this must be a height*/
-	height: 200px;
+	/*height: 300px;
 	overflow: hidden;
+	
 	-webkit-transition: height 1s;
 	-moz-transition: height 1s;
 	-ms-transition: height 1s;
 	-o-transition: height 1s;
-	transition: height 1s;
+	transition: height 1s;*/
+	
+	position: absolute;
+	height:350px;
+	display:block;
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	opacity: 1;
+	bottom: -180px;
 }
+
 .textnoshow{
-	height: 0px;
+	bottom: -500px;
+	opacity: 0;
+		
+	position: absolute;
+	display:block;
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+}
+
+.servicesection div{
+	background-color: #c6c8bb;
+	width: 80%;
+	height: 100%;
+	margin: 0 auto 0 auto;
+	padding: 0.5em 1em 0 1em;
+	font-size: 1em;
+}
+
+.servicesection h1 {
+	margin: 0;
 }
 
 #servicebackgrounds{
@@ -200,9 +321,19 @@ h1, h2 {
 }
 
 #buttoncontainer {
-	text-align: center;	
+	text-align: center;
+	margin: -1.5em;
 }
 
 #buttoncontainer a{
 	margin: 0 1em 0 1em;
 }
+
+
+/* Projects Section */
+
+.project {
+	display: inline-block;
+	width: 3em;
+}
+

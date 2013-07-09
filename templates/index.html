@@ -61,6 +61,7 @@
 <section id="services">
 	
 	<div class="for-space"></div>
+	<div class="for-space"></div>
 	
 	<div id="servicebackgrounds"> 
 		<div class="backgroundImage"  style="background-image: url('/../static/uploaded/{{services.services.image}}')"></div>
@@ -87,40 +88,63 @@
 		<a href="#contentproduction" id="contentproduction"><img src="/../static/assets/content.png"></a>
 		<a href="#resultsanalytics" id="resultsanalytics"><img src="/../static/assets/analytics.png"></a>
 	</div>
+	
+	<div class="for-space"></div>
+	
 	<div id="smsp" class="servicesection textnoshow">
+		<div>
 		<h2>Social Media Strategy Planning</h2>
-		<p>{{services.smsp.text|safe}}</p>
+		{{services.smsp.text|safe}}
+		</div>
 	</div>
 	<div id="branding" class="servicesection textnoshow">
+		<div>
 		<h2>Branding</h2>
-		<p>{{services.branding.text|safe}}</p>
+		{{services.branding.text|safe}}
+		</div>
 	</div>
 	<div id="research" class="servicesection textnoshow">
+		<div>
 		<h2>research</h2>
-		<p>{{services.research.text|safe}}</p>
+		{{services.research.text|safe}}
+		</div>
 	</div>
 	<div id="creativedev" class="servicesection textnoshow">
+		<div>
 		<h2>Creative Development</h2>
-		<p>{{services.creativedev.text|safe}}</p>
+		{{services.creativedev.text|safe}}
+		</div>
 	</div>
 	<div id="contentproduction" class="servicesection textnoshow">
+		<div>
 		<h2>Content Production</h2>
-		<p>{{services.contentproduction.text|safe}}</p>
+		{{services.contentproduction.text|safe}}
+		</div>
 	</div>
 	<div id="resultsanalytics" class="servicesection textnoshow">
+		<div>
 		<h2>Results Analytics</h2>
-		<p>{{services.resultsanalytics.text|safe}}</p>
+		{{services.resultsanalytics.text|safe}}
+		</div>
 	</div>
 </section>
 
 <section id="clients">
-	<h1>Clients</h1>
-	<p>{{clients.text|safe}}</p>
-	<div>
+	
+	<div class="sub-section">
+		<h1>Clients</h1>
+		<div>
+			{{clients.text|safe}}
+		</div>
+		
+	<div class="logo-container">
 		{% for img in clients.images%}
 			<a href="{{img.link}}"><img src="/../static/uploaded/{{img.title}}"></a>
 		{% endfor %}
 	</div>
+	
+	</div>
+	
 </section>
 
 <section id="work">
@@ -155,8 +179,13 @@
 	
 	<div class="backgroundImage" id="first-background-image" style="background-image: url('/../static/uploaded/{{contact.bkImg}}')"></div>
 	
-	<h1>Contact</h1>
-	<p>{{contact.text}}</p>
+	<div class="sub-section">
+		<h1>Contact</h1>
+	</div>
+	
+	<div class="contact-columns">
+		{{contact.text|safe}}
+	</div>
 	
 </section>
 
