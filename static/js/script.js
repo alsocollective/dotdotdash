@@ -6,18 +6,18 @@ function videoEnd(event){
 var myPlayer;
 var videoLenth = 1000;
 
-videojs("bkvid",{"autoplay":true,"controls":true,"loop": true }).ready(function(){
+videojs("bkvid",{"autoplay":true,"controls":false,"loop": true }).ready(function(){
 	myPlayer = this;
 	this.volume(0);
-	setTimeout(function(){
-		myPlayer.play();
-	},200)
+	// setTimeout(function(){
+	// 	myPlayer.play();
+	// },200)
 	// this.play();
 	// videoLenth = myPlayer.duration();
 
-	myPlayer.on("ended",videoEnd);
-	myPlayer.on("error",videoEnd);
-	myPlayer.on("pause",videoEnd);
+	// myPlayer.on("ended",videoEnd);
+	// myPlayer.on("error",videoEnd);
+	// myPlayer.on("pause",videoEnd);
 
 	// setInterval(function(){
 	// 	var currenttime = Math.floor((myPlayer.currentTime()*100))/100
