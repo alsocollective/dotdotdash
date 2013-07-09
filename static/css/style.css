@@ -113,7 +113,7 @@ div{
 	margin: 0 auto 0 auto;
 }
 
-.about div{
+.about p{ /* TEMPORARY FIX */
 	columns:100px 2;
 	column-gap: 2.5em;
 	-webkit-columns:100px 2; /* Safari and Chrome */
