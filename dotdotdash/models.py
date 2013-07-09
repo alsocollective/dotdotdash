@@ -94,6 +94,7 @@ class Page(models.Model):
 	videoURL = models.URLField(max_length=800, blank=True)
 	pageType = models.CharField(max_length=30, choices=pageTypes)
 	slug = models.SlugField(blank=True)
+	order = models.IntegerField(blank=True,default=0)
 
 	def save(self,*args, **kwargs):
 		self.slug = slugify(self.title)
@@ -109,6 +110,7 @@ class Work(models.Model):
 	description = models.TextField(max_length=1000)
 	datefororder = models.DateField(auto_now=True)
 	slug = models.SlugField(blank=True)
+	order = models.IntegerField(blank=True,default=0)
 
 	def save(self,*args, **kwargs):
 		self.slug = slugify(self.title)

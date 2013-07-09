@@ -1,3 +1,20 @@
+function videoEnd(){
+	console.log("video ended");
+	contact.log(this);
+}
+
+var myPlayer;
+videojs("bkvid",{"example_option":true,"controls":false,"autoplay":true,"preload": "none","loop": "true" }).ready(function(){
+	myPlayer = this;
+	//this.play()
+	myPlayer.volume(0);
+	setTimeout(function(){
+		console.log(myPlayer.currentTime());
+		console.log("this was called");
+	},4000)
+	//myPlayer.addEvent("ended",videoEnd);
+});
+
 
 var useOpacity = (typeof document.createElement("div").style.opacity != 'undefined');
 

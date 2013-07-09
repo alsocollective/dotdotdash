@@ -51,16 +51,15 @@ def getClients():
 	return clientsout
 
 def getWork():
-	work = Work.objects.all()
+	work = Work.objects.order_by('order').all()
 	workout = []
 	for project in work:
-		print project.pages.all()
 		workout.append({
 			"title":project.title,
 			"slug":project.slug,
 			"subtitle":project.subTitle,
 			"description":project.description,
-			"pages":getPages(project.pages.all())
+			"pages":getPages(project.pages.order_by('order').all())
 			})
 	return workout
 
