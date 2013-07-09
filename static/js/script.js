@@ -1,25 +1,35 @@
-function videoEnd(){
+function videoEnd(event){
 	console.log("video ended");
-	contact.log(this);
+	console.log(this);
 }
 
 var myPlayer;
 var videoLenth = 1000;
-videojs("bkvid",{"example_option":true,"controls":false,"autoplay":true,"preload": "none","loop": "true" }).ready(function(){
+videojs("bkvid",{"autoplay":true,"controls":true,"loop": true }).ready(function(){
 	myPlayer = this;
 	this.volume(0);
-	videoLenth = myPlayer.duration();
-	setInterval(function(){
-		var currenttime = Math.floor((myPlayer.currentTime()*100))/100
-		if(!videoLenth){
-			videoLenth = Math.floor((myPlayer.duration()*100))/100-0.2;
-		}
-		if(currenttime >= videoLenth){
-			console.log("greater with reset");
-//			myPlayer.play();
-			myPlayer.currentTime(0);
-		}
-	},100)
+	// this.play();
+	// videoLenth = myPlayer.duration();
+
+	myPlayer.on("ended",videoEnd);
+	myPlayer.on("error",videoEnd);
+	myPlayer.on("pause",videoEnd);
+
+	// setInterval(function(){
+	// 	var currenttime = Math.floor((myPlayer.currentTime()*100))/100
+	// 	if(!videoLenth){
+	// 		videoLenth = Math.floor((myPlayer.duration()*100))/100-0.3;
+	// 	}
+	// 	if(currenttime >= videoLenth){
+	// 		console.log(currenttime,videoLenth);
+	// 		console.log("greater with reset");
+	// 		myPlayer.currentTime(0);
+
+	// 	}
+	// 	// if(currenttime < 10){
+	// 	// 	myPlayer.currentTime(10);
+	// 	// }
+	// },100)
 });
 
 
@@ -238,10 +248,15 @@ $(".project").click(function(event){
 
 		$(".royalSlider").royalSlider({
 			// options go here
-			// as an example, enable keyboard arrows nav
-			arrowsNav: true,
-			controlNavigation: true,
-			keyboardNavEnabled: true
+			arrowsNav: false,
+			controlNavigation: 'bullets',
+			keyboardNavEnabled: true,
+			// autoPlay: {
+			// 	// autoplay options go gere
+			// 	delay:5000,
+			// 	enabled: true,
+			// 	pauseOnHover: true
+			// }
 		});
 	});
 
