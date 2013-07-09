@@ -40,7 +40,7 @@ section h1, section h2 {
 	font-size: 2.5em;
 	font-family: sans-serif;
 	width: 65%;
-	margin: 2em auto 0 auto;
+	margin: 4em auto 0 auto;
 	color: #fff;
 }
 
@@ -74,16 +74,19 @@ nav img {
 
 nav li {
 	display: inline-block;
+	margin: 0 0.5em 0 0.5em;
 }
 
 nav ul {
 	background-color: #fff;
 	width: 100%;
-	/*padding: 0.7em 0 0.5em 0;*/
+	padding: 0.7em 0 0.5em 0;
 }
 
 nav a {
 	text-decoration: none;
+	color: #000;
+	font-size: 0.8em;
 }
 
 h1{position: relative;}
@@ -136,6 +139,12 @@ h1, h2 {
 	width: 100%;
 	height: 100%;
 	position: absolute;
+	background-position:center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
 }
 
 
@@ -160,6 +169,17 @@ h1, h2 {
 	/*do not add margin to this element*/
 	z-index: 2 !important;
 	margin: 0px;
+}
+
+.dots {
+	background-image: url('http://localhost:8000/static/assets/dot-pattern.png');
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.stuck .dots {
+	position: fixed;
 }
 
 .backgroundImage{
@@ -200,7 +220,8 @@ h1, h2 {
 }
 
 #clients img{
-	width: 200px;
+	width: 150px;
+	margin: 1em 1em 0 1em;
 }
 
 .contact-columns {
@@ -269,6 +290,7 @@ h1, h2 {
 .logo-container {
 	border-top: solid 2px #000;
 	border-bottom: solid 2px #000;
+	text-align: center;
 }
 
 /*// servicesection stuff //*/
@@ -317,6 +339,12 @@ h1, h2 {
 	margin: 0 auto 0 auto;
 	padding: 0.5em 1em 0 1em;
 	font-size: 1em;
+	columns:100px 2;
+	column-gap: 2.5em;
+	-webkit-columns:100px 2; /* Safari and Chrome */
+	-webkit-column-gap: 2.5em;
+	-moz-columns:100px 2; /* Firefox */
+	-moz-column-gap: 2.5em;
 }
 
 .servicesection h1 {
@@ -349,6 +377,14 @@ h1, h2 {
 
 .project h2 {
 	font-size: 1.5em;
+	margin: 0 0 0 0;
+	text-align: left;
+}
+
+.project h3 {
+	font-size: 1em;
+	margin: 0 0 0 0;
+	font-weight: normal;
 }
 
 #work ul {
@@ -368,9 +404,20 @@ h1, h2 {
 	height: 9em;
 	margin: 0;
 	overflow: hidden;
-	white-space: nowrap;
+	text-align: left;
+	vertical-align: top;
+	padding: 0.5em 0 0 0.5em;
+}
+
+.project p {
+	font-size: 0.4em;
+	margin: 0 0 0 0;
 }
 
 .project:hover {
 	background-color: #248183;
+	color: #fff;
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	transition:all 1s ease;
 }

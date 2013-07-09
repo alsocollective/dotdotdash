@@ -232,6 +232,8 @@ $(".project").click(function(event){
 		$(".royalSlider").royalSlider({
 			// options go here
 			// as an example, enable keyboard arrows nav
+			arrowsNav: true,
+			controlNavigation: true,
 			keyboardNavEnabled: true
 		});
 	});
