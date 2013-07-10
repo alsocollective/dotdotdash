@@ -16,7 +16,9 @@
 .center{
 	display: table-cell;
 	vertical-align: middle;
+	text-align: center;
 }
+
 
 .backgroundImage{
 	z-index: 0;
@@ -62,4 +64,13 @@
 }
 .pdf:hover a{
 	opacity: 1;
+}
+.sins{
+	text-align: center;
+}
+.sins img{
+	margin-top: 10%;
+	width: auto;
+	max-width: 100%;
+	max-height: 70%;
 }
