@@ -1,12 +1,8 @@
 <link rel="stylesheet" type="text/css" href="/../static/css/template.css">
-<!-- <div class="text-container table"> -->
-	<!-- <div class="center"> -->
-	<div class="sins">
-		{%if content.vidLink%}
-			<iframe src="{{content.video}}" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-		{%else%}
-			<img src="/../static/uploaded/{{content.media.0.location}}">
-		{%endif%}
-	</div>
-	<!-- </div> -->
-<!-- </div> -->
+<div class="sins">
+	{%if content.video%}
+		<iframe src="{{content.video}}" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+	{%else%}
+		<img src="/../static/uploaded/{{content.media.0.location}}">
+	{%endif%}
+</div>
