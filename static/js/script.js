@@ -1,8 +1,3 @@
-function videoEnd(event){
-	console.log("video ended");
-	console.log(this);
-}
-
 var myPlayer;
 var videoLenth = 1000;
 
@@ -13,8 +8,7 @@ videojs("bkvid",{"autoplay":true,"controls":false,"loop": true }).ready(function
 
 var scrolllocation = 0;
 function noscroll(event){
-	console.log("noscroll!!");
-	console.log(event);
+	window.scroll(0,scrolllocation);
 	event.preventDefault();
 }
 
@@ -184,12 +178,11 @@ function FadeingObject(element){
 
 
 $(".project").click(function(event){
-	console.log("clicked",this);
+	scrolllocation = $(window).scrollTop();
 	event.preventDefault()
 	var workToShow = works[this.id];
-	console.log(works);
 
-	$('html, body').on("scroll",noscroll);
+	$(window).on("scroll",noscroll);
 
 	var rsSlider = document.createElement("div");
 	rsSlider.style.left = "100%";
@@ -203,7 +196,7 @@ $(".project").click(function(event){
 	$(backButton).click(function(){
 		rsSlider.style.left = "100%";
 		backButton.style.left = "105%";
-		$('html, body').off("scroll",noscroll);
+		$(window).off("scroll",noscroll);
 		setTimeout(function(){
 			rsSlider.parentNode.removeChild(rsSlider);
 			backButton.parentNode.removeChild(backButton);
@@ -228,7 +221,7 @@ $(".project").click(function(event){
 		with(rsSlider.style){
 			left = "0%";
 		}
-		backButton.style.left = "5%";
+		backButton.style.left = "0";
 
 		for(var a = 1; a < rsSliderChildren.length; ++a){
 			$(rsSliderChildren[a]).load(workToShow["Links"][a]);
