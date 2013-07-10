@@ -11,6 +11,12 @@ videojs("bkvid",{"autoplay":true,"controls":false,"loop": true }).ready(function
 	this.volume(0);
 });
 
+var scrolllocation = 0;
+function noscroll(event){
+	console.log("noscroll!!");
+	console.log(event);
+	event.preventDefault();
+}
 
 var useOpacity = (typeof document.createElement("div").style.opacity != 'undefined');
 
@@ -183,6 +189,8 @@ $(".project").click(function(event){
 	var workToShow = works[this.id];
 	console.log(works);
 
+	$('html, body').on("scroll",noscroll);
+
 	var rsSlider = document.createElement("div");
 	rsSlider.style.left = "100%";
 	rsSlider.setAttribute("class","royalSlider");
@@ -195,6 +203,7 @@ $(".project").click(function(event){
 	$(backButton).click(function(){
 		rsSlider.style.left = "100%";
 		backButton.style.left = "105%";
+		$('html, body').off("scroll",noscroll);
 		setTimeout(function(){
 			rsSlider.parentNode.removeChild(rsSlider);
 			backButton.parentNode.removeChild(backButton);
@@ -230,6 +239,7 @@ $(".project").click(function(event){
 			arrowsNav: false,
 			controlNavigation: 'bullets',
 			keyboardNavEnabled: true,
+			loop:true
 			// autoPlay: {
 			// 	// autoplay options go gere
 			// 	delay:5000,
