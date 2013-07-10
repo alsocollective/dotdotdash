@@ -232,7 +232,11 @@ $(".project").click(function(event){
 			arrowsNav: true,
 			controlNavigation: 'bullets',
 			keyboardNavEnabled: true,
-			loop:true
+			loop:true,
+			slidesSpacing: 0,
+			numImagesToPreload: 1,
+			usePreloader: false,
+			easeInOut: true
 			// autoPlay: {
 			// 	// autoplay options go gere
 			// 	delay:5000,
