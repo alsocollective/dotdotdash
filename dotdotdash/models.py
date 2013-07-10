@@ -88,6 +88,7 @@ class Page(models.Model):
 		("fourImage","fourImage"),
 		("imageWText","imageWText"),
 		("pdf","pdf"),
+		("singleImageNoStrech","singleImageNoStrech")
 	)
 	title = models.CharField(max_length=600)
 	textFields = models.TextField(max_length=1000,blank=True)
@@ -114,7 +115,7 @@ class Work(models.Model):
 	slug = models.SlugField(blank=True)
 	order = models.IntegerField(blank=True,default=0)
 	is_a_sos_project = models.BooleanField(blank=True)
-	
+
 	def save(self,*args, **kwargs):
 		self.slug = slugify(self.title)
 		super(Work, self).save(*args, **kwargs)

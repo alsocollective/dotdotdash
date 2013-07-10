@@ -3,6 +3,8 @@ from dotdotdash.models import *
 
 class pageAdmin(admin.ModelAdmin):
 	list_display = ('title','order','pageType')
+	filter_horizontal = ("mediaField",)
+
 
 class mediaAdmin(admin.ModelAdmin):
 	list_display = ('title','description','admin_image')
