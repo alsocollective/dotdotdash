@@ -489,6 +489,10 @@ h1, h2 {
 	width: 300px;
 }
 
+.sos-projects {
+	background-color: #3d3d3d;
+}
+
 /*#sos-projects {
 	margin: 3em auto 0 auto;
 	display: block;
