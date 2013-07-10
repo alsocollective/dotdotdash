@@ -229,7 +229,7 @@ $(".project").click(function(event){
 
 		$(".royalSlider").royalSlider({
 			// options go here
-			arrowsNav: false,
+			arrowsNav: true,
 			controlNavigation: 'bullets',
 			keyboardNavEnabled: true,
 			loop:true
