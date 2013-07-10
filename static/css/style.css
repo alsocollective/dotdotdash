@@ -144,6 +144,15 @@ h1, h2 {
 	font-size: 2em;
 }
 
+.clients-columns {
+	columns:100px 2;
+	column-gap: 2.5em;
+	-webkit-columns:100px 2; /* Safari and Chrome */
+	-webkit-column-gap: 2.5em;
+	-moz-columns:100px 2; /* Firefox */
+	-moz-column-gap: 2.5em;
+}
+
 
 /*// background stuff //*/
 /* still need to make the video full screen */
@@ -228,7 +237,8 @@ h1, h2 {
 }
 
 #services img{
-	width: 150px;
+	max-width: 150px;
+	width: 12%;
 }
 
 #clients img{
@@ -241,7 +251,7 @@ h1, h2 {
 	margin: 4em auto 0 auto;
 	border-top: solid 2px #fff;
 	border-bottom: solid 2px #fff;
-	padding: 3em 0 3em 0;
+	padding: 2em 0 1em 0;
 }
 
 #contact {
@@ -384,12 +394,13 @@ h1, h2 {
 
 #buttoncontainer {
 	text-align: center;
-	margin: -1.5em;
+	margin: -2em auto 0 auto;
 	width: 100%;
+	white-space: nowrap;
 }
 
 #buttoncontainer a {
-	margin: 0 1em 0 1em;
+	margin: 0 1% 0 1%;
 }
 
 
@@ -451,12 +462,31 @@ h1, h2 {
 	background: #248183; /* Firefox */
 }
 
-#sos-projects {
+#work h2 {
+	width: 40%;
+	min-width: 325px;
+	margin: 2em auto 1em auto;
+	border-top: solid 2px #fff;
+	border-bottom: solid 2px #fff;
+	padding: 0.5em 0 0.6em 0;
+	color: #fff;
+}
+
+#work img{
+	width: 80px;
+	vertical-align: middle;
+	margin: 0 0.5em 0 0;
+}
+
+#contact img {
+	width: 300px;
+}
+
+/*#sos-projects {
 	margin: 3em auto 0 auto;
 	display: block;
 	text-align: center;
 	width: 40%;
-	/*background-color: #3d3d3d;*/
 	background-color: transparent;
 }
 
@@ -471,7 +501,7 @@ h1, h2 {
 #sos-projects img {
 	height: 100px;
 }
-
+*/
 /* COLOUR PALETTE */
 
 /*

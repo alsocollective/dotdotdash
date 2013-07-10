@@ -131,7 +131,7 @@ function softScroll(click, endup){
 //Element -> Animation
 //scrolls html/body to the given element in 1 second
 function goToThisEndPoint(location){
-	$('html, body').animate({scrollTop :  $("#"+location).offset().top},1000);
+	$('html, body').animate({scrollTop :  $("#"+location).offset().top-100},1000);
 	setTimeout(function(){
 		setHashTag(location);
 	},1005);
