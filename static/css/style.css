@@ -40,7 +40,7 @@ section h1, section h2 {
 
 #quote1 {
 	font-size: 2.5em;
-	font-family:"Relative Bold", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	width: 65%;
 	margin: 4em auto 0 auto;
 	color: #fff;
@@ -48,7 +48,7 @@ section h1, section h2 {
 
 #quote2 {
 	font-size: 2.5em;
-	font-family:"Relative Bold", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	width: 80%;
 	margin: 2em auto 0 auto;
 	color: #fff;
@@ -57,7 +57,7 @@ section h1, section h2 {
 
 #static-quote {
 	font-size: 2.5em;
-	font-family:"Relative Bold", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	width: 70%;
 	margin: 1em auto 1em auto;
 	color: #fff;
@@ -78,7 +78,7 @@ nav {
 	font-size: 2em;
 	text-align: center;
 	text-transform: uppercase;
-	font-family:"Relative Bold", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	background-color: #fff;
 	top: 2em;
 	/*padding: 1em 0 1em 0;*/
@@ -161,7 +161,7 @@ div{
 }
 
 h1, h2 {
-	font-family:"Relative Bold", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
 	font-size: 2em;
 }
@@ -295,7 +295,7 @@ h1, h2 {
 	width: 45%;
 	display: inline-block;
 	font-size: 2.6em;
-	font-family:"Relative Bold", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	vertical-align: top;
 	margin: 0 1em 0 0;
 	line-height: 1.4em;
@@ -328,13 +328,13 @@ h1, h2 {
 
 .phone {
 	font-size: 2.6em;
-	font-family:"Relative Bold", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	white-space: nowrap;
 }
 
 .email {
 	font-size: 2.6em;
-	font-family:"Relative Bold", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	white-space: nowrap;
 }
 
@@ -504,7 +504,7 @@ h1, h2 {
 }
 
 #work h3 {
-	font-family:"Relative Bold", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size:1.4em;
 	text-transform: uppercase;
 	margin: 0 0 0 0;
@@ -526,7 +526,7 @@ a {
 }
 
 #work h4 {
-	font-family:"Relative Bold", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight: normal;
 	font-size:0.9em;
 	margin: 0.3em 0 0 0;
