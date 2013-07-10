@@ -130,7 +130,6 @@ function hideServicesBut(thisEl){
 function softScroll(click, endup){
 	$("#"+click).click(function(event){
 		event.preventDefault();
-		preventDefault(event);
 		goToThisEndPoint(endup);
 	});
 }
@@ -240,6 +239,7 @@ $(".project").click(function(event){
 			arrowsNav: false,
 			controlNavigation: 'bullets',
 			keyboardNavEnabled: true,
+			loop:true
 			// autoPlay: {
 			// 	// autoplay options go gere
 			// 	delay:5000,
