@@ -200,7 +200,7 @@ h1, h2 {
 }
 
 .dots {
-	background-image: url('http://localhost:8000/static/assets/dot-pattern.png');
+	background-image: url('/../static/assets/dot-pattern.png');
 	height: 100%;
 	width: 100%;
 	position: relative;
@@ -357,6 +357,7 @@ h1, h2 {
 	display:block;
 	-webkit-transition:all 1s ease;
 	-moz-transition:all 1s ease;
+	transition:all 1s ease;
 	opacity: 1;
 	bottom: -180px;
 }
@@ -368,6 +369,7 @@ h1, h2 {
 	display:block;
 	-webkit-transition:all 1s ease;
 	-moz-transition:all 1s ease;
+	transition:all 1s ease;
 }
 
 .servicesection div{
