@@ -23,11 +23,12 @@ $('.backgroundImage').waypoint('sticky',{
 });
 
 //scrolling effect for nav
-softScroll("aboutLink","about")
-softScroll("serviceLink","services")
-softScroll("clientsLink","clients")
-softScroll("ourWorkLink","work")
-softScroll("contactLink","contact")
+softScroll("aboutLink","about");
+softScroll("serviceLink","services");
+softScroll("clientsLink","clients");
+softScroll("ourWorkLink","work");
+softScroll("contactLink","contact");
+softScroll("contactLinktwo","contact");
 
 //fading quotes
 var fadingElement = [
@@ -162,11 +163,13 @@ function FadeingObject(element){
 		location = (quoteTop+(quoteSize/2))-scrollLocation;
 		midPoint = screenHeight/2;
 		if(location > midPoint - range && location < midPoint + range){
-			var transparency = (((quoteTop-scrollLocation)/(screenHeight/2))-1)*2;
-			if(transparency < 0){
-				transparency = transparency*(-1);
+			var transparency = (((quoteTop-scrollLocation)/(screenHeight/2)))*2;
+			console.log(transparency);
+			if(transparency < 1.5){
+				transparency = transparency-0.5;
+			} else {
+				transparency = 1;
 			}
-			transparency = 1 - transparency;
 			if(useOpacity){
 				quote.style.opacity = transparency;
 			} else {

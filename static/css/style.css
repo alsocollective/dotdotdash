@@ -203,6 +203,7 @@ h1, h2 {
 	height: auto;
 	min-width: 100%;
 	min-height: 100%;
+	display: none;
 }
 
 .video-js video{
@@ -253,6 +254,7 @@ h1, h2 {
 .stuck{
 	position: fixed !important;
 	top: 0;
+	display: block;
 }
 
 .for-space {

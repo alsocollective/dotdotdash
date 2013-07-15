@@ -5,9 +5,24 @@ class pageAdmin(admin.ModelAdmin):
 	list_display = ('title','order','pageType')
 	filter_horizontal = ("mediaField",)
 
-	# fieldsets= [
-	# 	(None,{'fields':'title','mediaField'})
-	# ]
+	fieldsets = [
+		(None,{'fields':['title','mediaField',("pageType","order")]}),
+
+		('Viemo',{
+			'description':("Add the Viemo url(from the embeded method) here it should look something like this... http://player.vimeo.com/video/52542094?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179"),
+			'fields':['videoURL'],
+			}),
+
+		("PDF",{
+			'description':("Upload the pdf here, and a jpg of the PDF in the mediaField"),
+			'fields':['pdf'],
+			}),
+		("Advance options",{
+			'classes':('collapse',),
+			'fields':['textFields'],
+			}),
+
+	]
 
 
 class mediaAdmin(admin.ModelAdmin):
@@ -17,14 +32,14 @@ class mediaAdmin(admin.ModelAdmin):
 		(None,{'fields':['location','link']}),
 		('Advance options', {
 			'classes':('collapse',),
-			'fields':('description','title','order')
+			'fields':('description','title','order'),
 			}),
 	]
 
 class workAdmin(admin.ModelAdmin):
 	list_display = ('title','order',"is_a_sos_project")
 	filter_horizontal = ("pages",)
-	fieldsets = [(None,{'fields':["title","subTitle","description","pages","order","is_a_sos_project"]})]
+	fieldsets = [(None,{'fields':[("title","subTitle"),"description",("order","is_a_sos_project"),"pages"]})]
 
 admin.site.register(Home)
 admin.site.register(About)
