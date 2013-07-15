@@ -173,15 +173,12 @@ h1, h2 {
 }
 
 .clients-half {
-	width: 50% !important;
-	padding: 0 0 1.5em 0;
+	width: 80%;
+	padding: 0.5em 0em 1.5em 0em;
 }
 
 .clients-half p{
-	font-family: 'Montserrat', sans-serif;
-	font-weight: normal;
-	font-size: 0.9em;
-	margin: 0.3em 0 0 0;
+	padding: 0 1em 0 1em;
 }
 
 .clients-columns {
