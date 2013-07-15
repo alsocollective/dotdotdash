@@ -164,9 +164,8 @@ function FadeingObject(element){
 		midPoint = screenHeight/2;
 		if(location > midPoint - range && location < midPoint + range){
 			var transparency = (((quoteTop-scrollLocation)/(screenHeight/2)))*2;
-			console.log(transparency);
 			if(transparency < 1.5){
-				transparency = transparency-0.5;
+				transparency = transparency-0.2;
 			} else {
 				transparency = 1;
 			}
@@ -239,7 +238,8 @@ $(".project").click(function(event){
 			slidesSpacing: 0,
 			numImagesToPreload: 1,
 			usePreloader: false,
-			easeInOut: true
+			easeInOut: true,
+			navigateByClick:false
 			// autoPlay: {
 			// 	// autoplay options go gere
 			// 	delay:5000,

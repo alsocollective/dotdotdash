@@ -48,35 +48,35 @@
 	</ul>
 </nav>
 
-{{home.mp4}}
-{{home.ogv}}
-{{home.webm}}
-
 <!-- do not add spaces between these elements -->
 <section class="quote"><div id="quote1">{{home.q1|safe}}</div></section>
 
-<div id="static-quote"><span class="quote-back">THE BEST BRANDS ARE THE ONES THAT AIM TO MAKE LIFE BETTER.</span></div>
-<div id="static-quote"><span class="quote-back">LIFE IS MADE BETTER BY USING CREATIVITY TO SERVE COMMUNITY, CULTURE AND NATURE.</span></div>
+<div id="static-quote">
+	<span class="quote-back">THE BEST BRANDS ARE THE ONES THAT AIM TO MAKE LIFE BETTER.</span>
+</div>
+<div id="static-quote">
+	<span class="quote-back">LIFE IS MADE BETTER BY USING CREATIVITY TO SERVE COMMUNITY, CULTURE AND NATURE.</span>
+</div>
 
 <section id="about">
 	<div class="backgroundImage" id="first-background-image" style="background-image: url('/../static/uploaded/{{about.bkImg}}')"><div class="dots"></div></div>
-	
+
 	<div class="sub-section about">
 		<h1>About</h1>
 		<div>
 			<p>{{about.about|safe}}</p>
 		</div>
 	</div>
-	
+
 	<div class="for-space"></div>
-	
+
 	<div class="sub-section process">
 		<h2>THE WAY WE WORK</h2>
 		<div>
 			<p>{{about.process|safe}}</p>
 		</div>
 	</div>
-	
+
 	<div class="for-space"></div>
 
 </section>
@@ -84,10 +84,10 @@
 <section class="quote"><div id="quote2">{{home.q2|safe}}</div></section>
 
 <section id="services">
-	
+
 	<div class="for-space"></div>
 	<div class="for-space"></div>
-	
+
 	<div id="servicebackgrounds"> 
 		<div class="backgroundImage"  style="background-image: url('/../static/uploaded/{{services.services.image}}')"><div class="dots"></div></div>
 		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.smsp.image}}')"><div class="dots"></div></div>
@@ -97,14 +97,14 @@
 		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.contentproduction.image}}')"><div class="dots"></div></div>
 		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.resultsanalytics.image}}')"><div class="dots"></div></div>
 	</div>
-	
+
 	<div id="servicescontent" class="sub-section">
 		<h1>Services We Offer</h1>
 		<div>
 			{{services.services.text|safe}}
 		</div>
 	</div>
-	
+
 	<div id="buttoncontainer"> <!-- This should probably -->
 		<a href="#smsp" id="smsp"><img src="/../static/assets/social.png"></a>
 		<a href="#branding" id="branding"><img src="/../static/assets/branding.png"></a>
@@ -113,9 +113,9 @@
 		<a href="#contentproduction" id="contentproduction"><img src="/../static/assets/content.png"></a>
 		<a href="#resultsanalytics" id="resultsanalytics"><img src="/../static/assets/analytics.png"></a>
 	</div>
-	
+
 	<div class="for-space"></div>
-	
+
 	<div id="smsp" class="servicesection textnoshow">
 		<div>
 		<h2>Social Media Strategy + Planning</h2>
@@ -159,7 +159,7 @@
 	
 	<div class="sub-section">
 		<h1>Clients</h1>
-		<div class="clients-columns">
+		<div class="clients-half">
 			{{clients.text|safe}}
 		</div>
 		
@@ -223,19 +223,15 @@
 </section>
 
 <section id="contact">
-	
-	
 	<div class="backgroundImage" style="background-image: url('/../static/uploaded/{{contact.bkImg}}')"><div class="dots"></div></div>
-	
-	
 	<div class="sub-section">
 		<h1>Contact</h1>
 	</div>
-	
+
 	<div class="contact-columns">
 		{{contact.text|safe}}
 	</div>
-	
+
 </section>
 
 {% endblock %}

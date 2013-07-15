@@ -31,7 +31,7 @@ class MediaNode(models.Model):
 
 	def admin_video(self):
 		if self.video:
-			return '<iframe src="%s?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' % self.video
+			return '<iframe src="%s?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179;autoplay=1" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' % self.video
 		return "not an video"
 	admin_video.allow_tags = True
 

@@ -1,8 +1,18 @@
 <link rel="stylesheet" type="text/css" href="/../static/css/template.css">
-<div class="sins">
 	{%if content.video%}
-		<iframe src="{{content.video}}" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+	<div class="text-container table">
+		<div class="center"><div class="pdf" style='background-image: url("/../static/uploaded/{{content.media.0.location}}");'><a id="{{content.slug}}" href="#" target="_blank">Play</a></div></div>
+	</div>
+		<script type="text/javascript">
+			var image = $("#{{content.slug}}")[0];
+			$(image).click(function(event){
+				event.preventDefault();
+				this.parentNode.parentNode.parentNode.parentNode.innerHTML = "	<div class='sins'><iframe src='{{content.video}}' width='500' height='281' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>";
+			});
+		</script>
 	{%else%}
+	<div class="sins">
+
 		<img src="/../static/uploaded/{{content.media.0.location}}">
+	</div>
 	{%endif%}
-</div>

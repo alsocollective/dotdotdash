@@ -172,6 +172,18 @@ h1, h2 {
 	box-shadow: 0px 2px 10px #000;
 }
 
+.clients-half {
+	width: 50% !important;
+	padding: 0 0 1.5em 0;
+}
+
+.clients-half p{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	font-size: 0.9em;
+	margin: 0.3em 0 0 0;
+}
+
 .clients-columns {
 	columns:100px 2;
 	column-gap: 2.5em;
@@ -287,6 +299,7 @@ h1, h2 {
 
 #contact {
 	color: #fff;
+	overflow: hidden;
 }
 
 #contact h1{
@@ -522,6 +535,12 @@ nav a img {
 	padding: 0;
 }
 
+p strong{
+	color: inherit;
+	background-color: #d4bf44;
+	font-size: 1.1em;
+	padding: 0 0.4em 0 0.4em;
+}
 strong {
 	color: #d4bf44;
 }
@@ -548,7 +567,7 @@ a {
 }
 
 #work img{
-	width: 80px;
+	width: 140px;
 	vertical-align: middle;
 	margin: 0 0.5em 0 0;
 }
