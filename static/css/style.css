@@ -452,6 +452,10 @@ h1, h2 {
 	font-weight: normal;
 }
 
+.project h4{
+	text-transform: uppercase;
+}
+
 #work ul {
 	margin: 0 auto 0 auto;
 	padding: 0;
@@ -525,6 +529,8 @@ strong {
 a {
 	text-decoration: none;
 	color: #248183;
+	border-style: none;
+	border-width: 0;
 }
 
 #work h4 {
