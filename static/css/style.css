@@ -577,14 +577,15 @@ a {
 	text-align: left;
 	width: 80%;
 	padding: 0.5em 0em 1.5em 0em;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 1.5em;
+/*	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;*/
 	color: #3d3d3d;
 }
 #sos-projects {
 	background-color: #fff;
 	width: 100%;
 	padding: 1em 0 2em 0;
+	margin: 0 0 2em 0;
 }
 
 
