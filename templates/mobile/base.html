@@ -22,41 +22,31 @@
 
 		<link rel="stylesheet" href="/static/css/mobile.css">
 
+		<script type="text/javascript">
+		WebFontConfig = {google: { families: [ 'Montserrat:700,400:latin' ] }};
+		(function() {
+			var wf = document.createElement('script');
+			wf.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			wf.type = 'text/javascript';
+			wf.async = 'true';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(wf, s);
+		})();
+		</script>
+
 	</head>
 
 <body>
 
 <div data-role="page" id="page1" class="{% block pagename %}{% endblock %}">
-<<<<<<< HEAD
-
-	<div data-role="header">
-	<!--     <a href="#defaultpanel" data-icon="bars" data-shadow="false" data-theme="c" data-corners="false">Menu</a> -->
-	<a href="#defaultpanel" id="top-left">&#8801; Menu</a>
-	</div>
-=======
-	
     <div data-role="header">
       <!--<a href="#defaultpanel" data-icon="bars" data-shadow="false" data-theme="c" data-corners="false">Menu</a>-->
-  	<a href="#defaultpanel" id="top-left">&#8801; Menu</a>
+  	<a href="#defaultpanel" data-shadow="false" data-corners="false" data-theme="d" id="top-left">&#8801; Menu</a>
     </div>
 
-    <!-- defaultpanel  -->
-      <div data-role="panel" id="defaultpanel" data-theme="a" data-display="overlay">
- 
-        <div class="panel-content">
 
-		<ul>
-			<li><a href="/" data-transition="slide">Home</a></li><li>
-			<a href="/about/" data-transition="slide">About</a></li><li>
-			<a href="/services/" data-transition="slide">Services</a></li><li>
-			<a href="/clients/" data-transition="slide">Clients</a></li><li>
-			<a href="/work/" data-transition="slide">Work</a></li>
-		</ul>
-	</div>
-  </div>
->>>>>>> 88a6cf09a70e5539c1e28f294e82f1b01b14db14
 
-	<div data-role="panel" id="defaultpanel" data-enhance="false">
+	<div data-role="panel"  data-display="overlay" id="defaultpanel" data-enhance="false">
 		<div class="panel-content">
 
 			<ul id="nav">
@@ -66,9 +56,8 @@
 				<a href="/clients/" id="nav-sponsors" data-transition="slide" class="nav-inactive">Clients</a></li><li>
 				<a href="/work/" id="nav-videos" data-transition="slide" class="nav-inactive">Work</a></li>
 			</ul>
-
-	      </div>
-	    </div>
+		</div>
+	</div>
 
 
 	<div data-role="content" data-enhance="false">
@@ -78,10 +67,11 @@
 
 
 		{% endblock %}
-
 	</div>
-
-
 </div>
+	<div class="background"></div>
+
+
+
 </body>
 </html>

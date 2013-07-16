@@ -2,8 +2,8 @@ from django.shortcuts import render_to_response, get_object_or_404
 from dotdotdash.models import *
 
 def home(request):
-	# if(not request.mobile):
-	# 	return render_to_response("mobile/index.html",getHome())
+	if(not request.mobile):
+		return render_to_response("mobile/index.html",getHome())
 	homeout = getHome()
 	aboutout = getAbout()
 	servicesout = getServices()
@@ -24,7 +24,7 @@ def home(request):
 
 def getHome():
 	home = Home.objects.all()[0]
-	homeout = {"q1":home.quote1,"q2":home.quote2,"mp4":home.mp4,"ogv":home.ogv,"webm":home.webm}
+	homeout = {"q1":home.quote1,"q2":home.quote2,"mp4":home.mp4,"ogv":home.ogv,"webm":home.webm,"bkimg":home.workbackgroundimage}
 	return homeout
 
 def getAbout():
