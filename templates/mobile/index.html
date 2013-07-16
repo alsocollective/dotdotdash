@@ -21,6 +21,10 @@ home
 		padding: 0;
 		/*z-index: -1;*/
 	}
+
+	.quote{
+		display: none;
+	}
 </style>
 
 
@@ -29,10 +33,10 @@ home
 <div class="table fixed">
 	<div class="center">
 		<h1 class="quote">
-			{{q1}}
+			{{q1|safe}}
 		</h1>
 		<h1 class="quote">
-			{{q2}}
+			{{q2|safe}}
 		</h1>
 	</div>
 </div>

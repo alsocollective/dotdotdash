@@ -1,5 +1,4 @@
 var myPlayer;
-var videoLenth = 1000;
 
 videojs("bkvid",{"autoplay":true,"controls":false,"loop": true }).ready(function(){
 	myPlayer = this;
@@ -12,7 +11,7 @@ function noscroll(event){
 	event.preventDefault();
 }
 
-var useOpacity = (typeof document.createElement("div").style.opacity != 'undefined');
+var useOpacity = (typeof document.createElement("div").style.opacity !== 'undefined');
 
 bttonsHeight();
 //sticky elements
@@ -34,7 +33,7 @@ softScroll("contactLinktwo","contact");
 var fadingElement = [
 	new FadeingObject("quote1"),
 	new FadeingObject("quote2")
-]
+];
 
 var scrollLocation = $(document).scrollTop();
 
@@ -45,12 +44,17 @@ function fadingResized(){
 	}
 }
 fadingResized();
-$(window).scroll(function(eForEvent){
+$(window).scroll(function(){
 	scrollLocation = $(document).scrollTop();
 	for(var a = 0; a < fadingElement.length; ++a){
 		fadingElement[a].makeFade(scrollLocation,200);
 	}
 });
+
+var serviceSection= $(".servicesection");
+var serviceBackgrounds = $("#servicebackgrounds").children();
+var windowHeight = $(window).height();
+document.getElementById('servicebackgrounds').style.height = windowHeight;
 
 $(window).bind("resize",function(){
 	bttonsHeight();
@@ -58,10 +62,6 @@ $(window).bind("resize",function(){
 	document.getElementById('servicebackgrounds').style.height = windowHeight;
 
 });
-var serviceSection= $(".servicesection");
-var serviceBackgrounds = $("#servicebackgrounds").children();
-var windowHeight = $(window).height();
-document.getElementById('servicebackgrounds').style.height = windowHeight;
 
 for(var a =0; a < serviceBackgrounds.length; ++a){
 	serviceBackgrounds[a] = $(serviceBackgrounds[a]).children()[0];
@@ -76,20 +76,20 @@ buttons.each(function(index){
 		hideServicesBut(this);
 	});
 
-})
+});
 
 function bttonsHeight(){
 	var bkImages = $(".backgroundImage");
 	windowHeight = $(window).height();
 	bkImages.each(function(index){
 		bkImages[index].style.height = windowHeight+"px";
-	})
+	});
 }
 
 function hideServicesBut(thisEl){
 	var first = true;
 	serviceSection.each(function(index){
-		if(serviceSection[index].id == thisEl.id){
+		if(serviceSection[index].id === thisEl.id){
 			if($(serviceSection[index]).hasClass("textnoshow")){
 				if(first && buttonsClicked){
 					$(serviceBackgrounds[index]).fadeIn(0);
@@ -107,11 +107,11 @@ function hideServicesBut(thisEl){
 			$(serviceSection[index]).addClass("textnoshow");
 			if(first){
 				setTimeout(function(){
-					$(serviceBackgrounds[index]).fadeOut(0)
-				},1000)
+					$(serviceBackgrounds[index]).fadeOut(0);
+				},1000);
 				first = false;
 			} else {
-				$(serviceBackgrounds[index]).fadeOut(500)
+				$(serviceBackgrounds[index]).fadeOut(500);
 			}
 		}
 	});
@@ -157,7 +157,7 @@ function FadeingObject(element){
 		quoteTop = $(quote).offset().top;
 		quoteSize = $(quote).height();
 		screenHeight = $(window).height();
-	}
+	};
 
 	this.makeFade = function(scrollLocation,range){
 		location = (quoteTop+(quoteSize/2))-scrollLocation;
@@ -175,13 +175,14 @@ function FadeingObject(element){
 				quote.style.filter = "alpha(opacity="+ ((0.5+transparency)*100) + ")";
 			}
 		}
-	}
+	};
 }
 
 
 $(".project").click(function(event){
 	scrolllocation = $(window).scrollTop();
-	event.preventDefault()
+	event.preventDefault();
+	//works defined in the django loop
 	var workToShow = works[this.id];
 
 	$(window).on("scroll",noscroll);
@@ -212,7 +213,7 @@ $(".project").click(function(event){
 
 	var numberofslides = workToShow["Links"].length;
 	for(var a = 0; a < numberofslides; ++a){
-		var temp = newElement.cloneNode(true)
+		var temp = newElement.cloneNode(true);
 		temp.innerHTML += "  " + a;
 		rsSlider.appendChild(temp);
 	}
@@ -220,9 +221,8 @@ $(".project").click(function(event){
 	var rsSliderChildren = rsSlider.childNodes;
 
 	$(rsSliderChildren[0]).load(workToShow["Links"][0],function(){
-		with(rsSlider.style){
-			left = "0%";
-		}
+		rsSlider.style.left = "0%";
+
 		backButton.style.left = "0";
 
 		for(var a = 1; a < rsSliderChildren.length; ++a){
@@ -240,12 +240,6 @@ $(".project").click(function(event){
 			usePreloader: false,
 			easeInOut: true,
 			navigateByClick:false
-			// autoPlay: {
-			// 	// autoplay options go gere
-			// 	delay:5000,
-			// 	enabled: true,
-			// 	pauseOnHover: true
-			// }
 		});
 	});
 

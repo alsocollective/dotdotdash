@@ -1,27 +1,78 @@
 /* CUSTOM OVERRIDES FOR JQUERY MOBILE */
 
-.ui-content {
+.ui-btn-corner-all {
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+
+.ui-body-c {
+	text-shadow: none !important;
+}
+
+.ui-bar-a {
+	border: none;
+	color: #fff;
+	font-weight: normal;
+	text-shadow: none;
+	background-image: none;
+}
+
+.ui-header, .ui-footer {
+	position: relative;
+	zoom: 1;
+}
+
+.ui-btn-up-a {
+	border: 3px solid #fff;
+	background: none;
+	font-weight: normal;
+	color: #fff;
+	text-shadow: none;
+	background-image: none;
+
+	-moz-transition: 0.2s ease-in;
+	-webkit-transition: 0.2s ease-in;
+	-o-transition: 0.2s ease-in;
+	transition: 0.2s ease-in;
+}
+
+.ui-btn-hover-a {
+	border: 3px solid #fff;
+	background: #333;
+	font-weight: normal;
+	color: #fff;
+	text-shadow: none;
+	background-image: none;
+
+	-moz-transition: 0.2s ease-in;
+	-webkit-transition: 0.2s ease-in;
+	-o-transition: 0.2s ease-in;
+	transition: 0.2s ease-in;
+}
+
+.ui-btn-text {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	font-size: 3em;
+}
+
+.ui-header .ui-btn-inner, .ui-footer .ui-btn-inner, .ui-mini .ui-btn-inner, .ui-panel-inner {
+	padding:0;
+}
+
+.ui-panel-display-reveal{
+	background-color: #fcf;
+}
+
+.ui-content{
+	min-height: inherit;
 	padding: 0;
 }
 
-.ui-mobile .ui-header, .ui-mobile .ui-footer {
-	background-color: #f00;
-	height: 2.5em;
-}
-
-.ui-grid-d > :nth-child(n) {
-	width: auto;
-}
-
-.ui-grid-d a{
-	text-decoration: none;
-	font-size: 2em;
-	text-transform: uppercase;
-}
-
-.ui-btn-inner {
-	padding: 0 0.4em 0 0.4em !important;
-}
 
 #containerAbout div{
 	background-color:#fff;
@@ -70,87 +121,10 @@ p {
 }
 
 
-/*
-.ui-body-c, .ui-body-c input, .ui-body-c select, .ui-body-c textarea, .ui-body-c button {
-	font-family: "ff-unit-web-pro", sans-serif !important;
-}
 
-.ui-body-a, .ui-body-a input, .ui-body-a select, .ui-body-a textarea, .ui-body-a button {
-	font-family: "ff-unit-web-pro", sans-serif !important;
-}
 
-.ui-btn-corner-all {
-	-webkit-border-radius: 0;
-	border-radius: 0;
-}
 
-.ui-body-c {
-	text-shadow: none !important;
-}
 
-.ui-bar-a {
-	border: none;
-	color: #fff;
-	font-weight: normal;
-	text-shadow: none;
-	background-image: none;
-}
-
-.ui-header, .ui-footer {
-	position: relative;
-	zoom: 1;
-}
-
-.ui-btn-up-a {
-border: 3px solid #fff;
-background: none;
-font-weight: normal;
-color: #fff;
-text-shadow: none;
-background-image: none;
-
--moz-transition: 0.2s ease-in;
--webkit-transition: 0.2s ease-in;
--o-transition: 0.2s ease-in;
-transition: 0.2s ease-in;
-}
-
-.ui-btn-hover-a {
-border: 3px solid #fff;
-background: #333;
-font-weight: normal;
-color: #fff;
-text-shadow: none;
-background-image: none;
-
--moz-transition: 0.2s ease-in;
--webkit-transition: 0.2s ease-in;
--o-transition: 0.2s ease-in;
-transition: 0.2s ease-in;
-}
-
-.ui-btn-text {
-position: relative;
-z-index: 1;
-width: 100%;
--moz-user-select: none;
--webkit-user-select: none;
--ms-user-select: none;
-font-size: 3em;
-}
-
-.ui-header .ui-btn-inner, .ui-footer .ui-btn-inner, .ui-mini .ui-btn-inner, .ui-panel-inner {
-	padding:0;
-}
-
-.ui-panel-display-reveal{
-	background-color: #fcf;
-}
-
-.ui-content{
-	min-height: inherit;
-	padding: 0;
-}*/
 /* JQUERY END */
 /*
 html,body{
@@ -237,4 +211,26 @@ img{
 	text-align: center;
 	display: inline-block;
 	vertical-align: middle;
+}*/
+/*.ui-content {
+	padding: 0;
+}
+
+.ui-mobile .ui-header, .ui-mobile .ui-footer {
+	background-color: #f00;
+	height: 2.5em;
+}
+
+.ui-grid-d > :nth-child(n) {
+	width: auto;
+}
+
+.ui-grid-d a{
+	text-decoration: none;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+.ui-btn-inner {
+	padding: 0 0.4em 0 0.4em !important;
 }*/
