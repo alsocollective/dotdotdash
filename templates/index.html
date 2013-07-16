@@ -88,7 +88,7 @@
 	<div class="for-space"></div>
 	<div class="for-space"></div>
 
-	<div id="servicebackgrounds"> 
+	<div id="servicebackgrounds">
 		<div class="backgroundImage"  style="background-image: url('/../static/uploaded/{{services.services.image}}')"><div class="dots"></div></div>
 		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.smsp.image}}')"><div class="dots"></div></div>
 		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.branding.image}}')"><div class="dots"></div></div>
@@ -156,29 +156,29 @@
 </section>
 
 <section id="clients">
-	
+
 	<div class="sub-section">
 		<h1>Clients</h1>
 		<div class="clients-half">
 			{{clients.text|safe}}
 		</div>
-		
+
 	<div class="logo-container">
 		{% for img in clients.images%}
 			<a href="{{img.link}}"><img src="/../static/uploaded/{{img.title}}"></a>
 		{% endfor %}
 	</div>
-	
+
 	</div>
-	
+
 	<div class="for-space"></div>
-	
+
 </section>
 
 <section id="work">
-	
+
 	<div class="for-space"></div>
-	
+
 	<script type="text/javascript">
 	var works = {
 		{%for project in work%}

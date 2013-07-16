@@ -5,7 +5,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Dot-Dot-Dash</title>
+        
+		<title>Urban Ecologies 2013</title>
 
 		<!--Description, Keywords-->
 		<meta name="description" content="OCAD University’s Faculty of Design is announcing a call for proposals for Urban Ecologies 2013, a conference that will examine the impact of five intersecting themes that are shaping the future of design in our cities.">
@@ -15,19 +16,24 @@
 		<!--For Mobile Devices-->
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-	    <link rel="stylesheet" href="/../static/css/jquery.mobile.structure-1.3.1.css">
-	    <!-- <link rel="stylesheet" href="/../static/css/jquery.mobile-1.3.1.min.css"> -->
-
-	    <script src="/../static/js/jquery.min.js"></script>
-	    <script src="/../static/js/jquery.mobile-1.3.1.min.js"></script>
+	    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css">
+	    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+	    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 
 		<link rel="stylesheet" href="/static/css/mobile.css">
 
 	</head>
 
 <body>
-	
+
 <div data-role="page" id="page1" class="{% block pagename %}{% endblock %}">
+<<<<<<< HEAD
+
+	<div data-role="header">
+	<!--     <a href="#defaultpanel" data-icon="bars" data-shadow="false" data-theme="c" data-corners="false">Menu</a> -->
+	<a href="#defaultpanel" id="top-left">&#8801; Menu</a>
+	</div>
+=======
 	
     <div data-role="header">
       <!--<a href="#defaultpanel" data-icon="bars" data-shadow="false" data-theme="c" data-corners="false">Menu</a>-->
@@ -48,19 +54,33 @@
 		</ul>
 	</div>
   </div>
+>>>>>>> 88a6cf09a70e5539c1e28f294e82f1b01b14db14
+
+	<div data-role="panel" id="defaultpanel" data-enhance="false">
+		<div class="panel-content">
+
+			<ul id="nav">
+				<li><a href="/" id="nav-about" data-transition="slide" class="nav-inactive">Home</a></li><li>
+				<a href="/about/" id="nav-about" data-transition="slide" class="nav-inactive">About</a></li><li>
+				<a href="/services/" id="nav-schedule" data-transition="slide" class="nav-inactive">Services</a></li><li>
+				<a href="/clients/" id="nav-sponsors" data-transition="slide" class="nav-inactive">Clients</a></li><li>
+				<a href="/work/" id="nav-videos" data-transition="slide" class="nav-inactive">Work</a></li>
+			</ul>
+
+	      </div>
+	    </div>
 
 
-<div data-role="content" data-enhance="false">
-	
-	{% block content %}
+	<div data-role="content" data-enhance="false">
+
+		{% block content %}
 
 
 
-	{% endblock %}
-	
-</div>
+		{% endblock %}
 
-<div class="background"></div>
+	</div>
+
 
 </div>
 </body>
