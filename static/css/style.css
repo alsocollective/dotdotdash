@@ -572,6 +572,22 @@ a {
 	background-color: #3d3d3d;
 }
 
+#sos-projects p {
+	margin: 0 auto 0 auto;
+	text-align: left;
+	width: 80%;
+	padding: 0.5em 0em 1.5em 0em;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+	color: #3d3d3d;
+}
+#sos-projects {
+	background-color: #fff;
+	width: 100%;
+	padding: 1em 0 2em 0;
+}
+
+
 /*#sos-projects {
 	margin: 3em auto 0 auto;
 	display: block;
