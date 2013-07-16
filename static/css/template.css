@@ -31,7 +31,7 @@
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background-position:center;
+	background-position:top left;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -77,6 +77,7 @@
 	color: #248183;
 }
 .sins{
+	height: 100%;
 	text-align: center;
 }
 .sins img{
