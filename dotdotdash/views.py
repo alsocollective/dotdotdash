@@ -2,8 +2,8 @@ from django.shortcuts import render_to_response, get_object_or_404
 from dotdotdash.models import *
 
 def home(request):
-	if(request.mobile):
-		return render_to_response("mobile/index.html",getHome())
+	# if(not request.mobile):
+	# 	return render_to_response("mobile/index.html",getHome())
 	homeout = getHome()
 	aboutout = getAbout()
 	servicesout = getServices()
@@ -51,16 +51,16 @@ def getClients():
 	return clientsout
 
 def getWork():
-	work = Work.objects.all()
+	work = Work.objects.order_by('order').all()
 	workout = []
 	for project in work:
-		print project.pages.all()
 		workout.append({
 			"title":project.title,
 			"slug":project.slug,
 			"subtitle":project.subTitle,
 			"description":project.description,
-			"pages":getPages(project.pages.all())
+			"pages":getPages(project.pages.order_by('order').all()),
+			"sos":project.is_a_sos_project,
 			})
 	return workout
 
@@ -118,9 +118,9 @@ def projects(request,project=None,page=None):
 
 	article = []
 	pageObj = []
-	pageType = "text"
 	project = Work.objects.filter(slug = project)[0]
 	page = project.pages.filter(slug = page)[0]
+	pageType = page.pageType
 	pageout = {
 		"title":page.title,
 		"text":page.textFields,
@@ -128,6 +128,7 @@ def projects(request,project=None,page=None):
 		"slug":page.slug
 		}
 	pageout.update(getImages(page.mediaField.all()))
+	pageout.update({"pdf":getImages(page.pdf.all())})
 
 	return render_to_response("%s.html"%pageType,{"project":article,"content":pageout})
 

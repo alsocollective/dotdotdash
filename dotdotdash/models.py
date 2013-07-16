@@ -31,7 +31,7 @@ class MediaNode(models.Model):
 
 	def admin_video(self):
 		if self.video:
-			return '<iframe src="%s?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' % self.video
+			return '<iframe src="%s?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179;autoplay=1" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' % self.video
 		return "not an video"
 	admin_video.allow_tags = True
 
@@ -86,14 +86,18 @@ class Page(models.Model):
 		("text","text"),
 		("singleImage","singleImage"),
 		("fourImage","fourImage"),
-		("imageWText","imageWText")
+		("imageWText","imageWText"),
+		("pdf","pdf"),
+		("singleImageNoStrech","singleImageNoStrech")
 	)
 	title = models.CharField(max_length=600)
-	textFields = models.TextField(max_length=1000)
+	textFields = models.TextField(max_length=1000,blank=True)
 	mediaField = models.ManyToManyField(MediaNode,blank=True,related_name="images+")
 	videoURL = models.URLField(max_length=800, blank=True)
 	pageType = models.CharField(max_length=30, choices=pageTypes)
 	slug = models.SlugField(blank=True)
+	order = models.IntegerField(blank=True,default=0)
+	pdf = models.ManyToManyField(MediaNode,blank=True,related_name="pdf+")
 
 	def save(self,*args, **kwargs):
 		self.slug = slugify(self.title)
@@ -109,6 +113,8 @@ class Work(models.Model):
 	description = models.TextField(max_length=1000)
 	datefororder = models.DateField(auto_now=True)
 	slug = models.SlugField(blank=True)
+	order = models.IntegerField(blank=True,default=0)
+	is_a_sos_project = models.BooleanField(blank=True)
 
 	def save(self,*args, **kwargs):
 		self.slug = slugify(self.title)

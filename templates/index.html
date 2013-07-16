@@ -5,14 +5,33 @@
 <link href="http://vjs.zencdn.net/4.0/video-js.css" rel="stylesheet">
 <link rel="stylesheet" href="/../static/css/royalslider.css">
 <link rel="stylesheet" href="/../static/css/rs-default.css">
+
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Montserrat:700,400:latin' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+
+
 {% endblock %}
 
 {% block content %}
 <div id="backgroundVideo">
-	<video id="bkvid" class="video-js vjs-default-skin stuck" controls preload="auto" width="100%" height="100%" poster="http://video-js.zencoder.com/oceans-clip.png" data-setup=''>
-	<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
-	<source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
-	<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+	<!-- controls preload="none" -->
+	<video id="bkvid" class="video-js vjs-default-skin stuck" width="100%" height="100%" poster="http://symonoliver.com/content/vidback2.jpg" data-setup=''>
+		<!-- http://v.cdn.vine.co/r/videos/75A61AC301965122215848878080_13c0fff343a.3_4Sp4pbcyzRUx87uFlgfQbQf1i91VwktLdsEcAxp.vGd4br3BJTKwWc2StcjFYW97 -->
+	<source src="http://symonoliver.com/content/vid2.mp4" type='video/mp4' />
+	<source src="http://symonoliver.com/content/vid2.webm" type='video/webm' />
+	<source src="http://symonoliver.com/content/vid2.ogv" type='video/ogg' />
 	</video>
 </div>
 
@@ -24,61 +43,68 @@
 		<li id="clientsLink"><a href="#clients">Clients</a></li>
 		<li id="ourWorkLink"><a href="#work">Our Work</a></li>
 		<li id="contactLink"><a href="#contact">Contact</a></li>
+		<li id="facebook"><a href="https://www.facebook.com/DOTDOTDASHCOMMUNICATIONS"><img src="/static/assets/facebook.png"></a></li>
+		<li id="instagram"><a href=""><img src="/static/assets/instagram.png"></a></li>
 	</ul>
 </nav>
 
-{{home.mp4}}
-{{home.ogv}}
-{{home.webm}}
-
 <!-- do not add spaces between these elements -->
 <section class="quote"><div id="quote1">{{home.q1|safe}}</div></section>
-<section class="quote"><div id="quote2">{{home.q2|safe}}</div></section>
+
+<div id="static-quote">
+	<span class="quote-back">THE BEST BRANDS ARE THE ONES THAT AIM TO MAKE LIFE BETTER.</span>
+</div>
+<div id="static-quote">
+	<span class="quote-back">LIFE IS MADE BETTER BY USING CREATIVITY TO SERVE COMMUNITY, CULTURE AND NATURE.</span>
+</div>
 
 <section id="about">
-	<div class="backgroundImage" id="first-background-image" style="background-image: url('/../static/uploaded/{{about.bkImg}}')"></div>
-	
-	<div class="sub-section">
+	<div class="backgroundImage" id="first-background-image" style="background-image: url('/../static/uploaded/{{about.bkImg}}')"><div class="dots"></div></div>
+
+	<div class="sub-section about">
 		<h1>About</h1>
 		<div>
-			{{about.about|safe}}
+			<p>{{about.about|safe}}</p>
 		</div>
 	</div>
-	
+
 	<div class="for-space"></div>
-	
-	<div class="sub-section">
-		<h2>Process</h2>
+
+	<div class="sub-section process">
+		<h2>THE WAY WE WORK</h2>
 		<div>
-			{{about.process|safe}}
+			<p>{{about.process|safe}}</p>
 		</div>
 	</div>
-	
+
 	<div class="for-space"></div>
 
 </section>
 
+<section class="quote"><div id="quote2">{{home.q2|safe}}</div></section>
+
 <section id="services">
-	
+
 	<div class="for-space"></div>
-	
+	<div class="for-space"></div>
+
 	<div id="servicebackgrounds"> 
-		<div class="backgroundImage"  style="background-image: url('/../static/uploaded/{{services.services.image}}')"></div>
-		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.smsp.image}}')"></div>
-		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.branding.image}}')"></div>
-		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.research.image}}')"></div>
-		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.creativedev.image}}')"></div>
-		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.contentproduction.image}}')"></div>
-		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.resultsanalytics.image}}')"></div>
+		<div class="backgroundImage"  style="background-image: url('/../static/uploaded/{{services.services.image}}')"><div class="dots"></div></div>
+		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.smsp.image}}')"><div class="dots"></div></div>
+		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.branding.image}}')"><div class="dots"></div></div>
+		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.research.image}}')"><div class="dots"></div></div>
+		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.creativedev.image}}')"><div class="dots"></div></div>
+		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.contentproduction.image}}')"><div class="dots"></div></div>
+		<div class="backgroundImage bknoshow"  style="background-image: url('/../static/uploaded/{{services.resultsanalytics.image}}')"><div class="dots"></div></div>
 	</div>
-	
+
 	<div id="servicescontent" class="sub-section">
-		<h1>Services</h1>
+		<h1>Services We Offer</h1>
 		<div>
 			{{services.services.text|safe}}
 		</div>
 	</div>
-	
+
 	<div id="buttoncontainer"> <!-- This should probably -->
 		<a href="#smsp" id="smsp"><img src="/../static/assets/social.png"></a>
 		<a href="#branding" id="branding"><img src="/../static/assets/branding.png"></a>
@@ -87,43 +113,72 @@
 		<a href="#contentproduction" id="contentproduction"><img src="/../static/assets/content.png"></a>
 		<a href="#resultsanalytics" id="resultsanalytics"><img src="/../static/assets/analytics.png"></a>
 	</div>
+
+	<div class="for-space"></div>
+
 	<div id="smsp" class="servicesection textnoshow">
-		<h2>Social Media Strategy Planning</h2>
-		<p>{{services.smsp.text|safe}}</p>
+		<div>
+		<h2>Social Media Strategy + Planning</h2>
+		{{services.smsp.text|safe}}
+		</div>
 	</div>
 	<div id="branding" class="servicesection textnoshow">
+		<div>
 		<h2>Branding</h2>
-		<p>{{services.branding.text|safe}}</p>
+		{{services.branding.text|safe}}
+		</div>
 	</div>
 	<div id="research" class="servicesection textnoshow">
+		<div>
 		<h2>research</h2>
-		<p>{{services.research.text|safe}}</p>
+		{{services.research.text|safe}}
+		</div>
 	</div>
 	<div id="creativedev" class="servicesection textnoshow">
+		<div>
 		<h2>Creative Development</h2>
-		<p>{{services.creativedev.text|safe}}</p>
+		{{services.creativedev.text|safe}}
+		</div>
 	</div>
 	<div id="contentproduction" class="servicesection textnoshow">
+		<div>
 		<h2>Content Production</h2>
-		<p>{{services.contentproduction.text|safe}}</p>
+		{{services.contentproduction.text|safe}}
+		</div>
 	</div>
 	<div id="resultsanalytics" class="servicesection textnoshow">
+		<div>
 		<h2>Results Analytics</h2>
-		<p>{{services.resultsanalytics.text|safe}}</p>
+		{{services.resultsanalytics.text|safe}}
+		</div>
 	</div>
+	<div class="for-space"></div>
 </section>
 
 <section id="clients">
-	<h1>Clients</h1>
-	<p>{{clients.text|safe}}</p>
-	<div>
+	
+	<div class="sub-section">
+		<h1>Clients</h1>
+		<div class="clients-half">
+			{{clients.text|safe}}
+		</div>
+		
+	<div class="logo-container">
 		{% for img in clients.images%}
 			<a href="{{img.link}}"><img src="/../static/uploaded/{{img.title}}"></a>
 		{% endfor %}
 	</div>
+	
+	</div>
+	
+	<div class="for-space"></div>
+	
 </section>
 
 <section id="work">
+	
+	<div class="for-space"></div>
+	
 	<script type="text/javascript">
 	var works = {
 		{%for project in work%}
@@ -139,25 +194,44 @@
 		{%endfor%}
 	}
 	</script>
+<!-- which ever element has the class .project and id of the slug will be what is clickable to get royalslider of the project, THE id and project class are to be kept together -->
 
+<h2>Client Projects</h2>
+<ul>
+{% for project in work %}{%if project.sos%}{%else%}<li class="project" id="{{project.slug}}">
 
-{% for project in work %}
-	<!-- which ever element has the class .project and id of the slug will be what is clickable to get royalslider of the project, THE id and project class are to be kept together -->
-	<div class="project" id="{{project.slug}}">
-		<h2>{{project.title}}</h2>
-		<h3>{{project.subtitle}}</h3>
-		<p>{{project.description}}</p>
-	</div>
-{% endfor %}
+	<h3>{{project.title}}</h3>
+	<h4>{{project.subtitle}}</h4>
+	<p>{{project.description}}</p>
+
+</li>{%endif%}{% endfor %}
+</ul>
+
+<h2><img src="/../static/assets/sos-logo.png"> Projects</h2>
+<ul>
+{% for project in work %}{%if project.sos%}<li class="project" id="{{project.slug}}">
+
+	<h3>{{project.title}}</h3>
+	<h4>{{project.subtitle}}</h4>
+	<p>{{project.description}}</p>
+
+</li>{%endif%}{% endfor %}
+</ul>
+
+<div class="for-space"></div>
+
 </section>
 
 <section id="contact">
-	
-	<div class="backgroundImage" id="first-background-image" style="background-image: url('/../static/uploaded/{{contact.bkImg}}')"></div>
-	
-	<h1>Contact</h1>
-	<p>{{contact.text}}</p>
-	
+	<div class="backgroundImage" style="background-image: url('/../static/uploaded/{{contact.bkImg}}')"><div class="dots"></div></div>
+	<div class="sub-section">
+		<h1>Contact</h1>
+	</div>
+
+	<div class="contact-columns">
+		{{contact.text|safe}}
+	</div>
+
 </section>
 
 {% endblock %}
@@ -176,15 +250,9 @@
 
 
 <script type="text/javascript">
-	var myPlayer;
-	videojs("bkvid",{"example_option":true,"controls":false,"loop": "true"}).ready(function(){
-		myPlayer = this;
-		this.play()
-		myPlayer.volume(0);
-	});
+
 </script>
 
 <script src="/../static/js/script.js"></script>
-
 
 {% endblock %}

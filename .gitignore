@@ -12,6 +12,7 @@
 *.ogg
 *.mp4
 *.webm
+*.pdf
 yeaa
 settings.py
 jquery.royalslider.min.js

@@ -1,3 +1,16 @@
+var myPlayer;
+var videoLenth = 1000;
+
+videojs("bkvid",{"autoplay":true,"controls":false,"loop": true }).ready(function(){
+	myPlayer = this;
+	this.volume(0);
+});
+
+var scrolllocation = 0;
+function noscroll(event){
+	window.scroll(0,scrolllocation);
+	event.preventDefault();
+}
 
 var useOpacity = (typeof document.createElement("div").style.opacity != 'undefined');
 
@@ -10,11 +23,12 @@ $('.backgroundImage').waypoint('sticky',{
 });
 
 //scrolling effect for nav
-softScroll("aboutLink","about")
-softScroll("serviceLink","services")
-softScroll("clientsLink","clients")
-softScroll("ourWorkLink","work")
-softScroll("contactLink","contact")
+softScroll("aboutLink","about");
+softScroll("serviceLink","services");
+softScroll("clientsLink","clients");
+softScroll("ourWorkLink","work");
+softScroll("contactLink","contact");
+softScroll("contactLinktwo","contact");
 
 //fading quotes
 var fadingElement = [
@@ -118,7 +132,7 @@ function softScroll(click, endup){
 //Element -> Animation
 //scrolls html/body to the given element in 1 second
 function goToThisEndPoint(location){
-	$('html, body').animate({scrollTop :  $("#"+location).offset().top},1000);
+	$('html, body').animate({scrollTop :  $("#"+location).offset().top-75},1000);
 	setTimeout(function(){
 		setHashTag(location);
 	},1005);
@@ -149,11 +163,12 @@ function FadeingObject(element){
 		location = (quoteTop+(quoteSize/2))-scrollLocation;
 		midPoint = screenHeight/2;
 		if(location > midPoint - range && location < midPoint + range){
-			var transparency = (((quoteTop-scrollLocation)/(screenHeight/2))-1)*2;
-			if(transparency < 0){
-				transparency = transparency*(-1);
+			var transparency = (((quoteTop-scrollLocation)/(screenHeight/2)))*2;
+			if(transparency < 1.5){
+				transparency = transparency-0.2;
+			} else {
+				transparency = 1;
 			}
-			transparency = 1 - transparency;
 			if(useOpacity){
 				quote.style.opacity = transparency;
 			} else {
@@ -165,10 +180,11 @@ function FadeingObject(element){
 
 
 $(".project").click(function(event){
-	console.log("clicked",this);
+	scrolllocation = $(window).scrollTop();
 	event.preventDefault()
 	var workToShow = works[this.id];
-	console.log(works);
+
+	$(window).on("scroll",noscroll);
 
 	var rsSlider = document.createElement("div");
 	rsSlider.style.left = "100%";
@@ -182,6 +198,7 @@ $(".project").click(function(event){
 	$(backButton).click(function(){
 		rsSlider.style.left = "100%";
 		backButton.style.left = "105%";
+		$(window).off("scroll",noscroll);
 		setTimeout(function(){
 			rsSlider.parentNode.removeChild(rsSlider);
 			backButton.parentNode.removeChild(backButton);
@@ -206,7 +223,7 @@ $(".project").click(function(event){
 		with(rsSlider.style){
 			left = "0%";
 		}
-		backButton.style.left = "5%";
+		backButton.style.left = "0";
 
 		for(var a = 1; a < rsSliderChildren.length; ++a){
 			$(rsSliderChildren[a]).load(workToShow["Links"][a]);
@@ -214,8 +231,21 @@ $(".project").click(function(event){
 
 		$(".royalSlider").royalSlider({
 			// options go here
-			// as an example, enable keyboard arrows nav
-			keyboardNavEnabled: true
+			arrowsNav: true,
+			controlNavigation: 'bullets',
+			keyboardNavEnabled: true,
+			loop:true,
+			slidesSpacing: 0,
+			numImagesToPreload: 1,
+			usePreloader: false,
+			easeInOut: true,
+			navigateByClick:false
+			// autoPlay: {
+			// 	// autoplay options go gere
+			// 	delay:5000,
+			// 	enabled: true,
+			// 	pauseOnHover: true
+			// }
 		});
 	});
 
