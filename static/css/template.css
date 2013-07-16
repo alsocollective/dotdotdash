@@ -58,16 +58,23 @@
 	background-size: cover;
 	margin: 0 auto 0 auto;
 }
+
 .pdf a{
 	display: table-cell;
 	vertical-align: middle;
-	opacity: 0;
+	opacity: 1;
+	
+	font-size: 2em;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0.5em;
+	
 	-webkit-transition:all 1s ease;
 	-moz-transition:all 1s ease;
 	transition:all 1s ease;
 }
 .pdf:hover a{
-	opacity: 1;
+	opacity: 0.5;
+	color: #248183;
 }
 .sins{
 	text-align: center;

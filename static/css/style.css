@@ -60,15 +60,8 @@ section h1, section h2 {
 	font-family: 'Montserrat', sans-serif;
 	width: 70%;
 	margin: 1em auto 1em auto;
-	color: #fff;
+	color: #3d3d3d;
 	text-align: center;
-}
-
-.quote-back {
-	background-color: #3d3d3d;
-	line-height: 1.8em;
-	padding: 0.2em;
-	box-shadow: 0px 2px 10px #000;
 }
 
 /*for layering of the content all ements must be relative to work*/
@@ -175,6 +168,9 @@ h1, h2 {
 .clients-half {
 	width: 80%;
 	padding: 0.5em 0em 1.5em 0em;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+	color: #3d3d3d;
 }
 
 .clients-half p{
@@ -532,12 +528,11 @@ nav a img {
 	padding: 0;
 }
 
-p strong{
-	color: inherit;
-	background-color: #d4bf44;
-	font-size: 1.1em;
-	padding: 0 0.4em 0 0.4em;
+#about strong{
+	color: #d4bf44;
+	font-size: 1.2em;
 }
+
 strong {
 	color: #d4bf44;
 }
