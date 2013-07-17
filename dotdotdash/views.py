@@ -3,7 +3,9 @@ from dotdotdash.models import *
 
 def home(request):
 	if(request.mobile):
-		return render_to_response("mobile/index.html",getHome())
+		out = getHome()
+		out.update({"contact":Contact.objects.all()[0].contant})
+		return render_to_response("mobile/index.html",out)
 	homeout = getHome()
 	aboutout = getAbout()
 	servicesout = getServices()

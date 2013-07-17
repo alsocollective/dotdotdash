@@ -1,7 +1,4 @@
 {% extends "mobile/base.html" %}
-{% block pagename %}
-
-{% endblock %}
 
 {% block content %}
 <style type="text/css">
@@ -11,48 +8,54 @@
 </style>
 
 <section id="services">
+
 <div class="services-intro">
 	<h1>Services</h1>
 	{{services.text|safe}}
 </div>
 
 <div class="service-image">
-<img src="/../static/assets/social.png">
+	<img src="/../static/assets/social.png">
 </div>
 <div class="servicesContainer">
 	<h3>Social Media and Strategy Planning</h3>
 	{{smsp.text|safe}}
 </div>
+
 <div class="service-image">
-<img src="/../static/assets/branding.png">
+	<img src="/../static/assets/branding.png">
 </div>
 <div class="servicesContainer">
 	<h3>Branding</h3>
 	{{branding.text|safe}}
 </div>
+
 <div class="service-image">
-<img src="/../static/assets/research.png">
+	<img src="/../static/assets/research.png">
 </div>
 <div class="servicesContainer">
 	<h3>Research</h3>
 	{{research.text|safe}}
 </div>
+
 <div class="service-image">
-<img src="/../static/assets/creative.png">
+	<img src="/../static/assets/creative.png">
 </div>
 <div class="servicesContainer">
 	<h3>Creative Development</h3>
 	{{creativedev.text|safe}}
 </div>
+
 <div class="service-image">
-<img src="/../static/assets/content.png">
+	<img src="/../static/assets/content.png">
 </div>
 <div class="servicesContainer">
 	<h3>Content Production</h3>
 	{{contentproduction.text|safe}}
 </div>
+
 <div class="service-image">
-<img src="/../static/assets/analytics.png">
+	<img src="/../static/assets/analytics.png">
 </div>
 <div class="servicesContainer">
 	<h3>Results Analytics</h3>
@@ -60,9 +63,5 @@
 </div>
 
 </section>
-
-<script type="text/javascript">
-//$(".background").css({"height":$(window).height()})
-</script>
 
 {% endblock %}
