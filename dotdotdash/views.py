@@ -82,6 +82,7 @@ def getContentOfPages(projectName):
 			"images":getClientImages(page.mediaField.all()),
 			"video":page.videoURL,
 			"slug":page.slug,
+			"pdf":getImages(page.pdf.all())
 			})
 	return {"pages":pagesOut,"title":work.title}
 
@@ -140,7 +141,6 @@ def clients(request):
 	return render_to_response('mobile/clients.html',getClients())
 
 def services(request):
-	print getServices()
 	return render_to_response('mobile/services.html',getServices())
 
 def work(request):
