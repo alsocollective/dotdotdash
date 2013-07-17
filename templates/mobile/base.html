@@ -39,16 +39,18 @@
 <body>
 
 <div data-role="page" id="page1" class="{% block pagename %}{% endblock %}">
+	<div class="background"></div>
+
 	<div data-role="header">
 		<!-- <a href="#defaultpanel"> Menu</a> -->
-		<a href="#defaultpanel" data-iconshadow="false" data-shadow="false" data-corners="false" data-theme="d" id="top-left">&#8801; Menu</a>
+		<a href="#dddpanel" data-iconshadow="false" data-shadow="false" data-corners="false" data-theme="d" id="top-left">&#8801; Menu</a>
 		{% block extrabutton %}
 		{% endblock %}
 	</div>
 
 	<div data-role="content" data-enhance="false">
-		<!-- <a href="#dddpanel" data-role="button" data-inline="true" data-mini="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-mini ui-btn-inline ui-btn-up-c">Bam</a>
-		 --><!-- <a href="#dddpanel" data-role="button" data-inline="true" data-iconshadow="false" data-shadow="false" data-corners="false" data-theme="d" id="top-left">&#8801; Menu</a> -->
+		<!-- <a href="#dddpanel" data-role="button" data-inline="true" data-mini="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-mini ui-btn-inline ui-btn-up-c">Bam</a> -->
+		<!-- <a href="#dddpanel" data-role="button" data-inline="true" data-iconshadow="false" data-shadow="false" data-corners="false" data-theme="d" id="top-left">&#8801; Menu</a> --> -->
 		<!-- <a href="#defaultpanel" data-role="button" data-inline="true">True</a> -->
 		{% block content %}{% endblock %}</div>
 	<div data-role="footer" class="ui-bar">{% block footer %}{% endblock %}</div>
@@ -65,7 +67,6 @@
 		</div>
 	</div>
 </div>
-	<div class="background"></div>
 
 
 
