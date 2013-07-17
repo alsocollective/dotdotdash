@@ -573,7 +573,7 @@ a {
 }
 
 #sos-projects p {
-	margin: 0 auto 0 auto;
+	margin: 0 auto 0.8em auto;
 	text-align: left;
 	width: 80%;
 	padding: 0.5em 0em 1.5em 0em;
@@ -581,12 +581,22 @@ a {
 	font-size: 1.5em;*/
 	color: #3d3d3d;
 	font-size: 0.9em;
+	
+	vertical-align: top;
+	line-height: 1.5em;
 }
 #sos-projects {
 	background-color: #fff;
 	width: 100%;
-	padding: 1em 0 2em 0;
+	padding: 2em 0 3em 0;
 	margin: 0 0 2em 0;
+	
+	columns:100px 2;
+	column-gap: 2.5em;
+	-webkit-columns:100px 2; /* Safari and Chrome */
+	-webkit-column-gap: 2.5em;
+	-moz-columns:100px 2; /* Firefox */
+	-moz-column-gap: 2.5em;
 }
 
 .pdf-only {
