@@ -16,7 +16,7 @@ html,body{
 	padding: 0;
 	margin: 0;
 	/*font-family: courier;*/
-	font-family: "courier-prime";
+	font-family: "courier-prime", courier;
 }
 
 section{
@@ -597,8 +597,12 @@ a {
 #sos-projects {
 	background-color: #fff;
 	width: 100%;
-	padding: 2em 0 2em 0;
+	padding: 2.5em 0 1em 0;
 	margin: 0 0 2em 0;
+}
+
+#sos-projects h3 {
+	margin-bottom: 0.4em;
 }
 
 .pdf-only {
