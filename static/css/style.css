@@ -147,6 +147,10 @@ div{
 	-moz-column-gap: 2.5em;
 }
 
+.process strong {
+	color: #000 !important;
+}
+
 .sub-section p {
 	vertical-align: top;
 	margin: 0;
