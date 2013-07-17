@@ -31,7 +31,7 @@
 
 /*Background transparent*/
 	.ui-overlay-c{
-		background:#fff; 
+		background:#fff;
 	}
 	.ui-body-c{
 		background-image: none;
@@ -42,46 +42,20 @@
 
 	.ui-panel{
 		background-color: #fff;
-		-moz-transition: 0.2s ease-in;
-		-webkit-transition: 0.2s ease-in;
-		-o-transition: 0.2s ease-in;
-		transition: 0.2s ease-in;
 	}
 
-	.ui-panel-closed{
-		width: 0em;
-		display: inline-block;
-	}
 
 /*Menue Button*/
-	#top-left{
-		width: 100%;
-		display: inline-block;
-		padding: 0;
-		background-color: #000;
-		margin: 0;
-
-		color: #fff;
-		font-family: 'Montserrat', sans-serif;
-		font-weight: normal;
-		font-size: 3em;
-
-		text-decoration: none;
-		text-align: center;
-	}
-
 	.ui-btn-left{
 		top: 0!important;
 		left: 0!important;
 		width: 100%;
-		z-index: 5;
 	}
 
 	.ui-btn-right{
 		top: 0!important;
 		left: 0!important;
 		width: 100%;
-		z-index: 5;
 	}
 
 	.ui-btn-inner{
@@ -176,8 +150,8 @@
 	}
 
 	.ui-panel-content-wrap{
-		position: relative;
-		z-index: 3;
+		/*position: relative;*/
+		/*z-index: 3;*/
 	}
 
 	.ui-content{
@@ -335,7 +309,7 @@
 
 	.service-image {
 		text-align: center;
-		position: relative;
+		/*position: relative;*/
 		top: 3em;
 		background-color: none;
 	}
