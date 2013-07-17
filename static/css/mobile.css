@@ -53,7 +53,19 @@
 	.ui-btn-left{
 		top: 0!important;
 		left: 0!important;
+		width: 100%;
 	}
+
+	.ui-btn-right{
+		top: 0!important;
+		left: 0!important;
+		width: 100%;
+	}
+
+	.ui-btn-inner{
+		border:none;
+	}
+
 	.ui-btn-up-d {
 		-moz-box-shadow:none;
 		-webkit-box-shadow:none;
@@ -64,6 +76,8 @@
 		color: #fff;
 		text-shadow: none;
 		background-image: none;
+		background-color: #000000;
+		border:none;
 	}
 	.ui-btn-hover-d {
 		color: #fff;
@@ -72,6 +86,7 @@
 		text-shadow: none;
 		font-weight: normal;
 		background-image: none;
+		border:none;
 
 		-moz-transition: 0.2s ease-in;
 		-webkit-transition: 0.2s ease-in;
@@ -79,10 +94,12 @@
 		transition: 0.2s ease-in;
 	}
 	.ui-btn-text {
+		display: inline-block;
+		width: 100%;
 		font-family: 'Montserrat', sans-serif;
 		color:#fff;
 		font-size: 3em;
-		padding: 1.5em 0.5em 1.5em 0.5em;
+		padding: 0;
 	}
 
 /*NavBar Style*/
@@ -179,6 +196,7 @@
 	.hidden{
 		display: none !important;
 	}
+
 /*Index*/
 	.logo{
 		width: 100%;
@@ -203,6 +221,12 @@
 	#about strong{
 		color: #d4bf44;
 		font-size: 1.2em;
+	}
+	#containerAbout div{
+		background-color:#fff;
+		margin: 14em 0 14em 0;
+		box-shadow: 0px 3px 10px #000;
+		padding: 0.5em 1em 0.5em 1em;
 	}
 
 /*clients*/
@@ -229,7 +253,7 @@
 
 /*Work*/
 	.work-scection .intro{
-		padding: 3em 1em 0.5em 1em;
+		padding: 0em 1em 0.5em 1em;
 		background-color: #fff;
 	}
 
@@ -275,16 +299,6 @@
 	have the content be same as desktop similar...
 	*/
 
-#containerAbout div{
-	background-color:#fff;
-	margin: 14em 0 14em 0;
-	box-shadow: 0px 3px 10px #000;
-	padding: 0.5em 1em 0.5em 1em;
-}
-
-
-
-
 /*Services*/
 	#services img{
 		width: 150px;
@@ -306,125 +320,23 @@
 
 	.services-intro {
 		background-color: #fff;
-		padding: 3em 1em 0.5em 1em;
+		margin-top: 14em;
+		padding: 0.5em 1em 0.5em 1em;
 	}
 
 	#services h3 {
 		display: none;
 	}
 
+/*projects*/
+	.project-section{
+		padding: 3em 0em 0em 0em;
+	}
+	.project-section img{
+		width: 100%;
+		height: auto;
+	}
+	.project-section p{
+		padding: 1em;
+	}
 
-
-
-
-
-
-/* JQUERY END */
-/*
-html,body{
-	padding: 0px;
-	margin: 0px;
-	width: 100%;
-	height: 100%;
-}
-
-body{
-}
-
-h1{
-	text-align: left;
-}
-
-p{
-	margin: 0 1em 3em 1em;
-}
-
-a{
-	text-decoration: none;
-	color: inherit;
-}
-
-img{
-	width: 100%;
-	height: auto;
-}
-
-#nav {
-	list-style: none;
-	padding: 0px;
-	margin: 0px;
-}
-#nav li{
-	margin: 0px;
-	padding:  1em 1em 1em 1em;
-	text-align: left;
-}
-
-#nav li:hover{
-	background-color: #fcf;
-}
-
-#nav a{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-}
-
-.table{
-	display: table;
-	min-height: inherit;
-	width: 100%;
-}
-
-.fixed{
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: -1;
-}
-
-.logo{
-	width: 90%;
-	height: auto;
-	margin-top: 20%;
-}
-
-.center{
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-}
-
-.quote{
-	padding-top: 1em;
-	color: #333;
-	display: none;
-}
-
-.client{
-	text-align: center;
-	display: inline-block;
-	vertical-align: middle;
-}*/
-/*.ui-content {
-	padding: 0;
-}
-
-.ui-mobile .ui-header, .ui-mobile .ui-footer {
-	background-color: #f00;
-	height: 2.5em;
-}
-
-.ui-grid-d > :nth-child(n) {
-	width: auto;
-}
-
-.ui-grid-d a{
-	text-decoration: none;
-	font-size: 2em;
-	text-transform: uppercase;
-}
-
-.ui-btn-inner {
-	padding: 0 0.4em 0 0.4em !important;
-}*/

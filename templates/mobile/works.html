@@ -1,19 +1,35 @@
 {% extends "mobile/base.html" %}
-{% block pagename %}
 
-{% endblock %}
+{% block extrabutton %}
+<!-- 	<a href="#defaultpanel" data-iconshadow="false" data-shadow="false" data-corners="false" data-theme="d" id="top-left">Work</a> -->
+{% endblock %}  
 
 {% block content %}
-<h1>{{title}}</h1>
-<br>
+<div class="project-section">
+	<h1>{{title}}</h1>
 	{%for page in pages%}
-			{{page.title}} <br>
+<!-- 			{{page.title}} <br>
 			{{page.text}} <br>
 			{{page.video}} <br>
-			{{page.slug}} <br>
+			{{page.slug}} <br> -->
+		{%if page.pdf%}
+			<p>PDF goes here</p>
+		{%endif%}
+
+
+		{%if page.text%}
+			<p>
+				{{page.text}}
+			</p>
+		{%endif%}
 		{% for media in page.images%}
 			<img src="/../static/uploaded/{{media.title}}"> <br>
 		{%endfor%}
 	{%endfor%}
+</div>
 
+{% endblock %}
+
+{% block footer%}
+	<a href="/work/" data-iconshadow="false" data-shadow="false" data-corners="false" data-theme="d" id="top-left">Back</a>
 {% endblock %}

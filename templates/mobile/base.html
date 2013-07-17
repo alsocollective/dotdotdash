@@ -5,8 +5,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        
-		<title>Urban Ecologies 2013</title>
+
+		<title>Dot Dot Dash</title>
 
 		<!--Description, Keywords-->
 		<meta name="description" content="OCAD University’s Faculty of Design is announcing a call for proposals for Urban Ecologies 2013, a conference that will examine the impact of five intersecting themes that are shaping the future of design in our cities.">
@@ -39,16 +39,16 @@
 <body>
 
 <div data-role="page" id="page1" class="{% block pagename %}{% endblock %}">
-    <div data-role="header">
-      <!--<a href="#defaultpanel" data-icon="bars" data-shadow="false" data-theme="c" data-corners="false">Menu</a>-->
-  	<a href="#defaultpanel" data-shadow="false" data-corners="false" data-theme="d" id="top-left">&#8801; Menu</a>
-    </div>
+	<div data-role="header">
+		<a href="#defaultpanel" data-iconshadow="false" data-shadow="false" data-corners="false" data-theme="d" id="top-left">&#8801; Menu</a>
+		{% block extrabutton %}
+		{% endblock %}
+	</div>
 
 
 
 	<div data-role="panel"  data-display="overlay" id="defaultpanel" data-enhance="false">
 		<div class="panel-content">
-
 			<ul id="nav">
 				<li><a href="/" id="nav-about" data-transition="slide" class="nav-inactive">Home</a></li><li>
 				<a href="/about/" id="nav-about" data-transition="slide" class="nav-inactive">About</a></li><li>
@@ -61,11 +61,12 @@
 
 
 	<div data-role="content" data-enhance="false">
-
 		{% block content %}
+		{% endblock %}
+	</div>
 
-
-
+	<div data-role="footer" class="ui-bar">
+		{% block footer %}
 		{% endblock %}
 	</div>
 </div>
