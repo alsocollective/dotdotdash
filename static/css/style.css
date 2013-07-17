@@ -382,9 +382,10 @@ h1, h2 {
 	-ms-transition: height 1s;
 	-o-transition: height 1s;
 	transition: height 1s;*/
-	
+
 	position: absolute;
 	height:350px;
+	width: 100%;
 	display:block;
 	-webkit-transition:all 1s ease;
 	-moz-transition:all 1s ease;
@@ -418,6 +419,11 @@ h1, h2 {
 	/*-moz-column-gap: 2.5em;*/
 }
 
+.servicesection p{
+	max-width: 700px;
+	margin: 0 auto 0 auto;
+}
+
 .servicesection h1 {
 	margin: 0;
 }
@@ -437,6 +443,7 @@ h1, h2 {
 	margin: -2em auto 0 auto;
 	width: 100%;
 	white-space: nowrap;
+	padding-bottom: 300px;
 }
 
 #buttoncontainer a {
@@ -543,6 +550,11 @@ a {
 	color: #248183;
 	border-style: none;
 	border-width: 0;
+	border:none;
+}
+
+a img{
+	border:none;
 }
 
 #work h4 {
