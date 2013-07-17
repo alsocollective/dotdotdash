@@ -54,6 +54,22 @@
 	}
 
 /*Menue Button*/
+	#top-left{
+		width: 100%;
+		display: inline-block;
+		padding: 0;
+		background-color: #000;
+		margin: 0;
+
+		color: #fff;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: normal;
+		font-size: 3em;
+
+		text-decoration: none;
+		text-align: center;
+	}
+
 	.ui-btn-left{
 		top: 0!important;
 		left: 0!important;
@@ -295,7 +311,7 @@
 		font-weight: normal;
 	}
 
-	.ui-link{
+	.work-scection .ui-link{
 		color: inherit!important;
 	}
 
