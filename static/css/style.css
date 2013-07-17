@@ -15,7 +15,8 @@ html,body{
 	height: 100%;
 	padding: 0;
 	margin: 0;
-	font-family: courier;
+	/*font-family: courier;*/
+	font-family: "courier-prime";
 }
 
 section{
