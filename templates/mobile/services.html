@@ -9,7 +9,7 @@
 
 <section id="services">
 
-<div class="services-intro">
+<div class="space-from-top">
 	<h1>Services</h1>
 	{{services.text|safe}}
 </div>
@@ -65,3 +65,7 @@
 </section>
 
 {% endblock %}
+
+{% block services %}
+	active-link
+{%endblock%}

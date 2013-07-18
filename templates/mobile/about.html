@@ -8,12 +8,12 @@
 </style>
 <section id="about">
 	<div id="containerAbout">
-		<div>
+		<div class="space-from-top">
 			<h1>About</h1>
 			<p>{{about|safe}}</p>
 		</div>
 
-		<div>
+		<div class="space-from-top">
 			<h2>Process</h2>
 			<p>{{process|safe}}</p>
 		</div>
@@ -29,3 +29,7 @@
 // }
 </script>
 {% endblock %}
+
+{% block about %}
+	active-link
+{%endblock%}

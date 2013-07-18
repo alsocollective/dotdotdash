@@ -8,9 +8,8 @@
 </style>
 
 <section class="work-scection">
-	<div class="intro">
+	<div class="space-from-top">
 		<h1>Work</h1>
-	</div>
 	{% for project in work%}{%if project.sos%}{%else%}
 	<a href="/works/{{project.slug}}/" class="project">
 		<h2>{{project.title}}</h2>
@@ -21,10 +20,10 @@
 		<br>
 	</a>
 	{%endif%}{% endfor %}
-
-	<div class="intro">
-		<h1><img src="/../static/assets/sos-logo.png"> Projects</h1>
 	</div>
+
+	<div class="space-from-top">
+		<h1><img src="/../static/assets/sos-logo.png"> Projects</h1>
 	{% for project in work%}{%if project.sos%}
 	<a href="/works/{{project.slug}}/" class="project">
 		<h2>{{project.title}}</h2>
@@ -35,6 +34,12 @@
 		<br>
 	</a>
 	{%endif%}{% endfor %}
+	</div>
 
 </section>
 {% endblock %}
+
+{% block work %}
+	active-link
+{%endblock%}
+

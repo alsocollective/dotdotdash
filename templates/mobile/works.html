@@ -12,7 +12,7 @@
 </style>
 
 
-<div class="project-section">
+<div class="space-from-top project-section">
 	<h1>{{title}}</h1>
 	{%for page in pages%}
 
@@ -23,7 +23,7 @@
 			<p class="sub-par"><a href="{{page.video}}" target="_blank">Video link</a></p>
 		{%elif page.text%}
 			<p>
-				{{page.text}}
+				{{page.text|safe}}
 			</p>
 		{%elif page.images%}
 			{% for media in page.images%}
@@ -35,6 +35,9 @@
 
 {% endblock %}
 
-{% block footer%}
-	<a href="/work/" data-iconshadow="false" data-shadow="false" data-corners="false" data-theme="d" id="top-left">Back</a>
-{% endblock %}
+
+
+{% block work %}
+	active-link
+{%endblock%}
+
