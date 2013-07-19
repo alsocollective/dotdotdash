@@ -87,9 +87,14 @@
 		transition: 0.2s ease-in;
 	}
 	.ui-btn-text {
-		font-family: 'Montserrat', sans-serif;
-		color:#fff;
-		font-size: 3em;
+
+	}
+	
+	.ui-btn-text img{
+		width: 55%;
+		vertical-align: middle;
+		height: auto;
+		padding: 0.8em;
 	}
 
 /*NavBar Style*/
