@@ -90,7 +90,7 @@ def getContentOfPages(projectName):
 
 def getClientImages(clist):
 	out = []
-	for client in clist:
+	for client in clist.order_by('order').all():
 		out.append(getImg(client))
 	return out
 
