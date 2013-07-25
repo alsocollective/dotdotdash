@@ -4,9 +4,10 @@ from dotdotdash.models import *
 class pageAdmin(admin.ModelAdmin):
 	list_display = ('title','order','pageType')
 	filter_horizontal = ("mediaField",)
+	list_filter = ('project', )
 
 	fieldsets = [
-		(None,{'fields':['title','mediaField',("pageType","order")]}),
+		(None,{'fields':['title','project','mediaField',("pageType","order")]}),
 
 		('Viemo',{
 			'description':("Add the Viemo url(from the embeded method) here it should look something like this... http://player.vimeo.com/video/52542094?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179"),
@@ -17,8 +18,8 @@ class pageAdmin(admin.ModelAdmin):
 			'description':("Upload the pdf here, and a jpg of the PDF in the mediaField"),
 			'fields':['pdf'],
 			}),
-		("Advance options",{
-			'classes':('collapse',),
+		("Text",{
+			'description':("This text will be displayed when the proper pageType"),
 			'fields':['textFields'],
 			}),
 
@@ -26,7 +27,8 @@ class pageAdmin(admin.ModelAdmin):
 
 
 class mediaAdmin(admin.ModelAdmin):
-	list_display = ('title','description','admin_image')
+	list_display = ('title','admin_image')
+
 
 	fieldsets = [
 		(None,{'fields':['location','link']}),

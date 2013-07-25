@@ -37,7 +37,7 @@ class MediaNode(models.Model):
 
 class Home(models.Model):
 	class Meta:
-		verbose_name_plural = "Home"
+		verbose_name = 'Quotes & Video'
 	quote1 = models.TextField(max_length=1000)
 	quote2 = models.TextField(max_length=1000)
 
@@ -82,6 +82,9 @@ class Clients(models.Model):
 	backgroundimage = models.ForeignKey(MediaNode,blank=True,null=True,related_name="bkimg+")
 
 class Page(models.Model):
+	class Meta:
+		verbose_name_plural = "Slides (for Projects)"
+		ordering = ['order']
 	pageTypes = (
 		("text","text"),
 		("singleImage","singleImage"),
@@ -96,9 +99,9 @@ class Page(models.Model):
 	videoURL = models.URLField(max_length=800, blank=True)
 	pageType = models.CharField(max_length=30, choices=pageTypes)
 	slug = models.SlugField(blank=True)
-	order = models.IntegerField(blank=True,default=0)
+	order = models.IntegerField(blank=True,default=1)
 	pdf = models.ManyToManyField(MediaNode,blank=True,related_name="pdf+")
-
+	project = models.CharField(max_length=400,blank=True)
 	def save(self,*args, **kwargs):
 		self.slug = slugify(self.title)
 		super(Page, self).save(*args, **kwargs)
@@ -113,7 +116,7 @@ class Work(models.Model):
 	description = models.TextField(max_length=1000)
 	datefororder = models.DateField(auto_now=True)
 	slug = models.SlugField(blank=True)
-	order = models.IntegerField(blank=True,default=0)
+	order = models.IntegerField(blank=True,default=1)
 	is_a_sos_project = models.BooleanField(blank=True)
 
 	def save(self,*args, **kwargs):
