@@ -101,7 +101,7 @@ class Page(models.Model):
 	slug = models.SlugField(blank=True)
 	order = models.IntegerField(blank=True,default=1)
 	pdf = models.ManyToManyField(MediaNode,blank=True,related_name="pdf+")
-	project = models.CharField(max_length=400,blank=True)
+	project = models.CharField(max_length=400,blank=True,default="not defined")
 	def save(self,*args, **kwargs):
 		self.slug = slugify(self.title)
 		super(Page, self).save(*args, **kwargs)
@@ -110,6 +110,8 @@ class Page(models.Model):
 		return self.title
 
 class Work(models.Model):
+	class Meta:
+		verbose_name = 'Project'
 	title = models.CharField(max_length=600)
 	subTitle = models.CharField(max_length=600)
 	pages = models.ManyToManyField(Page,blank=True,related_name="pages+")
