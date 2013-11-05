@@ -4,12 +4,25 @@
 // 	myPlayer = this;
 // 	this.volume(0);
 // });
+
 var myPlayer = $("#youtube-player").Jtube({
 		// videoId:"_vJG9kaVLEA",
 		skipvid:false,
 		skipWhash:false,
 		timeLeft:false,
-		loop:1
+		loop:1,
+		applyToContainer:true,
+		vidHeight:"100%",
+		vidWidth:"100%",
+		volume:0,
+
+		onLoaded:function(){
+			console.log("loaded", document.getElementById("youtube-container"));
+			$('.backgroundImage').waypoint('sticky',{
+				wrapper: '<div class="background-wrapper" />',
+				video: $("#backgroundVideo")[0]
+			});
+		}
 	});
 function onYouTubeIframeAPIReady() {
 	myPlayer.setupPlayer();
@@ -26,10 +39,10 @@ var useOpacity = (typeof document.createElement("div").style.opacity !== 'undefi
 bttonsHeight();
 //sticky elements
 $("#stickNav").waypoint('sticky');
-$('.backgroundImage').waypoint('sticky',{
-	wrapper: '<div class="background-wrapper" />',
-	video: $("#bkvid")[0]
-});
+// $('.backgroundImage').waypoint('sticky',{
+// 	wrapper: '<div class="background-wrapper" />',
+// 	video: $("#youtube-container")[0]
+// });
 
 //scrolling effect for nav
 softScroll("aboutLink","about");
