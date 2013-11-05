@@ -1,10 +1,3 @@
-// var myPlayer;
-
-// videojs("bkvid",{"autoplay":true,"controls":false,"loop": true }).ready(function(){
-// 	myPlayer = this;
-// 	this.volume(0);
-// });
-
 var myPlayer = $("#youtube-player").Jtube({
 		// videoId:"_vJG9kaVLEA",
 		skipvid:false,
@@ -37,12 +30,8 @@ function noscroll(event){
 var useOpacity = (typeof document.createElement("div").style.opacity !== 'undefined');
 
 bttonsHeight();
-//sticky elements
 $("#stickNav").waypoint('sticky');
-// $('.backgroundImage').waypoint('sticky',{
-// 	wrapper: '<div class="background-wrapper" />',
-// 	video: $("#youtube-container")[0]
-// });
+
 
 //scrolling effect for nav
 softScroll("aboutLink","about");
