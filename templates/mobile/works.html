@@ -17,14 +17,19 @@
 	{%for page in pages%}
 
 		{%if page.pdf.media%}
-			<p class="sub-par"> <a href="/static/uploaded/{{page.pdf.media.0.location}}"  target="_blank">PDF download</a>
-			</p>
-		{%elif page.video%}
-			<p class="sub-par"><a href="{{page.video}}" target="_blank">Video link
+			<div class="video-link">
 				{% for media in page.images%}
-					media.title
+					<img src="/../static/uploaded/{{media.title}}">
 				{%endfor%}
-			</a></p>
+				<a href="{{page.pdf.media.0.location}}" target="_blank">Pdf Link</a>
+			</div>
+		{%elif page.video%}
+			<div class="video-link">
+				{% for media in page.images%}
+					<img src="/../static/uploaded/{{media.title}}">
+				{%endfor%}
+				<a href="{{page.video}}" target="_blank"><img src="/../static/assets/play.png" style="width:100px !important;" height="auto"></a>
+			</div>
 		{%elif page.text%}
 			<p>
 				{{page.text|safe}}

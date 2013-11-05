@@ -365,6 +365,14 @@
 		width: 50%;
 		max-width: 250px;
 	}
+	.video-link{
+		position: relative;
+	}
+	.video-link a{
+		position: absolute;
+		top: calc(50% - 25px);
+		left: calc(50% - 50px);
+	}
 	/*
 	have the content be same as desktop similar...
 	*/
