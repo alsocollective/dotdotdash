@@ -372,6 +372,11 @@
 		position: absolute;
 		top: calc(50% - 25px);
 		left: calc(50% - 50px);
+		color: #333;
+		text-decoration: none;
+	}
+	.video-link a:visited{
+		color: #333 !important;
 	}
 	/*
 	have the content be same as desktop similar...
