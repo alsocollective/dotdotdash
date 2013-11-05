@@ -5,7 +5,6 @@
 {# <link defer href="http://vjs.zencdn.net/4.2/video-js.css" rel="stylesheet"> #}
 <link rel="stylesheet" href="/../static/css/royalslider.css">
 <link rel="stylesheet" href="/../static/css/rs-default.css">
-<script type="text/javascript" scr="http://alsocollective.github.io/also-cdn/js/j-tube.js"></script>
 <script type="text/javascript">
   WebFontConfig = {
     google: { families: [ 'Montserrat:700,400:latin' ] }
@@ -35,14 +34,7 @@
 
 {% block content %}
 <div id="backgroundVideo">
-	<!-- controls preload="none" -->
-	<video id="bkvid" class="video-js vjs-default-skin stuck" width="100%" height="100%" poster="http://www.dotdotdash.ca/static/uploaded/{{home.bkimg}}" data-setup=''>
-		<!-- http://v.cdn.vine.co/r/videos/75A61AC301965122215848878080_13c0fff343a.3_4Sp4pbcyzRUx87uFlgfQbQf1i91VwktLdsEcAxp.vGd4br3BJTKwWc2StcjFYW97 -->
-	<source src="http://www.dotdotdash.ca/static/uploaded/{{home.mp4}}" type='video/mp4' />
-	<source src="http://www.dotdotdash.ca/static/uploaded/{{home.webm}}" type='video/webm' />
-	<source src="http://www.dotdotdash.ca/static/uploaded/{{home.ogv}}" type='video/ogg' />
-	</video>
-
+	<div id="youtube-player"></div>
 </div>
 
 <nav>
@@ -254,6 +246,8 @@
 {% block js %}
 
 <script src="/../static/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://localhost:8000/js/j-tube.js"></script>
+{# <script type="text/javascript" scr="http://alsocollective.github.io/also-cdn/js/j-tube.js"></script> #}
 <script src="/../static/js/waypoints.min.js"></script>
 <script src="/../static/js/waypoints-sticky.js"></script>
 <script src="/../static/js/jquery.royalslider.min.js"></script>

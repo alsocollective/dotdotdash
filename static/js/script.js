@@ -4,6 +4,16 @@
 // 	myPlayer = this;
 // 	this.volume(0);
 // });
+var myPlayer = $("#youtube-player").Jtube({
+		// videoId:"_vJG9kaVLEA",
+		skipvid:false,
+		skipWhash:false,
+		timeLeft:false,
+		loop:1
+	});
+function onYouTubeIframeAPIReady() {
+	myPlayer.setupPlayer();
+}
 
 var scrolllocation = 0;
 function noscroll(event){
