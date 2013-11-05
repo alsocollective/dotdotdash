@@ -24,8 +24,10 @@
 {% endblock %}
 
 {% block content %}
-<div id="backgroundVideo">
+<div id="backgroundVideo" class="stuck">
+	<div id="youtube-container">
 	<div id="youtube-player"></div>
+	</div>
 </div>
 
 <nav>
@@ -237,7 +239,9 @@
 {% block js %}
 
 <script src="/../static/js/jquery.min.js"></script>
+
 <script type="text/javascript" scr="http://alsocollective.github.io/also-cdn/js/j-tube.js"></script>
+
 <script src="/../static/js/waypoints.min.js"></script>
 <script src="/../static/js/waypoints-sticky.js"></script>
 <script src="/../static/js/jquery.royalslider.min.js"></script>
