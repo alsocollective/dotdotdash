@@ -2,7 +2,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from dotdotdash.models import *
 
 def home(request):
-	if(True):#not request.mobile):
+	if(request.mobile):
 		out = getHome()
 		out.update({"contact":Contact.objects.all()[0].contant})
 		return render_to_response("mobile/index.html",out)
