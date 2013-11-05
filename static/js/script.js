@@ -1,9 +1,9 @@
-var myPlayer;
+// var myPlayer;
 
-videojs("bkvid",{"autoplay":true,"controls":false,"loop": true }).ready(function(){
-	myPlayer = this;
-	this.volume(0);
-});
+// videojs("bkvid",{"autoplay":true,"controls":false,"loop": true }).ready(function(){
+// 	myPlayer = this;
+// 	this.volume(0);
+// });
 
 var scrolllocation = 0;
 function noscroll(event){
