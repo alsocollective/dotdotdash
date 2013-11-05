@@ -207,7 +207,10 @@ h1, h2 {
 	overflow: hidden;
 }
 
-
+#youtube-player{
+	position: absolute;
+	z-index: 2;
+}
 .video-js{
 	width: auto;
 	height: auto;
