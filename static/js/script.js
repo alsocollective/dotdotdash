@@ -236,7 +236,7 @@ $(".project").click(function(event){
 			keyboardNavEnabled: true,
 			loop:true,
 			slidesSpacing: 0,
-			numImagesToPreload: 1,
+			// numImagesToPreload: 1,
 			usePreloader: false,
 			easeInOut: true,
 			navigateByClick:false

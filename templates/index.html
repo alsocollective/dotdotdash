@@ -54,7 +54,7 @@
 		<li id="ourWorkLink"><a href="#work">Our Work</a></li>
 		<li id="contactLink"><a href="#contact">Contact</a></li>
 		<li id="facebook"><a href="https://www.facebook.com/DOTDOTDASHCOMMUNICATIONS"><img src="/static/assets/facebook.png"></a></li>
-		<li id="instagram"><a href="http://instagram.com/dotddash"><img src="/static/assets/instagram.png"></a></li>
+		<li id="instagram"><a href="http://instagram.com/dotdotshot"><img src="/static/assets/instagram.png"></a></li>
 	</ul>
 </nav>
 
@@ -271,6 +271,31 @@
   ga('create', 'UA-42487410-1', 'dotdotdash.ca');
   ga('send', 'pageview');
 
+  function loadVideo(event, parentID, videoLink){
+		event.preventDefault();
+		// var parentElement = $("#"+parentID)[0].parentNode.parentNode.parentNode.parentNode;
+		// parentElement.innerHTML = "";
+		var parentElement = document.createElement("div");
+		parentElement.id = "vimeo-container";
+		$(parentElement).click(function(){
+			this.parentNode.removeChild(this);
+		});
+		document.body.appendChild(parentElement);
+
+		var sins = document.createElement("div");
+		sins.className = "sins";
+		parentElement.appendChild(sins);
+
+		var iframe = document.createElement("iframe");
+		iframe.src = videoLink;
+		iframe.setAttribute("webkitAllowFullScreen","");
+		iframe.setAttribute("mozallowfullscreen","");
+		iframe.setAttribute("allowFullScreen","");
+		iframe.setAttribute("frameborder","0");
+		iframe.setAttribute("width","500");
+		iframe.setAttribute("height","281");
+		sins.appendChild(iframe);
+  }
 </script>
 
 {% endblock %}

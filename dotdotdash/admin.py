@@ -2,7 +2,7 @@ from django.contrib import admin
 from dotdotdash.models import *
 
 class pageAdmin(admin.ModelAdmin):
-	list_display = ('title','order','pageType')
+	list_display = ('title','project','order','pageType')
 	filter_horizontal = ("mediaField",)
 	list_filter = ('project', )
 
