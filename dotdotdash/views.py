@@ -150,3 +150,5 @@ def work(request):
 
 def works(request,project=None):
 	return render_to_response('mobile/works.html',	getContentOfPages(project))
+
+

@@ -20,7 +20,11 @@
 			<p class="sub-par"> <a href="/static/uploaded/{{page.pdf.media.0.location}}"  target="_blank">PDF download</a>
 			</p>
 		{%elif page.video%}
-			<p class="sub-par"><a href="{{page.video}}" target="_blank">Video link</a></p>
+			<p class="sub-par"><a href="{{page.video}}" target="_blank">Video link
+				{% for media in page.images%}
+					media.title
+				{%endfor%}
+			</a></p>
 		{%elif page.text%}
 			<p>
 				{{page.text|safe}}
