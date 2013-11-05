@@ -628,6 +628,16 @@ a img{
 }
 
 
+
+#vimeo-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+}
+
 /*#sos-projects {
 	margin: 3em auto 0 auto;
 	display: block;

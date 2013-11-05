@@ -2,6 +2,9 @@ from django.db import models
 from django.template.defaultfilters import slugify
 import os.path
 
+
+
+
 class MediaNode(models.Model):
 	title = models.CharField(max_length=600,blank=True)
 	description = models.CharField(max_length=300, blank=True)
@@ -13,11 +16,14 @@ class MediaNode(models.Model):
 		fname, dot, extension = filename.rpartition('.')
 		slug = slugify(fname)
 		instance.title = '%s.%s' % (slug, extension)
-		return 'static/uploaded/%s.%s' % (slug, extension)
+		return '/srv/www/dotdotdash.ca/public_html/dotdotdash/static/uploaded/%s.%s' % (slug, extension)
+
 	location = models.FileField(upload_to=slugify_filename)
 
 	def save(self, *args, **kwargs):
-		self.title = os.path.basename(self.location.name)
+		fname, dot, extension = os.path.basename(self.location.name).rpartition('.')
+		fname = slugify(fname)
+		self.title = '%s.%s'%(fname,extension)
 		super(MediaNode, self).save(*args, **kwargs)
 
 	def __unicode__(self):
@@ -34,6 +40,9 @@ class MediaNode(models.Model):
 			return '<iframe src="%s?title=0&amp;byline=0&amp;portrait=0&amp;color=ff0179;autoplay=1" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>' % self.video
 		return "not an video"
 	admin_video.allow_tags = True
+
+
+
 
 class Home(models.Model):
 	class Meta:
