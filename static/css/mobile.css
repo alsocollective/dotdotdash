@@ -372,6 +372,8 @@
 		position: absolute;
 		top: calc(50% - 25px);
 		left: calc(50% - 50px);
+		top: -webkit-calc(50% - 25px);
+		left: -webkit-calc(50% - 50px);
 		color: #333;
 		text-decoration: none;
 	}
