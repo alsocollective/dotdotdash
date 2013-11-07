@@ -19,11 +19,13 @@ var myPlayer = $("#youtube-player").Jtube({
 		},
 		onStart:function(settings){
 			console.log("start");
-			$(settings.player.a).removeClass('hide');
+			// $(settings.player.a).removeClass('hide');
+			$(settings.player.a).fadeIn('fast');
 		},
 		onPause: function(settings){
 			console.log("pause");
-			$(settings.player.a).addClass('hide')
+			// $(settings.player.a).addClass('hide')
+			$(settings.player.a).fadeOut('fast')
 		}
 	});
 function onYouTubeIframeAPIReady() {
