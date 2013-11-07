@@ -386,6 +386,9 @@
 	.video-link{
 		position: relative;
 	}
+	.pdf-link{
+		position: relative;
+	}
 	.video-link a{
 		position: absolute;
 		top: calc(50% - 25px);
@@ -393,6 +396,19 @@
 		color: #333;
 		text-decoration: none;
 	}
+	.pdf-link a{
+		position: absolute;
+		top: calc(50% - 25px);
+		left: calc(50% - 50px);
+		color: #fff!important;
+		text-decoration: none;
+		padding: 1em;
+		background-color: #248183;
+	}
+	.pdf-link a:visited {
+		color:!important;		
+	}
+	
 	.video-link a:visited{
 		color: #333 !important;
 	}
