@@ -8,13 +8,22 @@ var myPlayer = $("#youtube-player").Jtube({
 		vidHeight:"100%",
 		vidWidth:"100%",
 		volume:0,
+		debugMode:false,
+		fallbackImage:"/../static/uploaded/bk-vid-img.png",
 
 		onLoaded:function(){
-			console.log("loaded", document.getElementById("youtube-container"));
 			$('.backgroundImage').waypoint('sticky',{
 				wrapper: '<div class="background-wrapper" />',
 				video: $("#backgroundVideo")[0]
 			});
+		},
+		onStart:function(settings){
+			console.log("start");
+			$(settings.player.a).removeClass('hide');
+		},
+		onPause: function(settings){
+			console.log("pause");
+			$(settings.player.a).addClass('hide')
 		}
 	});
 function onYouTubeIframeAPIReady() {
