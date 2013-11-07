@@ -1,5 +1,5 @@
 var myPlayer = $("#youtube-player").Jtube({
-		videoId:"BAU9EL96w60",
+		videoId:"RlCKrl1F-PI",
 		skipvid:false,
 		skipWhash:false,
 		timeLeft:false,
