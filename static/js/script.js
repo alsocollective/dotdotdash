@@ -266,3 +266,30 @@ $(".project").click(function(event){
 
 
 });
+
+
+function loadVideo(event, parentID, videoLink){
+	event.preventDefault();
+	// var parentElement = $("#"+parentID)[0].parentNode.parentNode.parentNode.parentNode;
+	// parentElement.innerHTML = "";
+	var parentElement = document.createElement("div");
+	parentElement.id = "vimeo-container";
+	$(parentElement).click(function(){
+	        this.parentNode.removeChild(this);
+	});
+	document.body.appendChild(parentElement);
+
+	var sins = document.createElement("div");
+	sins.className = "sins";
+	parentElement.appendChild(sins);
+
+	var iframe = document.createElement("iframe");
+	iframe.src = videoLink;
+	iframe.setAttribute("webkitAllowFullScreen","");
+	iframe.setAttribute("mozallowfullscreen","");
+	iframe.setAttribute("allowFullScreen","");
+	iframe.setAttribute("frameborder","0");
+	iframe.setAttribute("width","500");
+	iframe.setAttribute("height","281");
+	sins.appendChild(iframe);
+}
