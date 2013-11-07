@@ -271,13 +271,14 @@ $(".project").click(function(event){
 
 
 function loadVideo(event, parentID, videoLink){
-	event.preventDefault();
+	if(event.preventDefault) event.preventDefault();
+	event.returnValue = false;
 	// var parentElement = $("#"+parentID)[0].parentNode.parentNode.parentNode.parentNode;
 	// parentElement.innerHTML = "";
 	var parentElement = document.createElement("div");
 	parentElement.id = "vimeo-container";
 	$(parentElement).click(function(){
-	        this.parentNode.removeChild(this);
+		this.parentNode.removeChild(this);
 	});
 	document.body.appendChild(parentElement);
 
