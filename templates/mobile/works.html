@@ -19,16 +19,16 @@
 		{%if page.pdf.media%}
 			<div class="pdf-link">
 				{% for media in page.images%}
-					<img src="/../static/uploaded/{{media.title}}">
+					<img src="http://also-static.com/dotdotdash/uploads/{{media.title}}">
 				{%endfor%}
-				<a href="/../static/uploaded/{{page.pdf.media.0.location}}" target="_blank">Pdf Link</a>
+				<a href="http://also-static.com/dotdotdash/uploads/{{page.pdf.media.0.location}}" target="_blank">Pdf Link</a>
 			</div>
 		{%elif page.video%}
 			<div class="video-link">
 				{% for media in page.images%}
-					<img src="/../static/uploaded/{{media.title}}">
+					<img src="http://also-static.com/dotdotdash/uploads/{{media.title}}">
 				{%endfor%}
-				<a href="{{page.video}}"><img src="/../static/assets/play.png" style="width:100px !important;" height="auto"></a>
+				<a href="{{page.video}}"><img src="http://also-static.com/dotdotdash/assets/play.png" style="width:100px !important;" height="auto"></a>
 			</div>
 		{%elif page.text%}
 			<p>
@@ -36,7 +36,7 @@
 			</p>
 		{%elif page.images%}
 			{% for media in page.images%}
-				<img src="/../static/uploaded/{{media.title}}"> <br>
+				<img src="http://also-static.com/dotdotdash/uploads/{{media.title}}"> <br>
 			{%endfor%}
 		{%endif%}
 	{%endfor%}
