@@ -41,7 +41,7 @@ section h1, section h2 {
 
 #quote1 {
 	font-size: 2.5em;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 	width: 65%;
 	margin: 4em auto 0 auto;
 	color: #fff;
@@ -49,7 +49,7 @@ section h1, section h2 {
 
 #quote2 {
 	font-size: 2.5em;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 	width: 80%;
 	margin: 2em auto 0 auto;
 	color: #fff;
@@ -58,7 +58,7 @@ section h1, section h2 {
 
 #static-quote {
 	font-size: 2.5em;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 	width: 70%;
 	margin: 1em auto 1em auto;
 	color: #3d3d3d;
@@ -72,7 +72,7 @@ nav {
 	font-size: 2em;
 	text-align: center;
 	text-transform: uppercase;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 	background-color: #fff;
 	top: 2em;
 	/*padding: 1em 0 1em 0;*/
@@ -159,7 +159,7 @@ div{
 }
 
 h1, h2 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 	text-transform: uppercase;
 	font-size: 2em;
 }
@@ -173,7 +173,7 @@ h1, h2 {
 .clients-half {
 	width: 80%;
 	padding: 0.5em 0em 1.5em 0em;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 	font-size: 1.5em;
 	color: #3d3d3d;
 }
@@ -239,7 +239,7 @@ z-index: -1;
 }
 
 .dots {
-	background-image: url('/../static/assets/dot-pattern.png');
+	background-image: url('http://also-static.com/dotdotdash/assets/dot-pattern.png');
 	height: 100%;
 	width: 100%;
 	position: relative;
@@ -314,7 +314,7 @@ z-index: -1;
 	width: 45%;
 	display: inline-block;
 	font-size: 2.6em;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 	vertical-align: top;
 	margin: 0 1em 0 0;
 	line-height: 1.4em;
@@ -347,13 +347,13 @@ z-index: -1;
 
 .phone {
 	font-size: 2.6em;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 	white-space: nowrap;
 }
 
 .email {
 	font-size: 2.6em;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 	white-space: nowrap;
 }
 
@@ -534,7 +534,7 @@ z-index: -1;
 }
 
 #work h3 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 	font-size:1.4em;
 	text-transform: uppercase;
 	margin: 0 0 0 0;
@@ -568,7 +568,7 @@ a img{
 }
 
 #work h4 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Gotham A', 'Gotham B'; font-weight: 700; font-style: normal;
 	font-weight: normal;
 	font-size:0.9em;
 	margin: 0.3em 0 0 0;
