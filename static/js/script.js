@@ -1,3 +1,6 @@
+
+console.log("setting up initial call for youtube");
+
 var myPlayer = $("#youtube-player").Jtube({
 		videoId:"RlCKrl1F-PI",
 		skipvid:false,
@@ -8,7 +11,7 @@ var myPlayer = $("#youtube-player").Jtube({
 		vidHeight:"100%",
 		vidWidth:"100%",
 		volume:0,
-		debugMode:false,
+		debugMode:true,
 		fallbackImage:"http://also-static.com/dotdotdash/uploads/bk-vid-img.png",
 
 		onLoaded:function(){
@@ -18,17 +21,22 @@ var myPlayer = $("#youtube-player").Jtube({
 			});
 		},
 		onStart:function(settings){
-			console.log("start");
-			// $(settings.player.a).removeClass('hide');
+			if(settings.debugMode){
+				console.log("start");
+			}
 			$(settings.player.a).fadeIn('fast');
+			return null;
 		},
-		onPause: function(settings){
-			console.log("pause");
-			// $(settings.player.a).addClass('hide')
-			$(settings.player.a).fadeOut('fast')
+		onPause:function(settings){
+			if(settings.debugMode){
+				console.log("pause");
+			}
+			$(settings.player.a).fadeOut('fast');
+			return null;
 		}
 	});
 function onYouTubeIframeAPIReady() {
+	console.log("got call back from YT and starting");
 	myPlayer.setupPlayer();
 }
 
@@ -57,7 +65,7 @@ var fadingElement = [
 	new FadeingObject("quote1"),
 	new FadeingObject("quote2")
 ];
-
+console.log("set up a bunch of other things");
 var scrollLocation = $(document).scrollTop();
 
 function fadingResized(){

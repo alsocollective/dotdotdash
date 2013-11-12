@@ -647,6 +647,10 @@ a img{
 .hide{
 	display: none;
 }
+.shift-left{
+	position: absolute;
+	left: 100%;
+}
 
 /*#sos-projects {
 	margin: 3em auto 0 auto;
