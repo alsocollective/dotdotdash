@@ -14,7 +14,7 @@ var myPlayer = $("#youtube-player").Jtube({
 		vidWidth:"100%",
 		volume:0,
 		debugMode:true,
-		fallbackImage:"http://also-static.com/dotdotdash/uploads/bk-vid-img.png",
+		fallbackImage:"http://also-static.com/dotdotdash/uploads/bk-vid-img-opt.jpg",
 
 		onLoaded:function(){
 			$('.backgroundImage').waypoint('sticky',{
