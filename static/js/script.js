@@ -7,6 +7,8 @@ var myPlayer = $("#youtube-player").Jtube({
 		skipWhash:false,
 		timeLeft:false,
 		loop:1,
+		vidWidth:"1920",
+		vidHeight:"1080",
 		applyToContainer:true,
 		vidHeight:"100%",
 		vidWidth:"100%",
