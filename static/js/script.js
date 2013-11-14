@@ -2,7 +2,7 @@
 console.log("setting up initial call for youtube");
 
 var myPlayer = $("#youtube-player").Jtube({
-		videoId:"RlCKrl1F-PI",
+		videoId:"Teu110o31yc",
 		skipvid:false,
 		skipWhash:false,
 		timeLeft:false,
@@ -24,14 +24,16 @@ var myPlayer = $("#youtube-player").Jtube({
 			if(settings.debugMode){
 				console.log("start");
 			}
-			$(settings.player.a).fadeIn('fast');
+			// $(settings.player.a).fadeIn('fast');
+			$(settings.player.a).css({"display":"inline-block"})
 			return null;
 		},
 		onPause:function(settings){
 			if(settings.debugMode){
 				console.log("pause");
 			}
-			$(settings.player.a).fadeOut('fast');
+			// $(settings.player.a).fadeOut('fast');
+			$(settings.player.a).css({"display":"none"})
 			return null;
 		}
 	});

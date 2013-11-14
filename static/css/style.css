@@ -63,6 +63,7 @@ section h1, section h2 {
 	margin: 1em auto 1em auto;
 	color: #3d3d3d;
 	text-align: center;
+	z-index: 3;
 }
 
 /*for layering of the content all ements must be relative to work*/
@@ -195,7 +196,28 @@ h1, h2 {
 
 /*// background stuff //*/
 /* still need to make the video full screen */
-#backgroundVideo{
+#background-container{
+	background-color: #000;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1;
+}
+#youtube-player{
+	position: relative;
+	z-index: 10;
+	text-decoration: none;
+}
+.backface-hidden{
+	color: #FFF;
+	-webkit-backface-visibility:hidden;
+	position: static;
+}
+
+/*#backgroundVideo{
 background-color: #000;
 left: 0;
 top: 0;
@@ -204,15 +226,15 @@ right: 0;
 overflow: hidden;
 position: absolute;
 z-index: -1;
-}
-#youtube-container{
+}*/
+/*#youtube-container{
 	position: absolute;
 }
 #youtube-player{
 	position: relative;
 	z-index: 10;
 	text-decoration: none;
-}
+}*/
 
 .video-js{
 	width: auto;
