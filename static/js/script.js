@@ -2,7 +2,7 @@
 console.log("setting up initial call for youtube");
 
 var myPlayer = $("#youtube-player").Jtube({
-		videoId:"Teu110o31yc",
+		videoId:"1PxQj_HiQjo",
 		skipvid:false,
 		skipWhash:false,
 		timeLeft:false,
