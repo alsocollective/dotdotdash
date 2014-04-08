@@ -416,7 +416,6 @@ z-index: -1;
 	transition: height 1s;*/
 
 	position: absolute;
-	height:350px;
 	width: 100%;
 	display:block;
 	-webkit-transition:all 1s ease;
@@ -454,6 +453,10 @@ z-index: -1;
 .servicesection p{
 	max-width: 700px;
 	margin: 0 auto 0 auto;
+}
+
+.servicesection p:last-child{
+	padding-bottom: 5em;
 }
 
 .servicesection h1 {
